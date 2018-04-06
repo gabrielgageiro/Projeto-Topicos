@@ -15,6 +15,7 @@ import javax.swing.border.LineBorder;
 import java.awt.Toolkit;
 
 import com.topicos.listenners.PrincipalListenner;
+import com.topicos.telas.internalFrame.PessoasInternalFrame;
 
 public class Principal extends JFrame {
 
@@ -73,10 +74,7 @@ public class Principal extends JFrame {
         contentPane.add(panelOpcoes);
         panelOpcoes.setLayout(null);
 
-        /*ACHO QUE VAI SRE ESSA IMAGEM DE VERDADE*/
-//        ImageIcon icon = new ImageIcon(Principal.class.getResource("/com/topicos/telas/background/blur2.jpg"));
-
-        ImageIcon icon = new ImageIcon(Principal.class.getResource("/com/topicos/telas/background/wallpaper-corinthians-campeao-mundial-de-clubes-1920x1080-fox.jpg"));
+        ImageIcon icon = new ImageIcon(Principal.class.getResource("/com/topicos/telas/background/blur2.jpg"));
 
         JLabel backbround = new JLabel();
         backbround.setSize(1920, 1080);
@@ -114,6 +112,8 @@ public class Principal extends JFrame {
 
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
+
+        contentPane.add(new PessoasInternalFrame());
 
         setResizable(false);
         setVisible(true);

@@ -6,8 +6,7 @@ Data:23/03/18
 
 package com.topicos.app;
 
-import com.topicos.telas.frames.Login;
-import com.topicos.telas.frames.Principal;
+import com.topicos.telas.frames.principalFrame.Principal;
 
 public class App {
 

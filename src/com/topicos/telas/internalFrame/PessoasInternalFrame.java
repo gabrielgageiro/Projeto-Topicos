@@ -6,13 +6,9 @@ Data:02/04/18
 
 package com.topicos.telas.internalFrame;
 
-import java.awt.EventQueue;
+import java.awt.*;
 
-import javax.swing.JInternalFrame;
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
-import javax.swing.JCheckBox;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 public class PessoasInternalFrame extends JInternalFrame {
     private JTextField cidadeTextField;
@@ -136,6 +132,5 @@ public class PessoasInternalFrame extends JInternalFrame {
         numeroTextField.setBounds(597, 161, 62, 19);
         getContentPane().add(numeroTextField);
         numeroTextField.setColumns(10);
-
-    }
+        }
 }

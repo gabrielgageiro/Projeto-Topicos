@@ -1,8 +1,7 @@
-package com.topicos.telas.frames;
+package com.topicos.telas.frames.principalFrame;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -13,6 +12,7 @@ import java.awt.Color;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
 
 import com.topicos.listenners.PrincipalListenner;
 import com.topicos.telas.internalFrame.PessoasInternalFrame;
@@ -34,6 +34,7 @@ public class Principal extends JFrame {
     private JMenuItem RemoverUsuarioItem = new JMenuItem("Remover Usuario");
 
     private JMenu AjudaMenu = new JMenu("Ajuda");
+    private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
 
     private JMenuItem SobreItem = new JMenuItem("Sobre");
 
@@ -59,7 +60,6 @@ public class Principal extends JFrame {
         AdminMenu.add(RemoverUsuarioItem);
 
         menuBar.add(AjudaMenu);
-        SobreItem.addActionListener(new PrincipalListenner());
 
         AjudaMenu.add(SobreItem);
         contentPane = new JPanel();
@@ -73,6 +73,7 @@ public class Principal extends JFrame {
 //        panelOpcoes.setBounds(0,0,811,JFrame.MAXIMIZED_V);
         contentPane.add(panelOpcoes);
         panelOpcoes.setLayout(null);
+/*
 
         ImageIcon icon = new ImageIcon(Principal.class.getResource("/com/topicos/telas/background/blur2.jpg"));
 
@@ -81,6 +82,7 @@ public class Principal extends JFrame {
         backbround.setIcon(icon);
         contentPane.getSize();
         contentPane.add(backbround);
+*/
 
         JButton btnExit = new JButton("Exit");
         btnExit.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
@@ -109,14 +111,23 @@ public class Principal extends JFrame {
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
+        ActionListener list = new ListennerPrincipalFrame(btnCadastrar, SobreItem);
 
+        SobreItem.addActionListener(list);
+
+        btnCadastrar.addActionListener(list);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setUndecorated(true);
 
-        contentPane.add(new PessoasInternalFrame());
+        contentPane.add(pessoasInternalFrame);
 
         setResizable(false);
         setVisible(true);
+
+
+        btnCadastrar.addActionListener(e -> {
+            pessoasInternalFrame.setVisible(true);
+        });
 
 
     }

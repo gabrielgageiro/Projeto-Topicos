@@ -15,6 +15,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 
 import com.topicos.listenners.PrincipalListenner;
+import com.topicos.telas.internalFrame.AulasInternalFrame;
 import com.topicos.telas.internalFrame.PessoasInternalFrame;
 
 public class Principal extends JFrame {
@@ -35,6 +36,7 @@ public class Principal extends JFrame {
 
     private JMenu AjudaMenu = new JMenu("Ajuda");
     private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
+    private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
 
     private JMenuItem SobreItem = new JMenuItem("Sobre");
 
@@ -111,6 +113,12 @@ public class Principal extends JFrame {
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
+        JButton btnCadastrarTurma = new JButton("Cadastrar Turma");
+        btnCadastrarTurma.setBorder(new LineBorder(new Color(0, 0, 0)));
+        btnCadastrarTurma.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/register.png")));
+        btnCadastrarTurma.setBounds(412, 6, 131, 45);
+        panelOpcoes.add(btnCadastrarTurma);
+
         ActionListener list = new ListennerPrincipalFrame(btnCadastrar, SobreItem);
 
         SobreItem.addActionListener(list);
@@ -120,13 +128,21 @@ public class Principal extends JFrame {
         setUndecorated(true);
 
         contentPane.add(pessoasInternalFrame);
+        contentPane.add(aulasInternalFrame);
 
         setResizable(false);
         setVisible(true);
 
+        SairArquivoItem.addActionListener(e->{
+            dispose();
+        });
 
         btnCadastrar.addActionListener(e -> {
             pessoasInternalFrame.setVisible(true);
+        });
+
+        btnCadastrarTurma.addActionListener(e -> {
+            aulasInternalFrame.setVisible(true);
         });
 
 

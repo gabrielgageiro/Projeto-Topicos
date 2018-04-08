@@ -23,6 +23,7 @@ public class PessoasInternalFrame extends JInternalFrame {
     private JTextField numeroTextField;
 
     public PessoasInternalFrame() {
+        setClosable(true);
         setTitle("Cadastro de Pessoas");
         setBounds(100, 100, 755, 501);
         getContentPane().setLayout(null);
@@ -132,5 +133,5 @@ public class PessoasInternalFrame extends JInternalFrame {
         numeroTextField.setBounds(597, 161, 62, 19);
         getContentPane().add(numeroTextField);
         numeroTextField.setColumns(10);
-        }
+    }
 }

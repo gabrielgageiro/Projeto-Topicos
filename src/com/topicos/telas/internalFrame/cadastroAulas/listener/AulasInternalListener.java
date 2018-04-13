@@ -11,7 +11,7 @@ import com.topicos.comum.listener.InternalFrameListener;
 import javax.swing.*;
 
 public class AulasInternalListener extends InternalFrameListener {
-    public AulasInternalListener(JButton btnCadastrar, JButton btnCancelar) {
+    public AulasInternalListener(JButton btnCancelar, JButton btnCadastrar) {
         super(btnCancelar, btnCadastrar);
     }
 

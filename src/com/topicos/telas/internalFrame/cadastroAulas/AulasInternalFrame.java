@@ -6,12 +6,18 @@ Data:02/04/18
 
 package com.topicos.telas.internalFrame.cadastroAulas;
 
+import com.topicos.telas.internalFrame.cadastroAulas.listener.AulasInternalListener;
+
 import javax.swing.*;
+import java.awt.event.ActionListener;
 
 public class AulasInternalFrame extends JInternalFrame {
     private JComboBox idiomaCbx;
     private JComboBox professorCbx;
     private JComboBox alunosCbx;
+    private JButton btnCancelar;
+    private JButton btnCadastrar;
+    private ActionListener handle;
 
     public AulasInternalFrame() {
         setClosable(true);
@@ -61,6 +67,19 @@ public class AulasInternalFrame extends JInternalFrame {
         alunosCbx.addItem("Eles");
         //
         getContentPane().add(alunosCbx);
+        btnCancelar = new JButton("Cancelar");
+        btnCadastrar = new JButton("Cadastrar");
+
+        handle = new AulasInternalListener(btnCancelar,btnCadastrar);
+
+        btnCancelar.setBounds(35, 375, 117, 25);
+        btnCancelar.addActionListener(handle);
+
+        getContentPane().add(btnCancelar);
+        btnCadastrar.setBounds(215, 375, 117, 25);
+        btnCadastrar.addActionListener(handle);
+
+        getContentPane().add(btnCadastrar);
 
 
     }

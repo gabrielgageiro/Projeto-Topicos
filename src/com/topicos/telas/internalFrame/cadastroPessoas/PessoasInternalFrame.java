@@ -2,12 +2,16 @@ package com.topicos.telas.internalFrame.cadastroPessoas;
 
 
 import com.topicos.comum.enums.Estados;
+import com.topicos.comum.listener.InternalFrameListener;
+import com.topicos.telas.internalFrame.cadastroPessoas.listener.PessoasInternalListener;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class PessoasInternalFrame extends JInternalFrame {
+
+
     private JTextField cidadeTextField;
     private JTextField cepTextField;
     private JTextField nomeTextField;
@@ -15,6 +19,8 @@ public class PessoasInternalFrame extends JInternalFrame {
     private JTextField emailTextField;
     private JTextField email2TextField;
     private JTextField telefoneTextField;
+    private JButton btnCancelar ;
+    private JButton btnCadastrar;
     private JTextField telefone2TextField;
     private JTextField ruaTextField;
     private JTextField numeroTextField;
@@ -138,16 +144,21 @@ public class PessoasInternalFrame extends JInternalFrame {
         getContentPane().add(numeroTextField);
         numeroTextField.setColumns(10);
 
-        JButton btnSalvar = new JButton("Salvar");
-        btnSalvar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-            }
-        });
-        btnSalvar.setBounds(456, 414, 117, 25);
-        getContentPane().add(btnSalvar);
+        btnCadastrar= new JButton("Cadastrar");
+        btnCancelar = new JButton("Cancelar");
 
-        JButton btnCancelar = new JButton("Cancelar");
+        btnCadastrar.setBounds(456, 414, 117, 25);
+
+        ActionListener handle= new PessoasInternalListener(btnCancelar,btnCadastrar);
+
+        btnCadastrar.addActionListener(handle);
+
+        getContentPane().add(btnCadastrar);
+
         btnCancelar.setBounds(207, 414, 117, 25);
+
+        btnCancelar.addActionListener(handle);
+
         getContentPane().add(btnCancelar);
 
     }

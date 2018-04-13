@@ -13,7 +13,7 @@ import javax.swing.*;
 
 public class PessoasInternalListener extends InternalFrameListener {
 
-    public PessoasInternalListener(JButton btnCadastrar, JButton btnCancelar) {
+    public PessoasInternalListener(JButton btnCancelar, JButton btnCadastrar) {
         super(btnCancelar,btnCadastrar);
     }
 

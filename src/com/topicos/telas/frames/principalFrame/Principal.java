@@ -110,8 +110,6 @@ public class Principal extends JFrame {
 
         SobreItem.addActionListener(list);
 
-        btnCadastrar.addActionListener(list);
-
         contentPane.add(pessoasInternalFrame);
         contentPane.add(aulasInternalFrame);
 

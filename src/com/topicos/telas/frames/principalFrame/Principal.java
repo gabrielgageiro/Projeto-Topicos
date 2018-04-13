@@ -44,7 +44,6 @@ public class Principal extends JFrame {
      * Create the frame.
      */
     public Principal() {
-        setIconImage(Toolkit.getDefaultToolkit().getImage(Principal.class.getResource("/com/topicos/telas/background/sport_club_corinthians_paulista___background_by_lucasamarilla-d5v4zet.jpg")));
         setTitle("Topicos Especiais - I");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 811, 562);
@@ -72,19 +71,9 @@ public class Principal extends JFrame {
         JPanel panelOpcoes = new JPanel();
         panelOpcoes.setBorder(new LineBorder(null));
         panelOpcoes.setBounds(0, 0, 1920, 53);
-//        panelOpcoes.setBounds(0,0,811,JFrame.MAXIMIZED_V);
         contentPane.add(panelOpcoes);
         panelOpcoes.setLayout(null);
-/*
 
-        ImageIcon icon = new ImageIcon(Principal.class.getResource("/com/topicos/telas/background/blur2.jpg"));
-
-        JLabel backbround = new JLabel();
-        backbround.setSize(1920, 1080);
-        backbround.setIcon(icon);
-        contentPane.getSize();
-        contentPane.add(backbround);
-*/
 
         JButton btnExit = new JButton("Exit");
         btnExit.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
@@ -124,13 +113,14 @@ public class Principal extends JFrame {
         SobreItem.addActionListener(list);
 
         btnCadastrar.addActionListener(list);
+
+        /*
         setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setUndecorated(true);
+        setUndecorated(true);*/
 
         contentPane.add(pessoasInternalFrame);
         contentPane.add(aulasInternalFrame);
 
-        setResizable(false);
         setVisible(true);
 
         SairArquivoItem.addActionListener(e->{

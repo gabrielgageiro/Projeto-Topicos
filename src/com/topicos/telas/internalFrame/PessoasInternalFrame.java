@@ -1,14 +1,14 @@
-/*
-Criado por Gabriel Gageiro;
-Data:02/04/18
-*/
-
-
 package com.topicos.telas.internalFrame;
 
-import java.awt.*;
 
-import javax.swing.*;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+import javax.swing.JComboBox;
+import javax.swing.JCheckBox;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class PessoasInternalFrame extends JInternalFrame {
     private JTextField cidadeTextField;
@@ -23,10 +23,10 @@ public class PessoasInternalFrame extends JInternalFrame {
     private JTextField numeroTextField;
 
     public PessoasInternalFrame() {
-        setClosable(true);
         setTitle("Cadastro de Pessoas");
         setBounds(100, 100, 755, 501);
         getContentPane().setLayout(null);
+        setClosable(true);
 
         JLabel nomeLabel = new JLabel("Nome :");
         nomeLabel.setBounds(35, 27, 70, 15);
@@ -133,5 +133,18 @@ public class PessoasInternalFrame extends JInternalFrame {
         numeroTextField.setBounds(597, 161, 62, 19);
         getContentPane().add(numeroTextField);
         numeroTextField.setColumns(10);
+
+        JButton btnSalvar = new JButton("Salvar");
+        btnSalvar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            }
+        });
+        btnSalvar.setBounds(456, 414, 117, 25);
+        getContentPane().add(btnSalvar);
+
+        JButton btnCancelar = new JButton("Cancelar");
+        btnCancelar.setBounds(207, 414, 117, 25);
+        getContentPane().add(btnCancelar);
+
     }
 }

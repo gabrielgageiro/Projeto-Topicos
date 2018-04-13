@@ -1,12 +1,9 @@
 package com.topicos.telas.internalFrame;
 
 
-import javax.swing.JInternalFrame;
-import javax.swing.JLabel;
-import javax.swing.JComboBox;
-import javax.swing.JCheckBox;
-import javax.swing.JTextField;
-import javax.swing.JButton;
+import com.topicos.comum.enums.Estados;
+
+import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -23,11 +20,12 @@ public class PessoasInternalFrame extends JInternalFrame {
     private JTextField numeroTextField;
 
     public PessoasInternalFrame() {
+
         setTitle("Cadastro de Pessoas");
-        setBounds(100, 100, 755, 501);
+        setBounds(100, 100, 700, 501);
         getContentPane().setLayout(null);
         setClosable(true);
-
+        setResizable(true);
         JLabel nomeLabel = new JLabel("Nome :");
         nomeLabel.setBounds(35, 27, 70, 15);
         getContentPane().add(nomeLabel);
@@ -48,8 +46,14 @@ public class PessoasInternalFrame extends JInternalFrame {
         cidadeLabel.setBounds(35, 222, 70, 15);
         getContentPane().add(cidadeLabel);
 
-        JComboBox UFcomboBox = new JComboBox();
-        UFcomboBox.setBounds(359, 217, 32, 24);
+
+        JComboBox<Estados> UFcomboBox = new JComboBox<>();
+
+        //Modificar com o Banco de Dados
+        UFcomboBox.setModel(new DefaultComboBoxModel<>(Estados.values()));
+
+
+        UFcomboBox.setBounds(359, 217, 45, 24);
         getContentPane().add(UFcomboBox);
 
         JLabel emailLabel = new JLabel("Email: ");

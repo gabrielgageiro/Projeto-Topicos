@@ -11,10 +11,8 @@ import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
-import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 
-import com.topicos.listenners.PrincipalListenner;
 import com.topicos.telas.internalFrame.AulasInternalFrame;
 import com.topicos.telas.internalFrame.PessoasInternalFrame;
 

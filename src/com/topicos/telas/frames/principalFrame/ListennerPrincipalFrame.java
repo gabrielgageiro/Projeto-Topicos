@@ -6,8 +6,7 @@ Data:06/04/18
 
 package com.topicos.telas.frames.principalFrame;
 
-import com.topicos.listenners.PrincipalListenner;
-import com.topicos.telas.frames.principalFrame.Principal;
+import com.topicos.comum.listener.PrincipalListenner;
 
 import javax.swing.*;
 

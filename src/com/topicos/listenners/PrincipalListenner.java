@@ -31,9 +31,5 @@ public abstract class PrincipalListenner implements ActionListener{
     public abstract void btnCadastrar();
 
     public abstract void sobreItem();
-/*
-
-*/
-
 
 }

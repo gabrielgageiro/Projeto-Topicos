@@ -36,14 +36,14 @@ public enum Estados {
     TO("Tocantins");
 
 
-    private String descricao;
+    private String uf;
 
-    Estados(String descricao) {
-        this.descricao = descricao;
+    Estados(String uf) {
+        this.uf = uf;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getUF() {
+        return uf;
     }
 }
 

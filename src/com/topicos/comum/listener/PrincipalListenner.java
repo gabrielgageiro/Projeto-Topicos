@@ -13,18 +13,25 @@ import java.awt.event.ActionListener;
 public abstract class PrincipalListenner implements ActionListener{
 
     private JMenuItem SobreItem;
+    private JButton logoff,sair;
 
-
-    public PrincipalListenner(JMenuItem SobreItem){
+    public PrincipalListenner(JMenuItem SobreItem,JButton logoff,JButton sair){
         this.SobreItem=SobreItem;
+        this.logoff=logoff;
+        this.sair=sair;
     }
     public void actionPerformed(ActionEvent evento) {
         if(evento.getSource() == SobreItem)
             sobreItem();
-
+        else if (evento.getSource() == logoff)
+            logoff();
+        else if(evento.getSource() == sair)
+            sair();
     }
 
 
     public abstract void sobreItem();
+    public abstract void sair();
+    public abstract void logoff();
 
 }

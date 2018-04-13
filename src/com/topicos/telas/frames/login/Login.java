@@ -87,34 +87,7 @@ public class Login extends JFrame {
         public void actionPerformed(ActionEvent e) {
 
                 new Principal();
-
-
-            dispose();
-            char[] chars = senha.getPassword();
-            String senha = String.valueOf(chars);
-/*
-            if (new BancoDeDados().validarLogin(login.getText(), senha)) {
                 dispose();
-
-                Calendar c = Calendar.getInstance();
-                SimpleDateFormat ha = new SimpleDateFormat("dd/MM/yyyy");
-
-                try {
-                    String t = new BancoDeDados().getData();
-                    Date data = ha.parse(t);
-                    c.setTime(data);
-
-                    JOptionPane.showMessageDialog(null, "Dias para a devolução de dinheiro: " +
-                            (c.get(Calendar.DAY_OF_YEAR) - Calendar.getInstance().get(Calendar.DAY_OF_YEAR)));
-                } catch (Exception e3) {
-                    System.out.println(e3.getMessage());
-                }
-
-                new TelaPrincipal();
-            } else
-                JOptionPane.showMessageDialog(null, "Login invalido!");
-
-        }*/
         }
     }
 }

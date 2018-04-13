@@ -12,11 +12,24 @@ import javax.swing.*;
 
 public class ListennerPrincipalFrame extends PrincipalListenner {
 
+    private JFrame tp;
 
-    public ListennerPrincipalFrame(JMenuItem SobreItem){
-        super(SobreItem);
+    public ListennerPrincipalFrame(JMenuItem SobreItem,JButton logoff,JButton sair,JFrame tp){
+        super(SobreItem,logoff,sair);
+        this.tp=tp;
     }
 
+
+    @Override
+    public void logoff() {
+//        tp.dispose();
+        System.out.println("logoff da tela principal");
+    }
+
+    @Override
+    public void sair() {
+        tp.dispose();
+    }
 
     @Override
     public void sobreItem() {

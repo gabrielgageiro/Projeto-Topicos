@@ -1,4 +1,4 @@
-package com.topicos.telas.internalFrame;
+package com.topicos.telas.internalFrame.cadastroPessoas;
 
 
 import com.topicos.comum.enums.Estados;

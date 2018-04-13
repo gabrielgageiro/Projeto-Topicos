@@ -4,7 +4,7 @@ Data:02/04/18
 */
 
 
-package com.topicos.telas.internalFrame;
+package com.topicos.telas.internalFrame.cadastroAulas;
 
 import javax.swing.*;
 

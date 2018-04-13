@@ -13,8 +13,8 @@ import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
-import com.topicos.telas.internalFrame.AulasInternalFrame;
-import com.topicos.telas.internalFrame.PessoasInternalFrame;
+import com.topicos.telas.internalFrame.cadastroAulas.AulasInternalFrame;
+import com.topicos.telas.internalFrame.cadastroPessoas.PessoasInternalFrame;
 
 public class Principal extends JFrame {
 
@@ -44,7 +44,7 @@ public class Principal extends JFrame {
     public Principal() {
         setTitle("Topicos Especiais - I");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 811, 562);
+        setBounds(100, 100, 811, 711);
 
         setJMenuBar(menuBar);
 
@@ -106,15 +106,11 @@ public class Principal extends JFrame {
         btnCadastrarTurma.setBounds(412, 6, 131, 45);
         panelOpcoes.add(btnCadastrarTurma);
 
-        ActionListener list = new ListennerPrincipalFrame(btnCadastrar, SobreItem);
+        ActionListener list = new ListennerPrincipalFrame(SobreItem);
 
         SobreItem.addActionListener(list);
 
         btnCadastrar.addActionListener(list);
-
-        /*
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setUndecorated(true);*/
 
         contentPane.add(pessoasInternalFrame);
         contentPane.add(aulasInternalFrame);

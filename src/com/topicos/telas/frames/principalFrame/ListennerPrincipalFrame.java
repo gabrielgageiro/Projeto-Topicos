@@ -13,14 +13,10 @@ import javax.swing.*;
 public class ListennerPrincipalFrame extends PrincipalListenner {
 
 
-    public ListennerPrincipalFrame(JButton btnCadastrar,JMenuItem SobreItem){
-        super(SobreItem,btnCadastrar);
+    public ListennerPrincipalFrame(JMenuItem SobreItem){
+        super(SobreItem);
     }
 
-    @Override
-    public void btnCadastrar() {
-        
-   }
 
     @Override
     public void sobreItem() {

@@ -21,7 +21,7 @@ public abstract class InternalFrameListener implements ActionListener {
         }
         public void actionPerformed(ActionEvent evento) {
             if(evento.getSource() == btnCancelar)
-                sobreItem();
+                btnCancelar();
             else if(evento.getSource() == btnCadastrar)
                 btnCadastrar();
 
@@ -29,6 +29,6 @@ public abstract class InternalFrameListener implements ActionListener {
 
         public abstract void btnCadastrar();
 
-        public abstract void sobreItem();
+        public abstract void btnCancelar();
 
 }

@@ -81,6 +81,7 @@ public class Login extends JFrame {
         login.setText(LogLogin.lerUsuario());
     }
 
+
     @Override
     public String toString() {
         return login.getText();

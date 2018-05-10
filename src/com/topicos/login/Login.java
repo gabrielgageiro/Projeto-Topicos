@@ -4,18 +4,15 @@ Data:23/03/18
 */
 
 
-package com.topicos.telas.frames.login;
+package com.topicos.login;
 
 
-import com.topicos.telas.frames.principalFrame.Principal;
+import com.topicos.login.listener.LoginListener;
+import com.topicos.logs.login.LogLogin;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import static java.lang.System.exit;
-
 
 
 public class Login extends JFrame {
@@ -23,17 +20,23 @@ public class Login extends JFrame {
     private JPasswordField senha;
     private JButton logar;
     private JButton cancelar;
-
+    private ActionListener handle;
     public Login() {
-        super("Tela de login");
+        super("Tela de com.topicos.login");
 
         login = new JTextField();
         senha = new JPasswordField();
 
         logar = new JButton("Logar");
-        logar.addActionListener(new BotaoLogar());
         cancelar = new JButton("Cancelar");
-        cancelar.addActionListener(new BotaoCancelar());
+        //listener
+        handle = new LoginListener(logar,cancelar,this);
+        logar.addActionListener(handle);
+        cancelar.addActionListener(handle);
+
+        //set ultimo usuario
+        setLogin();
+
 
         setLocationRelativeTo(null);
         Container c = getContentPane();
@@ -41,10 +44,10 @@ public class Login extends JFrame {
         c.setLayout(new GridLayout(3, 2, 3, 3));
         //Poe Fonte
         Font fonte = new Font("serif", Font.BOLD | Font.ITALIC, 20);
-        //icones
-        ImageIcon iconeSenha = new ImageIcon("src/com/topicos/telas/icones/senha.png");
+        //com.topicos.icones
+        ImageIcon iconeSenha = new ImageIcon("src/com/topicos/icones/senha.png");
 
-        ImageIcon iconeLogin = new ImageIcon("src/com/topicos/telas/icones/login_photo.png");
+        ImageIcon iconeLogin = new ImageIcon("src/com/topicos/icones/login_photo.png");
 
         //Da forma aos botoes
         JLabel log = new JLabel("Login: ");
@@ -68,27 +71,20 @@ public class Login extends JFrame {
         //tamanho da janela
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 150);
+
         setVisible(true);
         getRootPane().setDefaultButton(logar);
 
     }
 
-    private class BotaoCancelar implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            exit(0);
-        }
+    private void setLogin(){
+        login.setText(LogLogin.lerUsuario());
     }
 
-    private class BotaoLogar implements ActionListener {
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-
-                new Principal();
-                dispose();
-        }
+    @Override
+    public String toString() {
+        return login.getText();
     }
 }
 

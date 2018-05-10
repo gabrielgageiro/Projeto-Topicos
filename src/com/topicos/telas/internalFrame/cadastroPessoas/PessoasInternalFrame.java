@@ -59,7 +59,7 @@ public class PessoasInternalFrame extends JInternalFrame {
         UFcomboBox.setModel(new DefaultComboBoxModel<>(Estados.values()));
 
 
-        UFcomboBox.setBounds(359, 217, 45, 24);
+        UFcomboBox.setBounds(359, 217, 60, 30);
         getContentPane().add(UFcomboBox);
 
         JLabel emailLabel = new JLabel("Email: ");

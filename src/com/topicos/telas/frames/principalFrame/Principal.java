@@ -13,6 +13,7 @@ import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
+import com.topicos.aula.AulaInternalFrame;
 import com.topicos.telas.internalFrame.cadastroAulas.AulasInternalFrame;
 import com.topicos.telas.internalFrame.cadastroPessoas.PessoasInternalFrame;
 
@@ -34,7 +35,9 @@ public class Principal extends JFrame {
 
     private JMenu AjudaMenu = new JMenu("Ajuda");
     private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
-    private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
+    //primeiro modo
+    //private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
+    private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
     private ActionListener handle;
     private JMenuItem SobreItem = new JMenuItem("Sobre");
 
@@ -117,7 +120,7 @@ public class Principal extends JFrame {
         SobreItem.addActionListener(handle);
 
         contentPane.add(pessoasInternalFrame);
-        contentPane.add(aulasInternalFrame);
+        contentPane.add(aulaInternalFrame);
 
         setVisible(true);
 
@@ -131,7 +134,7 @@ public class Principal extends JFrame {
         });
 
         btnCadastrarTurma.addActionListener(e -> {
-            aulasInternalFrame.setVisible(true);
+            aulaInternalFrame.setVisible(true);
         });
 
         btnSalvar.addActionListener(e ->{

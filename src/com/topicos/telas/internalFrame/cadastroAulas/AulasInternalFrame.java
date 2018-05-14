@@ -74,11 +74,10 @@ public class AulasInternalFrame extends JInternalFrame {
 
         btnCancelar.setBounds(35, 375, 117, 25);
         btnCancelar.addActionListener(handle);
-
         getContentPane().add(btnCancelar);
+
         btnCadastrar.setBounds(215, 375, 117, 25);
         btnCadastrar.addActionListener(handle);
-
         getContentPane().add(btnCadastrar);
 
 

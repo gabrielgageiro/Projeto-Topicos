@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 
 public abstract class InternalFrameListener implements ActionListener {
         private JButton btnCadastrar;
-     private JButton btnCancelar;
+        private JButton btnCancelar;
 
 
         public InternalFrameListener(JButton btnCancelar,JButton btnCadastrar){

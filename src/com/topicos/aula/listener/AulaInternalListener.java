@@ -18,12 +18,12 @@ public class AulaInternalListener extends InternalFrameListener {
 
     @Override
     public void btnCadastrar() {
-        System.out.println("Cadastrar Pessoa");
+        System.out.println("Cadastrar Aula");
     }
 
     @Override
     public void btnCancelar() {
-        System.out.println("Cancela Pessoa");
+        System.out.println("Cancelar Aula");
     }
 }
 

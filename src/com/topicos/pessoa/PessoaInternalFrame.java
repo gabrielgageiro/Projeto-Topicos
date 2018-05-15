@@ -224,6 +224,7 @@ public class PessoaInternalFrame extends JInternalFrame {
 		lblPis.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblPis.setBounds(236, 356, 46, 14);
 		getContentPane().add(lblPis);
+		lblPis.setEnabled(false);
 
 		txtPis = new JTextField();
 		txtPis.setBounds(276, 354, 92, 20);

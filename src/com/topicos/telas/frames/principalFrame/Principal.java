@@ -1,20 +1,12 @@
 package com.topicos.telas.frames.principalFrame;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import java.awt.Color;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
-import com.topicos.telas.internalFrame.cadastroAulas.AulasInternalFrame;
-import com.topicos.telas.internalFrame.cadastroPessoas.PessoasInternalFrame;
+import com.topicos.aula.AulaInternalFrame;
+import com.topicos.pessoa.PessoaInternalFrame;
 
 public class Principal extends JFrame {
 
@@ -33,8 +25,15 @@ public class Principal extends JFrame {
     private JMenuItem RemoverUsuarioItem = new JMenuItem("Remover Usuario");
 
     private JMenu AjudaMenu = new JMenu("Ajuda");
-    private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
-    private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
+
+    //primeiro modo pessoa
+    //private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
+    private PessoaInternalFrame pessoaInternalFrame = new PessoaInternalFrame();
+
+    //primeiro modo aula
+    //private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
+    private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
+
     private ActionListener handle;
     private JMenuItem SobreItem = new JMenuItem("Sobre");
 
@@ -116,8 +115,8 @@ public class Principal extends JFrame {
 
         SobreItem.addActionListener(handle);
 
-        contentPane.add(pessoasInternalFrame);
-        contentPane.add(aulasInternalFrame);
+        contentPane.add(pessoaInternalFrame);
+        contentPane.add(aulaInternalFrame);
 
         setVisible(true);
 
@@ -127,11 +126,11 @@ public class Principal extends JFrame {
         });
 
         btnCadastrar.addActionListener(e -> {
-            pessoasInternalFrame.setVisible(true);
+            pessoaInternalFrame.setVisible(true);
         });
 
         btnCadastrarTurma.addActionListener(e -> {
-            aulasInternalFrame.setVisible(true);
+            aulaInternalFrame.setVisible(true);
         });
 
         btnSalvar.addActionListener(e ->{

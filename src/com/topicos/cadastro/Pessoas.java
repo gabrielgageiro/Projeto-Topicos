@@ -11,20 +11,20 @@ public class Pessoas {
     private Integer id;
     private String nome;
     private String sobrenome;
-    private Integer CPF;
+    private String CPF;
     private String cidade;
     private String UF;
     private String email;
     private String email2;
     private String rua;
-    private Integer telefone;
-    private Integer telefone2;
+    private String telefone;
+    private String telefone2;
     private int numeroCasa;
     private int idade;
 
-    public Pessoas(String nome,String sobrenome,Integer CEP,String cidade,String UF,
-                   String email,String email2,String rua,Integer telefone,Integer telefone2,
-                   int numeroCasa,int idade){
+    public Pessoas(String nome, String sobrenome, String CEP, String cidade, String UF,
+                   String email, String email2, String rua, String telefone, String telefone2,
+                   int numeroCasa, int idade){
 
         this.nome=nome;
         this.sobrenome=sobrenome;
@@ -68,11 +68,11 @@ public class Pessoas {
         this.sobrenome = sobrenome;
     }
 
-    public Integer getCPF() {
+    public String getCPF() {
         return CPF;
     }
 
-    public void setCPF(Integer CPF) {
+    public void setCPF(String CPF) {
         this.CPF = CPF;
     }
 
@@ -116,19 +116,19 @@ public class Pessoas {
         this.rua = rua;
     }
 
-    public Integer getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(Integer telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    public Integer getTelefone2() {
+    public String getTelefone2() {
         return telefone2;
     }
 
-    public void setTelefone2(Integer telefone2) {
+    public void setTelefone2(String telefone2) {
         this.telefone2 = telefone2;
     }
 

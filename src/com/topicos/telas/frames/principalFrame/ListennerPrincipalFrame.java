@@ -7,6 +7,7 @@ Data:06/04/18
 package com.topicos.telas.frames.principalFrame;
 
 import com.topicos.comum.listener.PrincipalListenner;
+import com.topicos.logs.logsys.LogDeAcoes;
 
 import javax.swing.*;
 
@@ -29,6 +30,7 @@ public class ListennerPrincipalFrame extends PrincipalListenner {
     @Override
     public void sair() {
         tp.dispose();
+        LogDeAcoes.salvarLog("logoff");
     }
 
     @Override
@@ -38,6 +40,7 @@ public class ListennerPrincipalFrame extends PrincipalListenner {
             "<p>ERP para bibliotecas</p>"+"Desenvolvido por Erick, Gabriel, Marcelo"+"</html>";
 
             JOptionPane.showMessageDialog(null,a,"AJUDA",JOptionPane.INFORMATION_MESSAGE);
+            LogDeAcoes.salvarLog("Sobre Item");
         }
     }
 }

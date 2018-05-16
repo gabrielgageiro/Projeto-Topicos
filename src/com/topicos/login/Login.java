@@ -29,14 +29,16 @@ public class Login extends JFrame {
 
         logar = new JButton("Logar");
         cancelar = new JButton("Cancelar");
+
         //listener
-        handle = new LoginListener(logar,cancelar,this);
-        logar.addActionListener(handle);
-        cancelar.addActionListener(handle);
+//
+//        handle = new LoginListener(logar,this);
+//
+//        logar.addActionListener(handle);
+//        cancelar.addActionListener(handle);
 
         //set ultimo usuario
         setLogin();
-
 
         setLocationRelativeTo(null);
         Container c = getContentPane();
@@ -74,13 +76,15 @@ public class Login extends JFrame {
 
         setVisible(true);
         getRootPane().setDefaultButton(logar);
-
+        new LoginListener(logar,this);
     }
 
     private void setLogin(){
         login.setText(LogLogin.lerUsuario());
     }
-
+    public void fechar(){
+        dispose();
+    }
 
     @Override
     public String toString() {

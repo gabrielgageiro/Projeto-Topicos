@@ -32,7 +32,6 @@ public final class  LogDeAcoes {
         String dados = localDateTime.format(FORMATADOR) + "\t" + "|" + "\t" + usuario +
                  "\t" +   "\t" + "|"  + "\t" +  evento +"\n";
 
-
         try {
             FileWriter fileWriter = new FileWriter("log.txt",true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);

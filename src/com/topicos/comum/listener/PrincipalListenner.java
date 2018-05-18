@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 
 public abstract class PrincipalListenner implements ActionListener{
 
-    private JMenuItem SobreItem;
+    private JMenuItem SobreItem, ListarAlunoItem;
     private JButton logoff,sair;
 
     public PrincipalListenner(JMenuItem SobreItem,JButton logoff,JButton sair){
@@ -33,5 +33,6 @@ public abstract class PrincipalListenner implements ActionListener{
     public abstract void sobreItem();
     public abstract void sair();
     public abstract void logoff();
+
 
 }

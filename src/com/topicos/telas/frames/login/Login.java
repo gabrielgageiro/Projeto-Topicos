@@ -28,7 +28,9 @@ public class Login extends JFrame {
         super("Tela de login");
 
         login = new JTextField();
+        login.setTransferHandler(null);
         senha = new JPasswordField();
+        senha.setTransferHandler(null);
 
         logar = new JButton("Logar");
         logar.addActionListener(new BotaoLogar());

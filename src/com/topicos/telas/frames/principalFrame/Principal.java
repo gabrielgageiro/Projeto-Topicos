@@ -76,11 +76,11 @@ public class Principal extends JFrame {
         btnExit.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
         btnExit.setVerticalTextPosition(SwingConstants.BOTTOM);
         btnExit.setBackground(UIManager.getColor("Button.background"));
-        btnExit.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/exit.png")));
+        btnExit.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/exit.png")));
         btnExit.setBounds(12, 6, 70, 45);
 
         JButton btnSalvar = new JButton("Salvar");
-        btnSalvar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/floppy_disk_sh.png")));
+        btnSalvar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/floppy_disk_sh.png")));
         btnSalvar.setBorder(new LineBorder(new Color(0, 0, 0)));
         btnSalvar.setIconTextGap(1);
         btnSalvar.setBounds(94, 6, 70, 45);
@@ -96,19 +96,21 @@ public class Principal extends JFrame {
 
         btnLogout.addActionListener(handle);
         btnLogout.setBounds(176, 6, 81, 45);
-        btnLogout.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/logout.png")));
+        btnLogout.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/logout.png")));
         panelOpcoes.add(btnLogout);
 
         JButton btnCadastrar = new JButton("Cadastrar");
+
         btnCadastrar.setBorder(new LineBorder
                 (new Color(0, 0, 0)));
         btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/register.png")));
+
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
         JButton btnCadastrarTurma = new JButton("Cadastrar Turma");
         btnCadastrarTurma.setBorder(new LineBorder(new Color(0, 0, 0)));
-        btnCadastrarTurma.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/register.png")));
+        btnCadastrarTurma.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
         btnCadastrarTurma.setBounds(412, 6, 131, 45);
         panelOpcoes.add(btnCadastrarTurma);
 

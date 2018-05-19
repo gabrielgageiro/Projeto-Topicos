@@ -103,7 +103,8 @@ public class Principal extends JFrame {
 
         btnCadastrar.setBorder(new LineBorder
                 (new Color(0, 0, 0)));
-        btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/register.png")));
+
+        btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
 
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);

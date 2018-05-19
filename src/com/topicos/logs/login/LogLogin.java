@@ -15,7 +15,7 @@ public class LogLogin {
     public static void salvar(String user){
 
         try {
-            FileOutputStream fos = new FileOutputStream("user.dat");
+            FileOutputStream fos = new FileOutputStream("user.log");
 
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
@@ -31,11 +31,11 @@ public class LogLogin {
 
     public static String lerUsuario() {
 
-        File file = new File("user.dat");
+        File file = new File("user.log");
         if (!file.exists()) {
             try {
 
-                new File("user.dat").createNewFile();
+                new File("user.log").createNewFile();
                 return "";
             } catch (IOException e) {
                 e.printStackTrace();
@@ -43,7 +43,7 @@ public class LogLogin {
         }
 
         try {
-            FileInputStream fis = new FileInputStream("user.dat");
+            FileInputStream fis = new FileInputStream("user.log");
             ObjectInputStream ois = new ObjectInputStream(fis);
 
             Object obj = ois.readObject();

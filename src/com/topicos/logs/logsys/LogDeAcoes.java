@@ -27,22 +27,30 @@ public final class  LogDeAcoes {
 
 
     public static void salvarLog(String evento){
+        new Thread(() -> {
+            try {
 
-        LocalDateTime localDateTime = LocalDateTime.now();
-        String dados = localDateTime.format(FORMATADOR) + "\t" + "|" + "\t" + usuario +
-                 "\t" +   "\t" + "|"  + "\t" +  evento +"\n";
+                LocalDateTime localDateTime = LocalDateTime.now();
+                String dados = localDateTime.format(FORMATADOR) + "\t" + "|" + "\t" + usuario +
+                        "\t" +   "\t" + "|"  + "\t" +  evento +"\n";
 
-        try {
-            FileWriter fileWriter = new FileWriter("log.txt",true);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            bufferedWriter.write(dados);
-            bufferedWriter.flush();
-            bufferedWriter.close();
+                try {
+                    FileWriter fileWriter = new FileWriter("log.log",true);
+                    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                    bufferedWriter.write(dados);
+                    bufferedWriter.flush();
+                    bufferedWriter.close();
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                LogDeAcoes.salvarLog(e.getStackTrace().toString());
+            }
+        }).start();
+
     }
 
 }

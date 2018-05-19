@@ -20,7 +20,6 @@ public class Login extends JFrame {
     private JPasswordField senha;
     private JButton logar;
     private JButton cancelar;
-    private ActionListener handle;
     public Login() {
         super("Tela de com.topicos.login");
 
@@ -29,15 +28,6 @@ public class Login extends JFrame {
 
         logar = new JButton("Logar");
         cancelar = new JButton("Cancelar");
-
-        //listener
-//
-//        handle = new LoginListener(logar,this);
-//
-//        logar.addActionListener(handle);
-//        cancelar.addActionListener(handle);
-
-        //set ultimo usuario
         setLogin();
 
         setLocationRelativeTo(null);

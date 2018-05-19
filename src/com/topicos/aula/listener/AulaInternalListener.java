@@ -6,6 +6,7 @@ Data: 13/05/18
 package com.topicos.aula.listener;
 
 import com.topicos.comum.listener.InternalFrameListener;
+import com.topicos.logs.logsys.LogDeAcoes;
 
 import javax.swing.*;
 
@@ -18,12 +19,14 @@ public class AulaInternalListener extends InternalFrameListener {
 
     @Override
     public void btnCadastrar() {
-        System.out.println("Cadastrar Aula");
+        LogDeAcoes.salvarLog("Cadastrar Aula");
+
     }
 
     @Override
     public void btnCancelar() {
-        System.out.println("Cancelar Aula");
+        LogDeAcoes.salvarLog("cancelar Aula");
+
     }
 }
 

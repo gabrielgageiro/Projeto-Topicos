@@ -45,6 +45,8 @@ public class LoginListener implements ActionListener {
     }
 
     private  void sair(){
+        LogDeAcoes.salvarLog("sair");
+
         tl.dispose();
     }
 

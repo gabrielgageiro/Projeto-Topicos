@@ -31,7 +31,6 @@ public class App {
             e.printStackTrace();
         }
        new Login();
-//        new Principal();
     }
 
 }

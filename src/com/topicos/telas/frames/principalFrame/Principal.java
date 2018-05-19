@@ -1,20 +1,12 @@
 package com.topicos.telas.frames.principalFrame;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import java.awt.Color;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
-import com.topicos.telas.internalFrame.cadastroAulas.AulasInternalFrame;
-import com.topicos.telas.internalFrame.cadastroPessoas.PessoasInternalFrame;
+import com.topicos.aula.AulaInternalFrame;
+import com.topicos.pessoa.PessoaInternalFrame;
 
 public class Principal extends JFrame {
 
@@ -33,8 +25,15 @@ public class Principal extends JFrame {
     private JMenuItem RemoverUsuarioItem = new JMenuItem("Remover Usuario");
 
     private JMenu AjudaMenu = new JMenu("Ajuda");
-    private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
-    private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
+
+    //primeiro modo pessoa
+    //private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
+    private PessoaInternalFrame pessoaInternalFrame = new PessoaInternalFrame();
+
+    //primeiro modo aula
+    //private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
+    private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
+
     private ActionListener handle;
     private JMenuItem SobreItem = new JMenuItem("Sobre");
 
@@ -79,11 +78,11 @@ public class Principal extends JFrame {
         btnExit.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
         btnExit.setVerticalTextPosition(SwingConstants.BOTTOM);
         btnExit.setBackground(UIManager.getColor("Button.background"));
-        btnExit.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/exit.png")));
+        btnExit.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/exit.png")));
         btnExit.setBounds(12, 6, 70, 45);
 
         JButton btnSalvar = new JButton("Salvar");
-        btnSalvar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/floppy_disk_sh.png")));
+        btnSalvar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/floppy_disk_sh.png")));
         btnSalvar.setBorder(new LineBorder(new Color(0, 0, 0)));
         btnSalvar.setIconTextGap(1);
         btnSalvar.setBounds(94, 6, 70, 45);
@@ -98,26 +97,26 @@ public class Principal extends JFrame {
 
         btnLogout.addActionListener(handle);
         btnLogout.setBounds(176, 6, 81, 45);
-        btnLogout.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/logout.png")));
+        btnLogout.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/logout.png")));
         panelOpcoes.add(btnLogout);
 
         JButton btnCadastrar = new JButton("Cadastrar");
         btnCadastrar.setBorder(new LineBorder(new Color(0, 0, 0)));
-        btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/register.png")));
+        btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
         JButton btnCadastrarTurma = new JButton("Cadastrar Turma");
         btnCadastrarTurma.setBorder(new LineBorder(new Color(0, 0, 0)));
-        btnCadastrarTurma.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/register.png")));
+        btnCadastrarTurma.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
         btnCadastrarTurma.setBounds(412, 6, 131, 45);
         panelOpcoes.add(btnCadastrarTurma);
 
 
         SobreItem.addActionListener(handle);
 
-        contentPane.add(pessoasInternalFrame);
-        contentPane.add(aulasInternalFrame);
+        contentPane.add(pessoaInternalFrame);
+        contentPane.add(aulaInternalFrame);
 
         setVisible(true);
 
@@ -127,11 +126,11 @@ public class Principal extends JFrame {
         });
 
         btnCadastrar.addActionListener(e -> {
-            pessoasInternalFrame.setVisible(true);
+            pessoaInternalFrame.setVisible(true);
         });
 
         btnCadastrarTurma.addActionListener(e -> {
-            aulasInternalFrame.setVisible(true);
+            aulaInternalFrame.setVisible(true);
         });
 
         btnSalvar.addActionListener(e ->{

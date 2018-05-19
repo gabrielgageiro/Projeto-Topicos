@@ -8,9 +8,10 @@ package com.topicos.cadastro;
 
 
 public class Pessoas {
+    private Integer id;
     private String nome;
     private String sobrenome;
-    private String CEP;
+    private String CPF;
     private String cidade;
     private String UF;
     private String email;
@@ -21,13 +22,13 @@ public class Pessoas {
     private int numeroCasa;
     private int idade;
 
-    public Pessoas(String nome,String sobrenome,String CEP,String cidade,String UF,
-                   String email,String email2,String rua,String telefone,String telefone2,
-                   int numeroCasa,int idade){
+    public Pessoas(String nome, String sobrenome, String CEP, String cidade, String UF,
+                   String email, String email2, String rua, String telefone, String telefone2,
+                   int numeroCasa, int idade){
 
         this.nome=nome;
         this.sobrenome=sobrenome;
-        this.CEP=CEP;
+        this.CPF=CEP;
         this.cidade=cidade;
         this.UF=UF;
         this.email=email;
@@ -37,6 +38,18 @@ public class Pessoas {
         this.telefone2=telefone2;
         this.numeroCasa=numeroCasa;
         this.idade=idade;
+    }
+
+    public boolean novo(){
+       return id == null;
+    }
+
+    public void setId(Integer id){
+        this.id=id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getNome() {
@@ -55,12 +68,12 @@ public class Pessoas {
         this.sobrenome = sobrenome;
     }
 
-    public String getCEP() {
-        return CEP;
+    public String getCPF() {
+        return CPF;
     }
 
-    public void setCEP(String CEP) {
-        this.CEP = CEP;
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
 
     public String getCidade() {

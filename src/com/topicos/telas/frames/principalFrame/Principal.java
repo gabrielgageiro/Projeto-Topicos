@@ -6,6 +6,7 @@ import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
 import com.topicos.aula.AulaInternalFrame;
+import com.topicos.pessoa.ListarAluno;
 import com.topicos.pessoa.PessoaInternalFrame;
 
 public class Principal extends JFrame {
@@ -20,18 +21,15 @@ public class Principal extends JFrame {
 
     private JMenu AdminMenu = new JMenu("Admin");
     private JButton btnExit;
-    private JMenuItem AdicionarUsuarioItem = new JMenuItem("Adicionar Usuario");
+    private JMenuItem ListarAlunoItem = new JMenuItem("Listar Aluno");
 
     private JMenuItem RemoverUsuarioItem = new JMenuItem("Remover Usuario");
 
     private JMenu AjudaMenu = new JMenu("Ajuda");
 
-    //primeiro modo pessoa
-    //private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
     private PessoaInternalFrame pessoaInternalFrame = new PessoaInternalFrame();
+    private ListarAluno listarAluno = new ListarAluno();
 
-    //primeiro modo aula
-    //private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
     private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
 
     private ActionListener handle;
@@ -54,13 +52,14 @@ public class Principal extends JFrame {
 
         menuBar.add(AdminMenu);
 
-        AdminMenu.add(AdicionarUsuarioItem);
+        AdminMenu.add(ListarAlunoItem);
 
         AdminMenu.add(RemoverUsuarioItem);
 
         menuBar.add(AjudaMenu);
 
         AjudaMenu.add(SobreItem);
+
         contentPane = new JPanel();
         contentPane.setBorder(new LineBorder(new Color(0, 0, 0)));
         setContentPane(contentPane);
@@ -71,7 +70,6 @@ public class Principal extends JFrame {
         panelOpcoes.setBounds(0, 0, 1920, 53);
         contentPane.add(panelOpcoes);
         panelOpcoes.setLayout(null);
-
 
         btnExit = new JButton("Exit");
 
@@ -90,6 +88,7 @@ public class Principal extends JFrame {
 
         btnLogout = new JButton("Logout");
         btnLogout.setBorder(new LineBorder(new Color(0, 0, 0)));
+
         handle = new ListennerPrincipalFrame(SobreItem, btnLogout, btnExit, this);
         btnExit.addActionListener(handle);
 
@@ -101,8 +100,11 @@ public class Principal extends JFrame {
         panelOpcoes.add(btnLogout);
 
         JButton btnCadastrar = new JButton("Cadastrar");
-        btnCadastrar.setBorder(new LineBorder(new Color(0, 0, 0)));
-        btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
+
+        btnCadastrar.setBorder(new LineBorder
+                (new Color(0, 0, 0)));
+        btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/telas/icones/register.png")));
+
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
@@ -112,14 +114,15 @@ public class Principal extends JFrame {
         btnCadastrarTurma.setBounds(412, 6, 131, 45);
         panelOpcoes.add(btnCadastrarTurma);
 
-
         SobreItem.addActionListener(handle);
 
         contentPane.add(pessoaInternalFrame);
         contentPane.add(aulaInternalFrame);
+        contentPane.add(listarAluno);
 
         setVisible(true);
 
+        ListarAlunoItem.addActionListener(evt -> listarAluno.setVisible(true));
 
         SairArquivoItem.addActionListener(e -> {
             dispose();
@@ -138,4 +141,8 @@ public class Principal extends JFrame {
         });
 
     }
+
+    //public void ListarAluno(java.awt.event.ActionEvent evt){
+        //listarAluno.setVisible(true);
+    //}
 }

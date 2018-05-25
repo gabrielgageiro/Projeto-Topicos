@@ -8,13 +8,13 @@ import javax.swing.*;
 import java.awt.Font;
 import javax.swing.table.DefaultTableModel;
 
-public class ListarAluno extends JInternalFrame {
-    private JTable tabelaAluno;
-    private JTextField txtProcurarAluno;
+public class ListarProfessor extends JInternalFrame{
+    private JTable tabelaProfessor;
+    private JTextField txtProcurarProfessor;
     private DefaultTableModel val;
 
-    public ListarAluno() {
-        super("Listagem de Aluno");
+    public ListarProfessor(){
+        super("Listagem de Professor");
         setClosable(true);
         setBounds(100, 100, 450, 422);
         getContentPane().setLayout(null);
@@ -22,13 +22,13 @@ public class ListarAluno extends JInternalFrame {
         String [] colunas = {"Nome", "Curso", "Email", "Telefone"};
 
         Object [][] dados = {
-                {"Ana Maria", "Inglês", "ana.monteiro@gmail.com", "48 99237898"},
-                {"João da Silva", "Inglês", "joaosilva@hotmail.com", "48 88903345"},
-                {"Pedro Pedras", "Espanhol", "pedrinho@gmail.com", "48 9870-5634"}
+                {"Jorge Maciel", "Inglês", "jorge.maciel@gmail.com", "48 99237898"},
+                {"Maria Dolores", "Alemão", "doloresmaria@hotmail.com", "48 88903345"},
+                {"Otávio Rubres", "Espanhol", "tavaorubres@gmail.com", "48 9870-5634"}
         };
 
-        tabelaAluno = new JTable(dados, colunas);
-        JScrollPane barraRolagem = new JScrollPane(tabelaAluno);
+        tabelaProfessor = new JTable(dados, colunas);
+        JScrollPane barraRolagem = new JScrollPane(tabelaProfessor);
         barraRolagem.setBounds(10, 68, 414, 313);
 
         getContentPane().add(barraRolagem);
@@ -48,10 +48,10 @@ public class ListarAluno extends JInternalFrame {
         btnBuscar.setBounds(216, 37, 89, 20);
         getContentPane().add(btnBuscar);
 
-        txtProcurarAluno = new JTextField();
-        txtProcurarAluno.setBounds(10, 37, 196, 20);
-        getContentPane().add(txtProcurarAluno);
-        txtProcurarAluno.setColumns(10);
-
+        txtProcurarProfessor = new JTextField();
+        txtProcurarProfessor.setBounds(10, 37, 196, 20);
+        getContentPane().add(txtProcurarProfessor);
+        txtProcurarProfessor.setColumns(10);
     }
+
 }

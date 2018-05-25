@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import com.topicos.aula.AulaInternalFrame;
 import com.topicos.pessoa.ListarAluno;
+import com.topicos.pessoa.ListarProfessor;
 import com.topicos.pessoa.PessoaInternalFrame;
 
 public class Principal extends JFrame {
@@ -21,7 +22,9 @@ public class Principal extends JFrame {
 
     private JMenu AdminMenu = new JMenu("Admin");
     private JButton btnExit;
+
     private JMenuItem ListarAlunoItem = new JMenuItem("Listar Aluno");
+    private JMenuItem ListarProfessorItem = new JMenuItem("Listar Professor");
 
     private JMenuItem RemoverUsuarioItem = new JMenuItem("Remover Usuario");
 
@@ -29,6 +32,7 @@ public class Principal extends JFrame {
 
     private PessoaInternalFrame pessoaInternalFrame = new PessoaInternalFrame();
     private ListarAluno listarAluno = new ListarAluno();
+    private ListarProfessor listarProfessor = new ListarProfessor();
 
     private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
 
@@ -53,6 +57,8 @@ public class Principal extends JFrame {
         menuBar.add(AdminMenu);
 
         AdminMenu.add(ListarAlunoItem);
+
+        AdminMenu.add(ListarProfessorItem);
 
         AdminMenu.add(RemoverUsuarioItem);
 
@@ -120,10 +126,12 @@ public class Principal extends JFrame {
         contentPane.add(pessoaInternalFrame);
         contentPane.add(aulaInternalFrame);
         contentPane.add(listarAluno);
+        contentPane.add(listarProfessor);
 
         setVisible(true);
 
         ListarAlunoItem.addActionListener(evt -> listarAluno.setVisible(true));
+        ListarProfessorItem.addActionListener(evt -> listarProfessor.setVisible(true));
 
         SairArquivoItem.addActionListener(e -> {
             dispose();

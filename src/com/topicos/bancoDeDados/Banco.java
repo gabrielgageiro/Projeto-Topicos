@@ -7,7 +7,9 @@ Data:09/05/18
 package com.topicos.bancoDeDados;
 
 import com.topicos.cadastro.Pessoas;
+import com.topicos.logs.logsys.LogDeAcoes;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -33,11 +35,12 @@ public class Banco {
                 connection = DriverManager.getConnection(URL, USUARIO, SENHA);
 
             } catch (SQLException e) {
-                System.err.println("Erro: " + e.getMessage());
+                LogDeAcoes.salvarLog(e.getMessage());
             }
 
             if (connection == null)
-                System.err.println("Não foi possivel realizar conexão");
+                JOptionPane.showMessageDialog(null, "Não foi possivel conectar ao banco"
+                        , "Erro de conexao", JOptionPane.ERROR_MESSAGE);
 
         }
 
@@ -52,7 +55,7 @@ public class Banco {
                 return true;
 
             } catch (SQLException e) {
-                e.getMessage();
+                LogDeAcoes.salvarLog(e.getMessage());
             }
         }
 
@@ -80,6 +83,3 @@ public class Banco {
         }
     }
 }
-
-
-

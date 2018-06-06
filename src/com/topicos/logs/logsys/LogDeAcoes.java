@@ -12,14 +12,12 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-import java.util.ArrayList;
 import java.util.Locale;
 
 public final class LogDeAcoes {
 
 
     private static String usuario;
-    private static ArrayList<String> log = new ArrayList<>();
     private static LocalDateTime localDateTime;
     private static final DateTimeFormatter FORMATADOR = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
             .withLocale(new Locale("pt", "br"));

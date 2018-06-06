@@ -23,7 +23,6 @@ public class LoginListener implements ActionListener {
         this.login=login;
         this.tl=tl;
         login.addActionListener(this);
-
     }
 
     @Override
@@ -31,8 +30,6 @@ public class LoginListener implements ActionListener {
         if (e.getSource() == login) {
             validarLogin();
         }
-        else
-            sair();
     }
 
 
@@ -44,10 +41,5 @@ public class LoginListener implements ActionListener {
         new Principal();
     }
 
-    private  void sair(){
-        LogDeAcoes.salvarLog("sair");
-
-        tl.dispose();
-    }
 
 }

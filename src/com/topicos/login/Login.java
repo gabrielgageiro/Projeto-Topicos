@@ -42,7 +42,7 @@ public class Login extends JFrame {
 
         //Da forma aos botoes
         JLabel log = new JLabel("Login: ");
-        log.setBounds(12, 0, 129, 38);
+        log.setBounds(10, 0, 131, 38);
 
         log.setIcon(iconeLogin);
         log.setToolTipText("Insira seu usuario");
@@ -65,11 +65,12 @@ public class Login extends JFrame {
 
         //tamanho da janela
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 150);
+        setSize(300, 130);
+        setResizable(false);
 
         setVisible(true);
         getRootPane().setDefaultButton(logar);
-        new LoginListener(logar,this);
+        LoginListener loginListener = new LoginListener(logar,this);
     }
 
     private void setLogin(){

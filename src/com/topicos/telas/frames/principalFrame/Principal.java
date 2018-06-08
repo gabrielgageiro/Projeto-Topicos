@@ -1,11 +1,12 @@
 package com.topicos.telas.frames.principalFrame;
 
 import javax.swing.*;
-import java.awt.Color;
+import java.awt.*;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
 import com.topicos.aula.AulaInternalFrame;
+import com.topicos.logs.login.LogLogin;
 import com.topicos.pessoa.ListarAluno;
 import com.topicos.pessoa.ListarProfessor;
 import com.topicos.pessoa.PessoaInternalFrame;
@@ -39,6 +40,9 @@ public class Principal extends JFrame {
     private ActionListener handle;
     private JMenuItem SobreItem = new JMenuItem("Sobre");
 
+    private JLabel userNameLabel = new JLabel("Bem-vindo, " + LogLogin.lerUsuario());
+
+
     /**
      * Create the frame.
      */
@@ -65,6 +69,10 @@ public class Principal extends JFrame {
         menuBar.add(AjudaMenu);
 
         AjudaMenu.add(SobreItem);
+
+        menuBar.add(new javax.swing.JSeparator(SwingConstants.VERTICAL));
+
+        menuBar.add(userNameLabel);
 
         contentPane = new JPanel();
         contentPane.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -127,6 +135,9 @@ public class Principal extends JFrame {
         contentPane.add(aulaInternalFrame);
         contentPane.add(listarAluno);
         contentPane.add(listarProfessor);
+
+        userNameLabel.setForeground(Color.white);
+        userNameLabel.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
         setVisible(true);
 

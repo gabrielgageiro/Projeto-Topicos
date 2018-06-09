@@ -62,24 +62,4 @@ public class Banco {
         return false;
     }
 
-    public static void inserir(Pessoas p) {
-        String sql;
-
-        if (p.novo()) {
-            sql = "INSERT INTO PESSOA (NM_PESSOA,VL_CPF,DS_RUA,DS_UF,DS_CIDADE,VL_CASA,VL_TELEFONE,VL_CELULAR) VALUES (" +
-                    p.getNome() + "," + p.getCPF() + "," + p.getRua() + "," + p.getUF() + "," + p.getCidade() + "," +
-                    p.getNumeroCasa() + "," + p.getTelefone() + "," + p.getTelefone2() + ")";
-
-        } else {
-            sql = "UPDATE PESSOA SET " + "(NM_PESSOA,VL_CPF,DS_RUA,DS_UF,DS_CIDADE,VL_CASA,VL_TELEFONE,VL_CELULAR)" + "(= ? WHERE id = " +
-                    p.getId();
-        }
-        try {
-            PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.execute();
-            stmt.close();
-        } catch (Exception e) {
-            System.out.println("ERRO" + e.getMessage());
-        }
-    }
 }

@@ -10,16 +10,11 @@ public class Aluno extends Pessoas {
     private boolean pagamentoEmdia;
     private String curso;
 
-
-    public Aluno(String nome, String sobrenome, String CEP, String cidade, String UF, String email,
-                 String email2, String rua, String telefone, String telefone2, int numeroCasa,
-                 int idade,boolean pagamentoEmdia,String curso) {
-
-        super(nome, sobrenome, CEP, cidade, UF, email, email2, rua, telefone, telefone2,
-                numeroCasa, idade);
-
-        this.curso=curso;
-        this.pagamentoEmdia=pagamentoEmdia;
+    public Aluno(Integer id, String nome, String sobrenome, String CPF, int idade,
+                 Endereco endereco, Contato contato, boolean pagamentoEmdia, String curso) {
+        super(id, nome, sobrenome, CPF, idade, endereco, contato);
+        this.pagamentoEmdia = pagamentoEmdia;
+        this.curso = curso;
     }
 
     public boolean isPagamentoEmdia() {

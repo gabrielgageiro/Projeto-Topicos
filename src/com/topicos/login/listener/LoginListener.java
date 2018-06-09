@@ -7,6 +7,7 @@ Data:08/05/18
 package com.topicos.login.listener;
 
 import com.topicos.logs.login.LogLogin;
+import com.topicos.logs.logsys.LogDeAcoes;
 import com.topicos.telas.frames.principalFrame.Principal;
 
 import javax.swing.*;
@@ -15,15 +16,12 @@ import java.awt.event.ActionListener;
 
 public class LoginListener implements ActionListener {
 
-    private JButton login,cancelar;
+    private JButton login;
     private JFrame tl;
 
-    public LoginListener(JButton login, JButton cancelar,JFrame tl){
+    public LoginListener(JButton login,JFrame tl){
         this.login=login;
-        this.cancelar=cancelar;
         this.tl=tl;
-
-        cancelar.addActionListener(this);
         login.addActionListener(this);
     }
 
@@ -32,20 +30,16 @@ public class LoginListener implements ActionListener {
         if (e.getSource() == login) {
             validarLogin();
         }
-        else
-            sair();
     }
 
 
     private void validarLogin(){
         LogLogin.salvar(tl.toString());
         tl.dispose();
-
+        new LogDeAcoes(tl.toString());
+        LogDeAcoes.salvarLog("tela principal");
         new Principal();
     }
 
-    private  void sair(){
-        tl.dispose();
-    }
 
 }

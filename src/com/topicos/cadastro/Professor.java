@@ -14,18 +14,13 @@ public class Professor extends Pessoas {
     private String modulos;
     private int numeroPIS;
 
-
-    public Professor(String nome, String sobrenome, String CEP, String cidade, String UF,
-                     String email, String email2, String rua, String telefone, String telefone2,
-                     int numeroCasa, int idade, BigDecimal salario,String modulos, int numeroPIS) {
-
-        super(nome, sobrenome, CEP, cidade, UF, email, email2, rua, telefone, telefone2,
-                numeroCasa, idade);
-        this.modulos=modulos;
-        this.numeroPIS=numeroPIS;
-        this.salario=salario;
+    public Professor(Integer id, String nome, String sobrenome, String CPF, int idade,
+                     Endereco endereco, Contato contato, BigDecimal salario, String modulos, int numeroPIS) {
+        super(id, nome, sobrenome, CPF, idade, endereco, contato);
+        this.salario = salario;
+        this.modulos = modulos;
+        this.numeroPIS = numeroPIS;
     }
-
 
     public BigDecimal getSalario() {
         return salario;

@@ -7,7 +7,9 @@ Data:09/05/18
 package com.topicos.bancoDeDados;
 
 import com.topicos.cadastro.Pessoas;
+import com.topicos.logs.logsys.LogDeAcoes;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -33,11 +35,12 @@ public class Banco {
                 connection = DriverManager.getConnection(URL, USUARIO, SENHA);
 
             } catch (SQLException e) {
-                System.err.println("Erro: " + e.getMessage());
+                LogDeAcoes.salvarLog(e.getMessage());
             }
 
             if (connection == null)
-                System.err.println("Não foi possivel realizar conexão");
+                JOptionPane.showMessageDialog(null, "Não foi possivel conectar ao banco"
+                        , "Erro de conexao", JOptionPane.ERROR_MESSAGE);
 
         }
 
@@ -52,34 +55,11 @@ public class Banco {
                 return true;
 
             } catch (SQLException e) {
-                e.getMessage();
+                LogDeAcoes.salvarLog(e.getMessage());
             }
         }
 
         return false;
     }
 
-    public static void inserir(Pessoas p) {
-        String sql;
-
-        if (p.novo()) {
-            sql = "INSERT INTO PESSOA (NM_PESSOA,VL_CPF,DS_RUA,DS_UF,DS_CIDADE,VL_CASA,VL_TELEFONE,VL_CELULAR) VALUES (" +
-                    p.getNome() + "," + p.getCPF() + "," + p.getRua() + "," + p.getUF() + "," + p.getCidade() + "," +
-                    p.getNumeroCasa() + "," + p.getTelefone() + "," + p.getTelefone2() + ")";
-
-        } else {
-            sql = "UPDATE PESSOA SET " + "(NM_PESSOA,VL_CPF,DS_RUA,DS_UF,DS_CIDADE,VL_CASA,VL_TELEFONE,VL_CELULAR)" + "(= ? WHERE id = " +
-                    p.getId();
-        }
-        try {
-            PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.execute();
-            stmt.close();
-        } catch (Exception e) {
-            System.out.println("ERRO" + e.getMessage());
-        }
-    }
 }
-
-
-

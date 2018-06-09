@@ -8,6 +8,9 @@ package com.topicos.telas.frames.principalFrame;
 
 import com.topicos.comum.listener.PrincipalListenner;
 
+import com.topicos.logs.logsys.LogDeAcoes;
+import com.topicos.pessoa.ListarAluno;
+
 import javax.swing.*;
 
 public class ListennerPrincipalFrame extends PrincipalListenner {
@@ -22,22 +25,24 @@ public class ListennerPrincipalFrame extends PrincipalListenner {
 
     @Override
     public void logoff() {
-//        tp.dispose();
-        System.out.println("logoff da tela principal");
+        tp.dispose();
+        LogDeAcoes.salvarLog("Logoff");
     }
 
     @Override
     public void sair() {
         tp.dispose();
+        LogDeAcoes.salvarLog("sair");
     }
 
     @Override
     public void sobreItem() {
         {
             String a = "<html>"+"<h2>Trabalho de Topicos Especiais I.</h2>"+
-            "<p>ERP para bibliotecas</p>"+"Desenvolvido por Erick, Gabriel, Marcelo"+"</html>";
+            "<p>ERP para Escola de Idiomas</p>"+"Desenvolvido por Gabriel, Herick, Marcelo"+"</html>";
 
             JOptionPane.showMessageDialog(null,a,"AJUDA",JOptionPane.INFORMATION_MESSAGE);
+            LogDeAcoes.salvarLog("Sobre Item");
         }
     }
 }

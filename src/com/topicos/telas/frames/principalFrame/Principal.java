@@ -1,20 +1,15 @@
 package com.topicos.telas.frames.principalFrame;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
-import java.awt.Color;
-import javax.swing.UIManager;
+import javax.swing.*;
+import java.awt.*;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
-import com.topicos.telas.internalFrame.cadastroAulas.AulasInternalFrame;
-import com.topicos.telas.internalFrame.cadastroPessoas.PessoasInternalFrame;
+import com.topicos.aula.AulaInternalFrame;
+import com.topicos.logs.login.LogLogin;
+import com.topicos.pessoa.ListarAluno;
+import com.topicos.pessoa.ListarProfessor;
+import com.topicos.pessoa.PessoaInternalFrame;
 
 public class Principal extends JFrame {
 
@@ -28,15 +23,25 @@ public class Principal extends JFrame {
 
     private JMenu AdminMenu = new JMenu("Admin");
     private JButton btnExit;
-    private JMenuItem AdicionarUsuarioItem = new JMenuItem("Adicionar Usuario");
+
+    private JMenuItem ListarAlunoItem = new JMenuItem("Listar Aluno");
+    private JMenuItem ListarProfessorItem = new JMenuItem("Listar Professor");
 
     private JMenuItem RemoverUsuarioItem = new JMenuItem("Remover Usuario");
 
     private JMenu AjudaMenu = new JMenu("Ajuda");
-    private PessoasInternalFrame pessoasInternalFrame = new PessoasInternalFrame();
-    private AulasInternalFrame aulasInternalFrame = new AulasInternalFrame();
+
+    private PessoaInternalFrame pessoaInternalFrame = new PessoaInternalFrame();
+    private ListarAluno listarAluno = new ListarAluno();
+    private ListarProfessor listarProfessor = new ListarProfessor();
+
+    private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
+
     private ActionListener handle;
     private JMenuItem SobreItem = new JMenuItem("Sobre");
+
+    private JLabel userNameLabel = new JLabel("Bem-vindo, " + LogLogin.lerUsuario());
+
 
     /**
      * Create the frame.
@@ -55,13 +60,20 @@ public class Principal extends JFrame {
 
         menuBar.add(AdminMenu);
 
-        AdminMenu.add(AdicionarUsuarioItem);
+        AdminMenu.add(ListarAlunoItem);
+
+        AdminMenu.add(ListarProfessorItem);
 
         AdminMenu.add(RemoverUsuarioItem);
 
         menuBar.add(AjudaMenu);
 
         AjudaMenu.add(SobreItem);
+
+        menuBar.add(new javax.swing.JSeparator(SwingConstants.VERTICAL));
+
+        menuBar.add(userNameLabel);
+
         contentPane = new JPanel();
         contentPane.setBorder(new LineBorder(new Color(0, 0, 0)));
         setContentPane(contentPane);
@@ -72,7 +84,6 @@ public class Principal extends JFrame {
         panelOpcoes.setBounds(0, 0, 1920, 53);
         contentPane.add(panelOpcoes);
         panelOpcoes.setLayout(null);
-
 
         btnExit = new JButton("Exit");
 
@@ -91,6 +102,7 @@ public class Principal extends JFrame {
 
         btnLogout = new JButton("Logout");
         btnLogout.setBorder(new LineBorder(new Color(0, 0, 0)));
+
         handle = new ListennerPrincipalFrame(SobreItem, btnLogout, btnExit, this);
         btnExit.addActionListener(handle);
 
@@ -102,8 +114,12 @@ public class Principal extends JFrame {
         panelOpcoes.add(btnLogout);
 
         JButton btnCadastrar = new JButton("Cadastrar");
-        btnCadastrar.setBorder(new LineBorder(new Color(0, 0, 0)));
+
+        btnCadastrar.setBorder(new LineBorder
+                (new Color(0, 0, 0)));
+
         btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
+
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
@@ -113,25 +129,31 @@ public class Principal extends JFrame {
         btnCadastrarTurma.setBounds(412, 6, 131, 45);
         panelOpcoes.add(btnCadastrarTurma);
 
-
         SobreItem.addActionListener(handle);
 
-        contentPane.add(pessoasInternalFrame);
-        contentPane.add(aulasInternalFrame);
+        contentPane.add(pessoaInternalFrame);
+        contentPane.add(aulaInternalFrame);
+        contentPane.add(listarAluno);
+        contentPane.add(listarProfessor);
+
+        userNameLabel.setForeground(Color.white);
+        userNameLabel.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
         setVisible(true);
 
+        ListarAlunoItem.addActionListener(evt -> listarAluno.setVisible(true));
+        ListarProfessorItem.addActionListener(evt -> listarProfessor.setVisible(true));
 
         SairArquivoItem.addActionListener(e -> {
             dispose();
         });
 
         btnCadastrar.addActionListener(e -> {
-            pessoasInternalFrame.setVisible(true);
+            pessoaInternalFrame.setVisible(true);
         });
 
         btnCadastrarTurma.addActionListener(e -> {
-            aulasInternalFrame.setVisible(true);
+            aulaInternalFrame.setVisible(true);
         });
 
         btnSalvar.addActionListener(e ->{
@@ -139,4 +161,8 @@ public class Principal extends JFrame {
         });
 
     }
+
+    //public void ListarAluno(java.awt.event.ActionEvent evt){
+        //listarAluno.setVisible(true);
+    //}
 }

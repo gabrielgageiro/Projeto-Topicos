@@ -6,8 +6,10 @@ import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
 import com.topicos.aula.AulaInternalFrame;
+import com.topicos.idioma.IdiomaInternalFrame;
 import com.topicos.login.Login;
 import com.topicos.logs.login.LogLogin;
+import com.topicos.logs.logsys.LogDeAcoes;
 import com.topicos.pessoa.ListarAluno;
 import com.topicos.pessoa.ListarProfessor;
 import com.topicos.pessoa.PessoaInternalFrame;
@@ -38,6 +40,9 @@ public class Principal extends JFrame {
 
     private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
 
+    private IdiomaInternalFrame idiomaInternalFrame = new IdiomaInternalFrame();
+
+
     private ActionListener handle;
     private JMenuItem SobreItem = new JMenuItem("Sobre");
 
@@ -45,6 +50,7 @@ public class Principal extends JFrame {
 
     private JMenuItem LogoutItem = new JMenuItem("Logout");
     private JMenuItem EditarUserItem = new JMenuItem("Editar Usuário");
+    private JMenuItem AcessarLog = new JMenuItem("Abrir histórico do usuário");
 
     /**
      * Create the frame.
@@ -76,6 +82,9 @@ public class Principal extends JFrame {
         menuBar.add(new javax.swing.JSeparator(SwingConstants.VERTICAL));
 
         menuBar.add(userNameItem);
+
+        userNameItem.add(AcessarLog);
+
 
         userNameItem.add(EditarUserItem);
 
@@ -120,13 +129,17 @@ public class Principal extends JFrame {
 //        btnLogout.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/logout.png")));
 //        panelOpcoes.add(btnLogout);
 
-        JButton btnCadastrar = new JButton("Cadastrar");
+        //Botão de cadastro de idioma
+        JButton btnCadastrarIdioma = new JButton("Cadastrar idioma");
+        btnCadastrarIdioma.setBorder(new LineBorder(new Color(0,0,0)));
+        btnCadastrarIdioma.setIcon(new ImageIcon((Principal.class.getResource("/com/topicos/icones/register.png"))));
+        btnCadastrarIdioma.setBounds(555,6,131,45);
+        panelOpcoes.add(btnCadastrarIdioma);
 
-        btnCadastrar.setBorder(new LineBorder
-                (new Color(0, 0, 0)));
-
+        //Botão de cadastro de pessoas
+        JButton btnCadastrar = new JButton("Cadastrar pessoa");
+        btnCadastrar.setBorder(new LineBorder(new Color(0, 0, 0)));
         btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
-
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
@@ -140,6 +153,7 @@ public class Principal extends JFrame {
 
         contentPane.add(pessoaInternalFrame);
         contentPane.add(aulaInternalFrame);
+        contentPane.add(idiomaInternalFrame);
         contentPane.add(listarAluno);
         contentPane.add(listarProfessor);
 
@@ -150,6 +164,8 @@ public class Principal extends JFrame {
 
         ListarAlunoItem.addActionListener(evt -> listarAluno.setVisible(true));
         ListarProfessorItem.addActionListener(evt -> listarProfessor.setVisible(true));
+
+        AcessarLog.addActionListener(evt ->{LogDeAcoes.lerLog();});
 
         LogoutItem.addActionListener(evt -> {dispose(); new Login().setVisible(true);});
 
@@ -167,6 +183,10 @@ public class Principal extends JFrame {
 
         btnCadastrarTurma.addActionListener(e -> {
             aulaInternalFrame.setVisible(true);
+        });
+
+        btnCadastrarIdioma.addActionListener(e -> {
+            idiomaInternalFrame.setVisible(true);
         });
 
 //        btnSalvar.addActionListener(e ->{

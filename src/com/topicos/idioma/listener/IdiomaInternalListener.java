@@ -3,7 +3,7 @@ Criado por: Herick Maciel Maia
 Data: 13/05/18
 */
 
-package com.topicos.aula.listener;
+package com.topicos.idioma.listener;
 
 import com.topicos.comum.listener.InternalFrameListener;
 import com.topicos.logs.logsys.LogDeAcoes;
@@ -11,21 +11,21 @@ import com.topicos.logs.logsys.LogDeAcoes;
 import javax.swing.*;
 
 
-public class AulaInternalListener extends InternalFrameListener {
+public class IdiomaInternalListener extends InternalFrameListener {
 
-    public AulaInternalListener(JButton btnCancelar, JButton btnCadastrar) {
+    public IdiomaInternalListener(JButton btnCancelar, JButton btnCadastrar) {
         super(btnCancelar, btnCadastrar);
     }
 
     @Override
     public void btnCadastrar() {
-        LogDeAcoes.salvarLog("Cadastrar Aula");
+        LogDeAcoes.salvarLog("Cadastrar Idioma");
 
     }
 
     @Override
     public void btnCancelar() {
-        LogDeAcoes.salvarLog("Cancelar Aula");
+        LogDeAcoes.salvarLog("Cancelar Idioma");
 
     }
 }

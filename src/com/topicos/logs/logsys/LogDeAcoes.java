@@ -6,9 +6,9 @@ Data:16/05/18
 
 package com.topicos.logs.logsys;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.awt.*;
+import java.io.*;
+import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -47,6 +47,24 @@ public final class LogDeAcoes {
 
             }
         }).start();
+
+    }
+
+    public static void lerLog() {
+        //new Thread(() -> {
+            try {
+                FileReader fileReader = new FileReader("log.log");
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+                while (bufferedReader.ready()){
+                    System.out.println(bufferedReader.readLine());
+                }
+                bufferedReader.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                LogDeAcoes.salvarLog(e.getMessage());
+            }
+       // }).start();
 
     }
 

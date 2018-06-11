@@ -65,7 +65,7 @@ public class Login extends JFrame {
 
         //tamanho da janela
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 130);
+        setSize(300, 150);
         setResizable(false);
 
         setVisible(true);

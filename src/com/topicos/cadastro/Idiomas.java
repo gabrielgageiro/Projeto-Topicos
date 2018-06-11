@@ -10,6 +10,8 @@ public class Idiomas {
     private double preco;
     private int duracao;
     private int horario;
+    private Integer id;
+
 
     public void setNomeIdioma(String nomeIdioma){
         this.nomeIdioma = nomeIdioma;

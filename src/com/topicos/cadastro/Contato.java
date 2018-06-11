@@ -12,6 +12,8 @@ public class Contato {
     private String email2;
     private String telefone;
     private String telefone2;
+    private Integer id;
+
 
 
 }

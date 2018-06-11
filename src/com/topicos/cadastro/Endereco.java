@@ -12,6 +12,8 @@ public class Endereco {
     private String rua;
     private String cidade;
     private int numeroCasa;
+    private Integer id;
+
 
     public Endereco(String UF,String cidade, String rua, int numeroCasa) {
         this.cidade=cidade;

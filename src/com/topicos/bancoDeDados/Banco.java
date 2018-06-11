@@ -6,13 +6,11 @@ Data:09/05/18
 
 package com.topicos.bancoDeDados;
 
-import com.topicos.cadastro.Pessoas;
 import com.topicos.logs.logsys.LogDeAcoes;
 
 import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class Banco {
@@ -20,7 +18,7 @@ public class Banco {
     private static final String BANCO = "aula_banco";
     private static final String USUARIO = "gabriel";
     private static final String SENHA = "gabriel123";
-    private static final String URL = "jbdc:mysql://" + HOST + "/" + BANCO + "?useSSL=false";
+    private static final String URL = "jdbc:mysql://" + HOST + "/" + BANCO + "?useSSL=false";
 
     private static Connection connection = null;
 
@@ -36,11 +34,9 @@ public class Banco {
 
             } catch (SQLException e) {
                 LogDeAcoes.salvarLog(e.getMessage());
-            }
-
-            if (connection == null)
                 JOptionPane.showMessageDialog(null, "Não foi possivel conectar ao banco"
                         , "Erro de conexao", JOptionPane.ERROR_MESSAGE);
+            }
 
         }
 

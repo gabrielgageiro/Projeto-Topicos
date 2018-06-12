@@ -11,14 +11,14 @@ import java.math.BigDecimal;
 public class Professor extends Pessoas {
 
     private BigDecimal salario;
-    private String modulos;
+    private String modulo;
     private int numeroPIS;
 
     public Professor(Integer id, String nome, String sobrenome, String CPF, int idade,
-                     Endereco endereco, Contato contato, BigDecimal salario, String modulos, int numeroPIS) {
+                     Endereco endereco, Contato contato, BigDecimal salario, String modulo, int numeroPIS) {
         super(id, nome, sobrenome, CPF, idade, endereco, contato);
         this.salario = salario;
-        this.modulos = modulos;
+        this.modulo = modulo;
         this.numeroPIS = numeroPIS;
     }
 
@@ -30,12 +30,12 @@ public class Professor extends Pessoas {
         this.salario = salario;
     }
 
-    public String getModulos() {
-        return modulos;
+    public String getModulo() {
+        return modulo;
     }
 
-    public void setModulos(String modulos) {
-        this.modulos = modulos;
+    public void setModulo(String modulo) {
+        this.modulo = modulo;
     }
 
     public int getNumeroPIS() {

@@ -8,8 +8,6 @@ package com.topicos.aula;
 
 import com.topicos.cadastro.Aluno;
 import com.topicos.cadastro.Professor;
-import com.topicos.cadastro.TipoDeCurso;
-
 public class Aula {
 
     private Professor professor;

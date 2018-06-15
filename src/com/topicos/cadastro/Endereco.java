@@ -12,12 +12,22 @@ public class Endereco {
     private String rua;
     private String cidade;
     private int numeroCasa;
+    private Integer id;
+
 
     public Endereco(String UF,String cidade, String rua, int numeroCasa) {
         this.cidade=cidade;
         this.UF = UF;
         this.rua = rua;
         this.numeroCasa = numeroCasa;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCidade() {

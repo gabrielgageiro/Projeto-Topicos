@@ -7,25 +7,42 @@ Data:08/06/18
 package com.topicos.aula;
 
 import com.topicos.cadastro.Aluno;
+import com.topicos.cadastro.Idiomas;
 import com.topicos.cadastro.Professor;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aula {
 
+    private Idiomas idiomas;
+    private List<Aluno> alunos = new ArrayList<>();
     private Professor professor;
-    private Aluno aluno;
-    private TipoDeCurso tipoDeCurso;
+    private Integer id;
+    private String periodo;
 
-    public Aula(Professor professor, Aluno aluno,TipoDeCurso tipoDeCurso) {
+    public Aula(Idiomas idiomas, Aluno aluno, Professor professor, Integer id, String periodo) {
+        this.idiomas = idiomas;
         this.professor = professor;
-        this.tipoDeCurso=tipoDeCurso;
-        this.aluno = aluno;
+        this.id = id;
+        this.periodo = periodo;
+        this.alunos.add(aluno);
     }
 
-    public TipoDeCurso getTipoDeCurso() {
-        return tipoDeCurso;
+    public Idiomas getIdiomas() {
+        return idiomas;
     }
 
-    public void setTipoDeCurso(TipoDeCurso tipoDeCurso) {
-        this.tipoDeCurso = tipoDeCurso;
+    public void setIdiomas(Idiomas idiomas) {
+        this.idiomas = idiomas;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(Aluno aluno) {
+        alunos.add(aluno);
     }
 
     public Professor getProfessor() {
@@ -36,11 +53,19 @@ public class Aula {
         this.professor = professor;
     }
 
-    public Aluno getAluno() {
-        return aluno;
+    public Integer getId() {
+        return id;
     }
 
-    public void setAluno(Aluno aluno) {
-        this.aluno = aluno;
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(String periodo) {
+        this.periodo = periodo;
     }
 }

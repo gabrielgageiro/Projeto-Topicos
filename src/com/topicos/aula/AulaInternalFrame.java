@@ -6,6 +6,7 @@ Data: 13/05/18
 package com.topicos.aula;
 
 import com.topicos.aula.listener.AulaInternalListener;
+import com.topicos.comum.enums.Periodo;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
@@ -19,6 +20,7 @@ public class AulaInternalFrame extends JInternalFrame {
     private JComboBox idiomaCbx;
     private JComboBox professorCbx;
     private JComboBox alunoCbx;
+    private JComboBox periodoCbx;
     private JButton btnCancelar;
     private JButton btnCadastrar;
     private ActionListener handle;
@@ -26,7 +28,7 @@ public class AulaInternalFrame extends JInternalFrame {
     public AulaInternalFrame() {
         setClosable(true);
         setTitle("Cadastro de Turmas");
-        setBounds(100, 100, 285, 240);
+        setBounds(100, 100, 285, 280);
         getContentPane().setLayout(null);
 
         JLabel lblIdioma = new JLabel("Idioma:");
@@ -43,6 +45,11 @@ public class AulaInternalFrame extends JInternalFrame {
         lblAluno.setFont(new Font("Tahoma", Font.PLAIN, 14));
         lblAluno.setBounds(30, 120, 70, 14);
         getContentPane().add(lblAluno);
+
+        JLabel lblPeriodo = new JLabel("Período:");
+        lblPeriodo.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        lblPeriodo.setBounds(30, 165, 70, 14);
+        getContentPane().add(lblPeriodo);
 
         idiomaCbx = new JComboBox();
         idiomaCbx.setBounds(110, 29, 130, 20);
@@ -74,17 +81,26 @@ public class AulaInternalFrame extends JInternalFrame {
         //
         getContentPane().add(alunoCbx);
 
+        periodoCbx = new JComboBox();
+        periodoCbx.setBounds(110, 164, 130, 20);
+        //Modificar com o Banco de Dados
+        periodoCbx.addItem("Matutino");
+        periodoCbx.addItem("Vespertino");
+        periodoCbx.addItem("Noturno");
+        //
+        getContentPane().add(periodoCbx);
+
         btnCadastrar = new JButton("Cadastrar");
         btnCancelar = new JButton("Cancelar");
         handle = new AulaInternalListener(btnCancelar, btnCadastrar);
 
         btnCadastrar.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        btnCadastrar.setBounds(145, 165, 95, 23);
+        btnCadastrar.setBounds(145, 210, 95, 23);
         btnCancelar.addActionListener(handle);
         getContentPane().add(btnCadastrar);
 
         btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        btnCancelar.setBounds(30, 165, 95, 23);
+        btnCancelar.setBounds(30, 210, 95, 23);
         btnCadastrar.addActionListener(handle);
         getContentPane().add(btnCancelar);
 

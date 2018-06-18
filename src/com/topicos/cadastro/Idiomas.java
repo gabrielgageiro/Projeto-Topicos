@@ -7,17 +7,11 @@ package com.topicos.cadastro;
 public class Idiomas {
 
     private String nomeIdioma;
-    private double preco;
-    private int duracao;
-    private int horario;
     private Integer id;
 
 
     public Idiomas(String nomeIdioma, double preco, int duracao, int horario, Integer id) {
         this.nomeIdioma = nomeIdioma;
-        this.preco = preco;
-        this.duracao = duracao;
-        this.horario = horario;
         this.id = id;
     }
 
@@ -35,30 +29,6 @@ public class Idiomas {
 
     public String getNomeIdioma(){
         return nomeIdioma;
-    }
-
-    public void setPreco(double preco){
-        this.preco = preco;
-    }
-
-    public double getPreco(){
-        return preco;
-    }
-
-    public void setDuracao(int duracao){
-        this.duracao = duracao;
-    }
-
-    public int getDuracao(){
-        return duracao;
-    }
-
-    public void setHorario(int horario){
-        this.horario = horario;
-    }
-
-    public int getHorario(){
-        return horario;
     }
 
 }

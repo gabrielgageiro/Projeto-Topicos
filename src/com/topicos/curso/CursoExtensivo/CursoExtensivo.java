@@ -43,9 +43,9 @@ public class CursoExtensivo extends Curso implements CalcularValorDoSemestre{
         ValorAula = valorAula;
     }
 
-    public Integer getDuracao() {
-        return duracao;
-    }
+//    public Integer getDuracao() {
+//        return duracao;
+//    }
 
     public void setDuracao(Integer duracao) {
         this.duracao = duracao;

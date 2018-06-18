@@ -18,11 +18,17 @@ public class Curso {
     private Aula aula;
     private Idiomas idiomas;
     private List<Professor> professores = new ArrayList<>();
+    private double preco;
+    private int duracao;
+    private int horario;
 
     public Curso(Aula aula, Idiomas idiomas, Professor professor) {
         this.aula = aula;
         this.idiomas = idiomas;
         this.professores.add(professor);
+        this.preco = preco;
+        this.duracao = duracao;
+        this.horario = horario;
     }
 
     public Aula getAula() {
@@ -47,5 +53,29 @@ public class Curso {
 
     public void setProfessores(Professor professor) {
         professores.add(professor);
+    }
+
+    public void setPreco(double preco){
+        this.preco = preco;
+    }
+
+    public double getPreco(){
+        return preco;
+    }
+
+    public void setDuracao(int duracao){
+        this.duracao = duracao;
+    }
+
+    public int getDuracao(){
+        return duracao;
+    }
+
+    public void setHorario(int horario){
+        this.horario = horario;
+    }
+
+    public int getHorario(){
+        return horario;
     }
 }

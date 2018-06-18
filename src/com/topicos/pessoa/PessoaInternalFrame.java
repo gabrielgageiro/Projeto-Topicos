@@ -9,8 +9,10 @@ import com.topicos.comum.enums.Estados;
 import com.topicos.pessoa.listener.PessoaInternalListener;
 
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 
 public class PessoaInternalFrame extends JInternalFrame {
 	private JTextField txtNome;
@@ -20,9 +22,9 @@ public class PessoaInternalFrame extends JInternalFrame {
 	private JLabel lblEmail2;
 	private JTextField txtEmail2;
 	private JLabel lblTelefone;
-	private JTextField txtTelefone;
+	private JFormattedTextField txtTelefone;
 	private JLabel lblTelefone2;
-	private JTextField txtTelefone2;
+	private JFormattedTextField txtTelefone2;
 	private JLabel lblCidade;
 	private JTextField txtCidade;
 	private JLabel lblEstado;
@@ -44,6 +46,8 @@ public class PessoaInternalFrame extends JInternalFrame {
 	private JLabel lblPagamento;
 	private JCheckBox chckbxSim;
 	private JCheckBox chckbxNao;
+
+	private MaskFormatter maskFormatter;
 
 	public PessoaInternalFrame() {
 		setTitle("Cadastro de Pessoas");
@@ -97,7 +101,12 @@ public class PessoaInternalFrame extends JInternalFrame {
 		lblTelefone.setBounds(10, 109, 56, 14);
 		getContentPane().add(lblTelefone);
 
-		txtTelefone = new JTextField();
+		try{
+			maskFormatter = new MaskFormatter("####-####");
+			maskFormatter.setPlaceholderCharacter('_');
+		}catch(ParseException pex){}
+
+		txtTelefone = new JFormattedTextField(maskFormatter);
 		txtTelefone.setBounds(76, 108, 150, 20);
 		getContentPane().add(txtTelefone);
 		txtTelefone.setColumns(10);
@@ -107,7 +116,7 @@ public class PessoaInternalFrame extends JInternalFrame {
 		lblTelefone2.setBounds(236, 109, 132, 14);
 		getContentPane().add(lblTelefone2);
 
-		txtTelefone2 = new JTextField();
+		txtTelefone2 = new JFormattedTextField(maskFormatter);
 		txtTelefone2.setBounds(378, 108, 150, 20);
 		getContentPane().add(txtTelefone2);
 		txtTelefone2.setColumns(10);

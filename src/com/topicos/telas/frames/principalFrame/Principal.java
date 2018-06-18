@@ -6,7 +6,10 @@ import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
 import com.topicos.aula.AulaInternalFrame;
+import com.topicos.idioma.IdiomaInternalFrame;
+import com.topicos.login.Login;
 import com.topicos.logs.login.LogLogin;
+import com.topicos.logs.logsys.LogDeAcoes;
 import com.topicos.pessoa.ListarAluno;
 import com.topicos.pessoa.ListarProfessor;
 import com.topicos.pessoa.PessoaInternalFrame;
@@ -37,11 +40,17 @@ public class Principal extends JFrame {
 
     private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
 
+    private IdiomaInternalFrame idiomaInternalFrame = new IdiomaInternalFrame();
+
+
     private ActionListener handle;
     private JMenuItem SobreItem = new JMenuItem("Sobre");
 
-    private JLabel userNameLabel = new JLabel("Bem-vindo, " + LogLogin.lerUsuario());
+    private JMenu userNameItem = new JMenu("Olá, " + LogLogin.lerUsuario());
 
+    private JMenuItem LogoutItem = new JMenuItem("Logout");
+    private JMenuItem EditarUserItem = new JMenuItem("Editar Usuário");
+    private JMenuItem AcessarLog = new JMenuItem("Abrir histórico do usuário");
 
     /**
      * Create the frame.
@@ -72,7 +81,14 @@ public class Principal extends JFrame {
 
         menuBar.add(new javax.swing.JSeparator(SwingConstants.VERTICAL));
 
-        menuBar.add(userNameLabel);
+        menuBar.add(userNameItem);
+
+        userNameItem.add(AcessarLog);
+
+
+        userNameItem.add(EditarUserItem);
+
+        userNameItem.add(LogoutItem);
 
         contentPane = new JPanel();
         contentPane.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -85,41 +101,45 @@ public class Principal extends JFrame {
         contentPane.add(panelOpcoes);
         panelOpcoes.setLayout(null);
 
-        btnExit = new JButton("Exit");
+//        btnExit = new JButton("Exit");
+//
+//        btnExit.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+//        btnExit.setVerticalTextPosition(SwingConstants.BOTTOM);
+//        btnExit.setBackground(UIManager.getColor("Button.background"));
+//        btnExit.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/exit.png")));
+//        btnExit.setBounds(12, 6, 70, 45);
 
-        btnExit.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
-        btnExit.setVerticalTextPosition(SwingConstants.BOTTOM);
-        btnExit.setBackground(UIManager.getColor("Button.background"));
-        btnExit.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/exit.png")));
-        btnExit.setBounds(12, 6, 70, 45);
-
-        JButton btnSalvar = new JButton("Salvar");
-        btnSalvar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/floppy_disk_sh.png")));
-        btnSalvar.setBorder(new LineBorder(new Color(0, 0, 0)));
-        btnSalvar.setIconTextGap(1);
-        btnSalvar.setBounds(94, 6, 70, 45);
-        panelOpcoes.add(btnSalvar);
-
-        btnLogout = new JButton("Logout");
-        btnLogout.setBorder(new LineBorder(new Color(0, 0, 0)));
-
+//        JButton btnSalvar = new JButton("Salvar");
+//        btnSalvar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/floppy_disk_sh.png")));
+//        btnSalvar.setBorder(new LineBorder(new Color(0, 0, 0)));
+//        btnSalvar.setIconTextGap(1);
+//        btnSalvar.setBounds(94, 6, 70, 45);
+//        panelOpcoes.add(btnSalvar);
+//
+//        btnLogout = new JButton("Logout");
+//        btnLogout.setBorder(new LineBorder(new Color(0, 0, 0)));
+//
         handle = new ListennerPrincipalFrame(SobreItem, btnLogout, btnExit, this);
-        btnExit.addActionListener(handle);
+//        btnExit.addActionListener(handle);
+//
+//        panelOpcoes.add(btnExit);
+//
+//        btnLogout.addActionListener(handle);
+//        btnLogout.setBounds(176, 6, 81, 45);
+//        btnLogout.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/logout.png")));
+//        panelOpcoes.add(btnLogout);
 
-        panelOpcoes.add(btnExit);
+        //Botão de cadastro de idioma
+        JButton btnCadastrarIdioma = new JButton("Cadastrar idioma");
+        btnCadastrarIdioma.setBorder(new LineBorder(new Color(0,0,0)));
+        btnCadastrarIdioma.setIcon(new ImageIcon((Principal.class.getResource("/com/topicos/icones/register.png"))));
+        btnCadastrarIdioma.setBounds(555,6,131,45);
+        panelOpcoes.add(btnCadastrarIdioma);
 
-        btnLogout.addActionListener(handle);
-        btnLogout.setBounds(176, 6, 81, 45);
-        btnLogout.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/logout.png")));
-        panelOpcoes.add(btnLogout);
-
-        JButton btnCadastrar = new JButton("Cadastrar");
-
-        btnCadastrar.setBorder(new LineBorder
-                (new Color(0, 0, 0)));
-
+        //Botão de cadastro de pessoas
+        JButton btnCadastrar = new JButton("Cadastrar pessoa");
+        btnCadastrar.setBorder(new LineBorder(new Color(0, 0, 0)));
         btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
-
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
@@ -133,16 +153,25 @@ public class Principal extends JFrame {
 
         contentPane.add(pessoaInternalFrame);
         contentPane.add(aulaInternalFrame);
+        contentPane.add(idiomaInternalFrame);
         contentPane.add(listarAluno);
         contentPane.add(listarProfessor);
 
-        userNameLabel.setForeground(Color.white);
-        userNameLabel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+        userNameItem.setForeground(Color.white);
+        userNameItem.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
         setVisible(true);
 
         ListarAlunoItem.addActionListener(evt -> listarAluno.setVisible(true));
         ListarProfessorItem.addActionListener(evt -> listarProfessor.setVisible(true));
+
+        AcessarLog.addActionListener(evt ->{LogDeAcoes.lerLog();});
+
+        LogoutItem.addActionListener(evt -> {dispose(); new Login().setVisible(true);});
+
+
+        userNameItem.addActionListener(evt -> new Login().setVisible(true));
+
 
         SairArquivoItem.addActionListener(e -> {
             dispose();
@@ -156,9 +185,13 @@ public class Principal extends JFrame {
             aulaInternalFrame.setVisible(true);
         });
 
-        btnSalvar.addActionListener(e ->{
-            System.out.println("Salvar Principal");
+        btnCadastrarIdioma.addActionListener(e -> {
+            idiomaInternalFrame.setVisible(true);
         });
+
+//        btnSalvar.addActionListener(e ->{
+//            System.out.println("Salvar Principal");
+//        });
 
     }
 

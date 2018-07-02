@@ -17,6 +17,7 @@ public class Login extends JFrame {
     private JTextField login;
     private JPasswordField senha;
     private JButton logar;
+
     public Login() {
         super("Tela de login");
 
@@ -70,18 +71,23 @@ public class Login extends JFrame {
 
         setVisible(true);
         getRootPane().setDefaultButton(logar);
-        LoginListener loginListener = new LoginListener(logar,this);
+        LoginListener loginListener = new LoginListener(logar, this);
     }
 
-    private void setLogin(){
+    private void setLogin() {
         login.setText(LogLogin.lerUsuario());
     }
 
+    public String getUsuario(){
+        return login.getText();
+    }
+
+    public char[] getSenha(){
+        return senha.getPassword();
+    }
 
     @Override
     public String toString() {
         return login.getText();
     }
 }
-
-

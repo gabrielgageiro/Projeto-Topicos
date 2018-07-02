@@ -18,6 +18,7 @@ public class Exceptions extends Exception{
         showWindow(msg);
     }
 
+
     public void showWindow(String msg){
         JOptionPane.showMessageDialog(null,msg,"ERRO!",JOptionPane.ERROR_MESSAGE);
     }

@@ -1,0 +1,95 @@
+28/06/2018 17:14:45	|			|	tela principal
+28/06/2018 17:15:21	|	null		|	No suitable driver found for jdbc:mysql://db4free.net/aula_banco?useSSL=false
+28/06/2018 17:18:55	|	null		|	No suitable driver found for jdbc:mysql://db4free.net/aula_banco?useSSL=false
+01/07/2018 18:54:15	|	null		|	Access denied for user 'gabriel'@'177.184.148.29' (using password: YES)
+01/07/2018 18:55:00	|	null		|	Access denied for user 'gabriel'@'177.184.148.29' (using password: YES)
+01/07/2018 18:59:06	|	null		|	Access denied for user 'gabriel'@'177.184.148.29' (using password: YES)
+01/07/2018 18:59:08	|			|	tela principal
+01/07/2018 19:04:37	|	null		|	Access denied for user 'escola_idiomas'@'177.184.148.29' (using password: YES)
+01/07/2018 21:03:26	|	null		|	login
+01/07/2018 21:03:26	|			|	tela principal
+01/07/2018 21:05:18	|			|	tela principal
+01/07/2018 21:05:18	|			|	login
+01/07/2018 21:05:47	|			|	login
+01/07/2018 21:05:47	|			|	tela principal
+01/07/2018 21:06:03	|	null		|	login
+01/07/2018 21:06:03	|			|	tela principal
+01/07/2018 21:07:05	|	das		|	tela principal
+01/07/2018 21:07:05	|	das		|	login
+01/07/2018 21:08:19	|	das		|	login
+01/07/2018 21:08:59	|	das		|	login
+01/07/2018 21:08:59	|	das		|	tela principal
+01/07/2018 21:10:38	|	null		|	login
+01/07/2018 21:10:38	|	das		|	tela principal
+01/07/2018 21:11:24	|	das		|	login
+01/07/2018 21:11:24	|	das		|	tela principal
+01/07/2018 21:11:53	|	null		|	login
+01/07/2018 21:11:53	|	das		|	tela principal
+01/07/2018 21:12:35	|	das		|	tela principal
+01/07/2018 21:12:35	|	das		|	login
+01/07/2018 21:13:53	|	das		|	No operations allowed after connection closed.
+01/07/2018 21:13:53	|	das		|	tela principal
+01/07/2018 21:21:18	|	das		|	tela principal
+01/07/2018 21:21:18	|	das		|	No operations allowed after connection closed.
+01/07/2018 21:25:22	|	null		|	Before start of result set
+01/07/2018 21:25:22	|	das		|	tela principal
+01/07/2018 21:28:22	|	das		|	Before start of result set
+01/07/2018 21:28:22	|	das		|	tela principal
+01/07/2018 21:28:50	|	das		|	tela principal
+01/07/2018 21:32:15	|	null		|	Before start of result set
+01/07/2018 21:32:15	|	das		|	tela principal
+01/07/2018 21:36:58	|	das		|	tela principal
+01/07/2018 21:36:58	|	das		|	Before start of result set
+01/07/2018 21:42:00	|	das		|	tela principal
+01/07/2018 21:42:00	|	das		|	Before start of result set
+01/07/2018 21:42:33	|	das		|	Before start of result set
+01/07/2018 21:42:33	|	das		|	tela principal
+01/07/2018 21:42:57	|	das		|	Before start of result set
+01/07/2018 21:42:57	|	das		|	tela principal
+01/07/2018 21:43:21	|	null		|	Before start of result set
+01/07/2018 21:43:21	|	das		|	tela principal
+01/07/2018 21:44:04	|	null		|	Before start of result set
+01/07/2018 21:44:04	|	das		|	tela principal
+01/07/2018 21:44:27	|	das		|	Before start of result set
+01/07/2018 21:44:27	|	das		|	tela principal
+01/07/2018 21:46:50	|	null		|	Before start of result set
+01/07/2018 21:46:50	|	das		|	tela principal
+01/07/2018 21:52:46	|	das		|	Before start of result set
+01/07/2018 21:52:49	|	das		|	tela principal
+01/07/2018 21:57:38	|	das		|	Unknown column 'senha' in 'field list'
+01/07/2018 21:57:38	|	das		|	tela principal
+01/07/2018 21:58:28	|	das		|	tela principal
+01/07/2018 21:58:28	|	das		|	Before start of result set
+01/07/2018 22:01:13	|	das		|	tela principal
+01/07/2018 22:01:29	|	das		|	tela principal
+01/07/2018 22:13:33	|	das		|	tela principal
+01/07/2018 22:16:39	|	das		|	tela principal
+01/07/2018 22:18:39	|	das		|	tela principal
+01/07/2018 22:20:05	|	das		|	tela principal
+01/07/2018 22:20:24	|	das		|	tela principal
+01/07/2018 22:21:18	|	AEAEAEAEA		|	tela principal
+01/07/2018 22:35:19	|	AEAEAEAEA		|	tela principal
+01/07/2018 22:35:32	|	gfdsgdsf		|	tela principal
+01/07/2018 22:53:12	|	AEAEAEAEA		|	tela principal
+01/07/2018 22:53:35	|	dasfers		|	tela principal
+01/07/2018 22:56:26	|	testse		|	tela principal
+01/07/2018 22:59:02	|	testes		|	tela principal
+01/07/2018 23:23:02	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:23:02	|	null		|	tela principal
+01/07/2018 23:24:20	|	null		|	tela principal
+01/07/2018 23:24:20	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:25:20	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:25:27	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:25:29	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:25:34	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:25:53	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:25:53	|	null		|	tela principal
+01/07/2018 23:25:58	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:25:58	|	null		|	tela principal
+01/07/2018 23:30:40	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:30:40	|	null		|	tela principal
+01/07/2018 23:31:58	|	null		|	tela principal
+01/07/2018 23:31:58	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:33:04	|	null		|	tela principal
+01/07/2018 23:33:04	|	null		|	No operations allowed after connection closed.
+01/07/2018 23:38:47	|	admin		|	tela principal

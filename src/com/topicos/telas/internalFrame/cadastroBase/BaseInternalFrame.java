@@ -15,6 +15,7 @@ public abstract class BaseInternalFrame <T extends Cadastro> extends JInternalFr
         this.obj=obj;
         instanciarTela();
     }
+    public BaseInternalFrame(){}
 
     public T getObjeto() {
         return obj;

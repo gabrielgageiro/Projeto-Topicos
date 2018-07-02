@@ -7,9 +7,10 @@ Data:24/03/18
 package com.topicos.cadastro;
 
 
-public class Pessoas {
+import com.topicos.comum.Cadastro;
 
-    private Integer id;
+public class Pessoas extends Cadastro {
+
     private String nome;
     private String sobrenome;
     private String CPF;
@@ -17,22 +18,13 @@ public class Pessoas {
     private Endereco endereco;
     private Contato contato;
 
-    public Pessoas(Integer id, String nome, String sobrenome, String CPF, int idade, Endereco endereco, Contato contato) {
-        this.id = id;
+    public Pessoas(String nome, String sobrenome, String CPF, int idade, Endereco endereco, Contato contato) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.CPF = CPF;
         this.idade = idade;
         this.endereco = endereco;
         this.contato = contato;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getNome() {

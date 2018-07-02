@@ -23,7 +23,6 @@ public class AulaInternalFrame extends JInternalFrame {
     private JComboBox periodoCbx;
     private JButton btnCancelar;
     private JButton btnCadastrar;
-    private ActionListener handle;
 
     public AulaInternalFrame() {
         setClosable(true);
@@ -92,16 +91,13 @@ public class AulaInternalFrame extends JInternalFrame {
 
         btnCadastrar = new JButton("Cadastrar");
         btnCancelar = new JButton("Cancelar");
-        handle = new AulaInternalListener(btnCancelar, btnCadastrar);
 
         btnCadastrar.setFont(new Font("Tahoma", Font.PLAIN, 14));
         btnCadastrar.setBounds(145, 210, 95, 23);
-        btnCancelar.addActionListener(handle);
         getContentPane().add(btnCadastrar);
 
         btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 14));
         btnCancelar.setBounds(30, 210, 95, 23);
-        btnCadastrar.addActionListener(handle);
         getContentPane().add(btnCancelar);
 
     }

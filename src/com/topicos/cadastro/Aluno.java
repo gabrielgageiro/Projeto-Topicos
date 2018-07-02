@@ -10,9 +10,9 @@ public class Aluno extends Pessoas {
     private boolean pagamentoEmdia;
     private String curso;
 
-    public Aluno(Integer id, String nome, String sobrenome, String CPF, int idade,
-                 Endereco endereco, Contato contato, boolean pagamentoEmdia, String curso) {
-        super(id, nome, sobrenome, CPF, idade, endereco, contato);
+    public Aluno(String nome, String sobrenome, String CPF, int idade, Endereco endereco, Contato contato,
+                 boolean pagamentoEmdia, String curso) {
+        super(nome, sobrenome, CPF, idade, endereco, contato);
         this.pagamentoEmdia = pagamentoEmdia;
         this.curso = curso;
     }

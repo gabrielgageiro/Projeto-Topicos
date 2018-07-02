@@ -6,12 +6,17 @@ package com.topicos.pessoa;
 
 import javax.swing.*;
 import java.awt.Font;
-import javax.swing.table.DefaultTableModel;
+import java.util.regex.PatternSyntaxException;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 public class ListarAluno extends JInternalFrame {
     private JTable tabelaAluno;
     private JTextField txtProcurarAluno;
-    private DefaultTableModel val;
+    private TableModel val;
+    private JCheckBox chckbxNome;
+    private JCheckBox chckbxCurso;
+    private boolean checkNome, checkCurso;
 
     public ListarAluno() {
         super("Listagem de Aluno");
@@ -22,8 +27,8 @@ public class ListarAluno extends JInternalFrame {
         String [] colunas = {"Nome", "Curso", "Email", "Telefone"};
 
         Object [][] dados = {
-                {"Ana Maria", "Inglês", "ana.monteiro@gmail.com", "48 99237898"},
-                {"João da Silva", "Inglês", "joaosilva@hotmail.com", "48 88903345"},
+                {"Ana Maria", "Ingles", "ana.monteiro@gmail.com", "48 99237898"},
+                {"Joao da Silva", "Ingles", "joaosilva@hotmail.com", "48 88903345"},
                 {"Pedro Pedras", "Espanhol", "pedrinho@gmail.com", "48 9870-5634"}
         };
 
@@ -33,25 +38,95 @@ public class ListarAluno extends JInternalFrame {
 
         getContentPane().add(barraRolagem);
 
-        JCheckBox chckbxNome = new JCheckBox("Nome");
+        chckbxNome = new JCheckBox("Nome");
         chckbxNome.setFont(new Font("Tahoma", Font.PLAIN, 14));
         chckbxNome.setBounds(10, 7, 97, 23);
         getContentPane().add(chckbxNome);
 
-        JCheckBox chckbxCurso = new JCheckBox("Curso");
+        chckbxCurso = new JCheckBox("Curso");
         chckbxCurso.setFont(new Font("Tahoma", Font.PLAIN, 14));
         chckbxCurso.setBounds(109, 7, 97, 23);
         getContentPane().add(chckbxCurso);
 
         JButton btnBuscar = new JButton("Buscar");
         btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        btnBuscar.setBounds(216, 37, 89, 20);
+        btnBuscar.setBounds(236, 37, 89, 21);
         getContentPane().add(btnBuscar);
 
+        JButton btnAtualizar = new JButton("Atualizar");
+        btnAtualizar.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        btnAtualizar.setBounds(335, 37, 89, 21);
+        getContentPane().add(btnAtualizar);
+
         txtProcurarAluno = new JTextField();
-        txtProcurarAluno.setBounds(10, 37, 196, 20);
+        txtProcurarAluno.setBounds(10, 37, 216, 20);
         getContentPane().add(txtProcurarAluno);
         txtProcurarAluno.setColumns(10);
 
+        chckbxNome.addActionListener(evt -> checkBox());
+        chckbxCurso.addActionListener(evt -> checkBox());
+        btnBuscar.addActionListener(evt -> btnBuscarActionPerformed());
+        btnAtualizar.addActionListener(evt -> btnAtualizarActionPerformed());
+    }
+
+    public void btnAtualizarActionPerformed(){
+        val = tabelaAluno.getModel();
+        final TableRowSorter<TableModel> sorter = new TableRowSorter<>(val);
+        tabelaAluno.setRowSorter(sorter);
+        sorter.setRowFilter(null);
+    }
+
+    public void checkBox(){
+        if(chckbxNome.isSelected()) {
+            checkNome = true;
+        } else{
+            checkNome = false;
+        }
+
+        if(chckbxCurso.isSelected()) {
+            checkCurso = true;
+        } else{
+            checkCurso = false;
+        }
+    }
+
+    private void btnBuscarActionPerformed() {
+        if(checkNome && checkCurso == false) {
+            val = tabelaAluno.getModel();
+            final TableRowSorter<TableModel> sorter = new TableRowSorter<>(val);
+            tabelaAluno.setRowSorter(sorter);
+            String text = txtProcurarAluno.getText().toUpperCase();
+            if (text.length() == 0) {
+                sorter.setRowFilter(null);
+            } else {
+                try {
+                    sorter.setRowFilter(RowFilter.regexFilter("(?i)" + text, 0));
+                } catch (PatternSyntaxException pse) {
+                    System.err.println("Erro");
+                }
+            }
+        }
+        if(checkCurso && checkNome == false) {
+            val = tabelaAluno.getModel();
+            final TableRowSorter<TableModel> sorter = new TableRowSorter<>(val);
+            tabelaAluno.setRowSorter(sorter);
+            String text = txtProcurarAluno.getText().toUpperCase();
+            if (text.length() == 0) {
+                sorter.setRowFilter(null);
+            } else {
+                try {
+                    sorter.setRowFilter(RowFilter.regexFilter("(?i)" + text, 1));
+
+                } catch (PatternSyntaxException pse) {
+                    System.err.println("Erro");
+                }
+            }
+        }
+        if(checkNome && checkCurso){
+            JOptionPane.showMessageDialog(null, "Os dois filtros estão marcados");
+        }
+        if(checkNome == false && checkCurso == false){
+            JOptionPane.showMessageDialog(null, "Nenhum filtro marcado");
+        }
     }
 }

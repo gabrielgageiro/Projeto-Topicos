@@ -1,6 +1,6 @@
 /*
 Criado por: Herick Maciel Maia
-Data: 18/05/18
+Data: 18/05/18.
  */
 package com.topicos.pessoa;
 
@@ -22,9 +22,9 @@ public class ListarProfessor extends JInternalFrame{
         String [] colunas = {"Nome", "Curso", "Email", "Telefone"};
 
         Object [][] dados = {
-                {"Jorge Maciel", "Inglês", "jorge.maciel@gmail.com", "48 99237898"},
-                {"Maria Dolores", "Alemão", "doloresmaria@hotmail.com", "48 88903345"},
-                {"Otávio Rubres", "Espanhol", "tavaorubres@gmail.com", "48 9870-5634"}
+                {"Jorge Maciel", "Ingles", "jorge.maciel@gmail.com", "48 99237898"},
+                {"Maria Dolores", "Alemao", "doloresmaria@hotmail.com", "48 88903345"},
+                {"Otavio Rubres", "Espanhol", "tavaorubres@gmail.com", "48 9870-5634"}
         };
 
         tabelaProfessor = new JTable(dados, colunas);
@@ -53,5 +53,4 @@ public class ListarProfessor extends JInternalFrame{
         getContentPane().add(txtProcurarProfessor);
         txtProcurarProfessor.setColumns(10);
     }
-
 }

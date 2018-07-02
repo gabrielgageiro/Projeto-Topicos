@@ -15,7 +15,6 @@ import com.topicos.pessoa.ListarProfessor;
 import com.topicos.pessoa.PessoaInternalFrame;
 
 public class Principal extends JFrame {
-
     private JPanel contentPane;
 
     private JMenuBar menuBar = new JMenuBar();

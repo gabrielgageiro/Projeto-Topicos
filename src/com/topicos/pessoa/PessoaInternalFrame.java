@@ -55,6 +55,9 @@ public class PessoaInternalFrame extends BaseInternalFrame<Pessoas> {
 	    super("Cadastrar Pessoas",pessoa);
     }
 
+    public PessoaInternalFrame(){
+	    instanciarTela();
+    }
 
     @Override
     public void instanciarTela() {

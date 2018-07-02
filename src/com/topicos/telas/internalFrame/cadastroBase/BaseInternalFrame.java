@@ -1,16 +1,29 @@
 package com.topicos.telas.internalFrame.cadastroBase;
 
+import com.topicos.comum.Cadastro;
+
 import javax.swing.*;
 import javax.swing.event.InternalFrameEvent;
 
-public class BaseInternalFrame extends JInternalFrame {
-    public BaseInternalFrame(){
-        setClosable(true);
+public abstract class BaseInternalFrame <T extends Cadastro> extends JInternalFrame {
 
-        setBounds(100, 100, 755, 501);
-        getContentPane().setLayout(null);
+    private T obj;
 
 
-
+    public BaseInternalFrame(String titulo,T obj){
+        super(titulo, false, true, true, false);
+        this.obj=obj;
+        instanciarTela();
     }
+
+    public T getObjeto() {
+        return obj;
+    }
+
+    public void setObjeto(T objeto){
+        this.obj = obj;
+    }
+
+    public abstract void instanciarTela();
+
 }

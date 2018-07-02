@@ -6,28 +6,20 @@ Data:23/03/18
 
 package com.topicos.app;
 
+
 import com.topicos.bancoDeDados.Banco;
 import com.topicos.login.Login;
-import javax.swing.*;
+import com.topicos.telas.frames.principalFrame.Principal;
 
 public class App {
 
     public static void main(String[] args) {
 
-/*
+//        Banco.getConexao();
 
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException
-                | UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        }
-
-
-        Banco.getConexao();
-*/
-
-        new Login();
+//        new Login();
+        new Principal();
     }
+
 
 }

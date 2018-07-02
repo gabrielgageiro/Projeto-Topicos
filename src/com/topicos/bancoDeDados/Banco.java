@@ -6,18 +6,17 @@ Data:09/05/18
 
 package com.topicos.bancoDeDados;
 
+import com.topicos.exceptions.Exceptions;
 import com.topicos.logs.logsys.LogDeAcoes;
 
 import javax.swing.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class Banco {
     private static final String HOST = "db4free.net";
-    private static final String BANCO = "aula_banco";
-    private static final String USUARIO = "gabriel";
-    private static final String SENHA = "gabriel123";
+    private static final String BANCO = "projeto_topicos";
+    private static final String USUARIO = "escola_diomas";
+    private static final String SENHA = "12345678";
     private static final String URL = "jdbc:mysql://" + HOST + "/" + BANCO + "?useSSL=false";
 
     private static Connection connection = null;
@@ -56,6 +55,29 @@ public class Banco {
         }
 
         return false;
+    }
+
+    public static boolean validarUsuario(String usuario, String password){
+
+        String sql = "SELECT usuario, password FROM Usuario";
+
+        try  {
+            Connection conn = getConexao();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()){
+                return rs.getString("usuario").equals(usuario) && rs.getString("password").equals(password);
+
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            LogDeAcoes.salvarLog(e.getMessage());
+
+        }
+        return true;
+
     }
 
 }

@@ -14,9 +14,9 @@ public class Professor extends Pessoas {
     private String modulo;
     private int numeroPIS;
 
-    public Professor(Integer id, String nome, String sobrenome, String CPF, int idade,
-                     Endereco endereco, Contato contato, BigDecimal salario, String modulo, int numeroPIS) {
-        super(id, nome, sobrenome, CPF, idade, endereco, contato);
+    public Professor(String nome, String sobrenome, String CPF, int idade, Endereco endereco,
+                     Contato contato, BigDecimal salario, String modulo, int numeroPIS) {
+        super(nome, sobrenome, CPF, idade, endereco, contato);
         this.salario = salario;
         this.modulo = modulo;
         this.numeroPIS = numeroPIS;

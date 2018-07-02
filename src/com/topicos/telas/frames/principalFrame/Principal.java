@@ -6,7 +6,7 @@ import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
 import com.topicos.aula.AulaInternalFrame;
-import com.topicos.idioma.IdiomaInternalFrame;
+
 import com.topicos.login.Login;
 import com.topicos.logs.login.LogLogin;
 import com.topicos.logs.logsys.LogDeAcoes;
@@ -39,7 +39,7 @@ public class Principal extends JFrame {
 
     private AulaInternalFrame aulaInternalFrame = new AulaInternalFrame();
 
-    private IdiomaInternalFrame idiomaInternalFrame = new IdiomaInternalFrame();
+//    private IdiomaInternalFrame idiomaInternalFrame = new IdiomaInternalFrame();
 
 
     private ActionListener handle;
@@ -100,34 +100,7 @@ public class Principal extends JFrame {
         contentPane.add(panelOpcoes);
         panelOpcoes.setLayout(null);
 
-//        btnExit = new JButton("Exit");
-//
-//        btnExit.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
-//        btnExit.setVerticalTextPosition(SwingConstants.BOTTOM);
-//        btnExit.setBackground(UIManager.getColor("Button.background"));
-//        btnExit.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/exit.png")));
-//        btnExit.setBounds(12, 6, 70, 45);
-
-//        JButton btnSalvar = new JButton("Salvar");
-//        btnSalvar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/floppy_disk_sh.png")));
-//        btnSalvar.setBorder(new LineBorder(new Color(0, 0, 0)));
-//        btnSalvar.setIconTextGap(1);
-//        btnSalvar.setBounds(94, 6, 70, 45);
-//        panelOpcoes.add(btnSalvar);
-//
-//        btnLogout = new JButton("Logout");
-//        btnLogout.setBorder(new LineBorder(new Color(0, 0, 0)));
-//
         handle = new ListennerPrincipalFrame(SobreItem, btnLogout, btnExit, this);
-//        btnExit.addActionListener(handle);
-//
-//        panelOpcoes.add(btnExit);
-//
-//        btnLogout.addActionListener(handle);
-//        btnLogout.setBounds(176, 6, 81, 45);
-//        btnLogout.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/logout.png")));
-//        panelOpcoes.add(btnLogout);
-
         //Botão de cadastro de idioma
         JButton btnCadastrarIdioma = new JButton("Cadastrar idioma");
         btnCadastrarIdioma.setBorder(new LineBorder(new Color(0,0,0)));
@@ -152,7 +125,7 @@ public class Principal extends JFrame {
 
         contentPane.add(pessoaInternalFrame);
         contentPane.add(aulaInternalFrame);
-        contentPane.add(idiomaInternalFrame);
+//        contentPane.add(idiomaInternalFrame);
         contentPane.add(listarAluno);
         contentPane.add(listarProfessor);
 
@@ -184,9 +157,9 @@ public class Principal extends JFrame {
             aulaInternalFrame.setVisible(true);
         });
 
-        btnCadastrarIdioma.addActionListener(e -> {
-            idiomaInternalFrame.setVisible(true);
-        });
+//        btnCadastrarIdioma.addActionListener(e -> {
+//            idiomaInternalFrame.setVisible(true);
+//        });
 
 //        btnSalvar.addActionListener(e ->{
 //            System.out.println("Salvar Principal");

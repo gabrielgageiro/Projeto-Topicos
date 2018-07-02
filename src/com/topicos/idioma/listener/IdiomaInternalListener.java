@@ -15,17 +15,22 @@ public class IdiomaInternalListener extends InternalFrameListener {
 
     public IdiomaInternalListener(JButton btnCancelar, JButton btnCadastrar) {
         super(btnCancelar, btnCadastrar);
+        btnCadastrar.addActionListener(this);
+        btnCancelar.addActionListener(this);
     }
 
     @Override
     public void btnCadastrar() {
         LogDeAcoes.salvarLog("Cadastrar Idioma");
+        System.out.println("CADASSTRAR");
 
     }
 
     @Override
     public void btnCancelar() {
         LogDeAcoes.salvarLog("Cancelar Idioma");
+        System.out.println("SAIU");
+
 
     }
 }

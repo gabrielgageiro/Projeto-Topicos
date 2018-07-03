@@ -14,6 +14,8 @@ public class PessoaInternalListener extends InternalFrameListener {
 
     public PessoaInternalListener(JButton btnCancelar, JButton btnCadastrar) {
         super(btnCancelar, btnCadastrar);
+        btnCadastrar.addActionListener(this);
+        btnCancelar.addActionListener(this);
     }
 
     @Override

@@ -5,10 +5,8 @@ Data: 15/05/18
 
 package com.topicos.pessoa;
 
-import com.topicos.cadastro.Pessoas;
 import com.topicos.comum.enums.Estados;
 import com.topicos.pessoa.listener.PessoaInternalListener;
-import com.topicos.telas.internalFrame.cadastroBase.BaseInternalFrame;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
@@ -16,51 +14,42 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
 
-public class PessoaInternalFrame extends BaseInternalFrame<Pessoas> {
-	private JTextField txtNome;
-	private JTextField txtSobrenome;
-	private JLabel lblEmail;
-	private JTextField txtEmail;
-	private JLabel lblEmail2;
-	private JTextField txtEmail2;
-	private JLabel lblTelefone;
-	private JFormattedTextField txtTelefone;
-	private JLabel lblTelefone2;
-	private JFormattedTextField txtTelefone2;
-	private JLabel lblCidade;
-	private JTextField txtCidade;
-	private JLabel lblEstado;
-	private JTextField txtCep;
-	private JTextField txtRua;
-	private JTextField txtNumero;
-	private JLabel lblOcupacao;
-	private JTextField txtCurso;
-	private JLabel lblModulo;
-	private JTextField txtModulo;
-	private JLabel lblPis;
-	private JTextField txtPis;
-	private JLabel lblSalario;
-	private JTextField txtSalario;
+public class PessoaInternalFrame extends JInternalFrame {
+    private JTextField txtNome;
+    private JTextField txtSobrenome;
+    private JLabel lblEmail;
+    private JTextField txtEmail;
+    private JLabel lblEmail2;
+    private JTextField txtEmail2;
+    private JLabel lblTelefone;
+    private JFormattedTextField txtTelefone;
+    private JLabel lblTelefone2;
+    private JFormattedTextField txtTelefone2;
+    private JLabel lblCidade;
+    private JTextField txtCidade;
+    private JLabel lblEstado;
+    private JTextField txtCep;
+    private JTextField txtRua;
+    private JTextField txtNumero;
+    private JLabel lblOcupacao;
+    private JTextField txtCurso;
+    private JLabel lblModulo;
+    private JTextField txtModulo;
+    private JLabel lblPis;
+    private JTextField txtPis;
+    private JLabel lblSalario;
+    private JTextField txtSalario;
 
-	private JCheckBox chckbxAluno;
-	private JCheckBox chckbxProfessor;
-	private JLabel lblCurso;
-	private JLabel lblPagamento;
-	private JCheckBox chckbxSim;
-	private JCheckBox chckbxNao;
+    private JCheckBox chckbxAluno;
+    private JCheckBox chckbxProfessor;
+    private JLabel lblCurso;
+    private JLabel lblPagamento;
+    private JCheckBox chckbxSim;
+    private JCheckBox chckbxNao;
 
-	private MaskFormatter maskFormatter;
+    private MaskFormatter maskFormatter;
 
-	public PessoaInternalFrame(Pessoas pessoa){
-	    super("Cadastrar Pessoas",pessoa);
-    }
-
-    public PessoaInternalFrame(){
-	    instanciarTela();
-    }
-
-    @Override
-    public void instanciarTela() {
+    public PessoaInternalFrame() {
         setTitle("Cadastro de Pessoas");
         setBounds(100, 100, 557, 471);
         getContentPane().setLayout(null);
@@ -279,40 +268,39 @@ public class PessoaInternalFrame extends BaseInternalFrame<Pessoas> {
         btnCancelar.addActionListener(handle);
         btnCadastrar.addActionListener(handle);
 
-        chckbxAluno.addActionListener(evt -> checkBox(evt));
-        chckbxProfessor.addActionListener(evt -> checkBox(evt));
+        chckbxAluno.addActionListener(this::checkBox);
+        chckbxProfessor.addActionListener(this::checkBox);
     }
-
     public void checkBox(java.awt.event.ActionEvent evt){
-		//manipulando JCheckBox de aluno e professor
-		if(chckbxAluno.isSelected()){
-			lblCurso.setEnabled(true);
-			txtCurso.setEnabled(true);
-			lblPagamento.setEnabled(true);
-			chckbxSim.setEnabled(true);
-			chckbxNao.setEnabled(true);
-		} else{
-			lblCurso.setEnabled(false);
-			txtCurso.setEnabled(false);
-			lblPagamento.setEnabled(false);
-			chckbxSim.setEnabled(false);
-			chckbxNao.setEnabled(false);
-		}
+        //manipulando JCheckBox de aluno e professor
+        if(chckbxAluno.isSelected()){
+            lblCurso.setEnabled(true);
+            txtCurso.setEnabled(true);
+            lblPagamento.setEnabled(true);
+            chckbxSim.setEnabled(true);
+            chckbxNao.setEnabled(true);
+        } else{
+            lblCurso.setEnabled(false);
+            txtCurso.setEnabled(false);
+            lblPagamento.setEnabled(false);
+            chckbxSim.setEnabled(false);
+            chckbxNao.setEnabled(false);
+        }
 
-		if(chckbxProfessor.isSelected()){
-			lblModulo.setEnabled(true);
-			txtModulo.setEnabled(true);
-			lblPis.setEnabled(true);
-			txtPis.setEnabled(true);
-			lblSalario.setEnabled(true);
-			txtSalario.setEnabled(true);
-		} else{
-			lblModulo.setEnabled(false);
-			txtModulo.setEnabled(false);
-			lblPis.setEnabled(false);
-			txtPis.setEnabled(false);
-			lblSalario.setEnabled(false);
-			txtSalario.setEnabled(false);
-		}
-	}
+        if(chckbxProfessor.isSelected()){
+            lblModulo.setEnabled(true);
+            txtModulo.setEnabled(true);
+            lblPis.setEnabled(true);
+            txtPis.setEnabled(true);
+            lblSalario.setEnabled(true);
+            txtSalario.setEnabled(true);
+        } else{
+            lblModulo.setEnabled(false);
+            txtModulo.setEnabled(false);
+            lblPis.setEnabled(false);
+            txtPis.setEnabled(false);
+            lblSalario.setEnabled(false);
+            txtSalario.setEnabled(false);
+        }
+    }
 }

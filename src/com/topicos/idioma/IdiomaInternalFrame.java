@@ -6,7 +6,6 @@ Data: 13/05/18
 package com.topicos.idioma;
 
 import com.topicos.idioma.listener.IdiomaInternalListener;
-import com.topicos.telas.internalFrame.cadastroBase.BaseInternalFrame;
 
 import javax.swing.*;
 import java.awt.*;

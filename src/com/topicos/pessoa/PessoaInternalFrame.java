@@ -163,7 +163,12 @@ public class PessoaInternalFrame extends BaseInternalFrame<Pessoas> {
         lblCep.setBounds(378, 160, 39, 14);
         getContentPane().add(lblCep);
 
-        txtCep = new JTextField();
+        try{
+            maskFormatter = new MaskFormatter("#####-###");
+            maskFormatter.setPlaceholderCharacter('_');
+        }catch(ParseException pex){}
+
+        txtCep = new JFormattedTextField(maskFormatter);
         txtCep.setBounds(427, 157, 101, 20);
         getContentPane().add(txtCep);
         txtCep.setColumns(10);

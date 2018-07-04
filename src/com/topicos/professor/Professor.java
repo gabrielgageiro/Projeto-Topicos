@@ -6,9 +6,9 @@ Data:24/03/18
 
 package com.topicos.professor;
 
-import com.topicos.comum.cadastro.Contato;
-import com.topicos.comum.cadastro.Endereco;
-import com.topicos.comum.cadastro.Pessoas;
+import com.topicos.cadastro.Contato;
+import com.topicos.cadastro.Endereco;
+import com.topicos.comum.Pessoas;
 
 import java.math.BigDecimal;
 

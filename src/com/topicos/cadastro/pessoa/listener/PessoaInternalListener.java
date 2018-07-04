@@ -3,13 +3,11 @@ Criado por Herick Maciel Maia
 Data: 14/05/18
 */
 
-package com.topicos.pessoa.listener;
+package com.topicos.cadastro.pessoa.listener;
 
 import com.topicos.comum.listener.InternalFrameListener;
 import com.topicos.logs.logsys.LogDeAcoes;
-import com.topicos.pessoa.PessoaInternalFrame;
-
-import javax.swing.*;
+import com.topicos.cadastro.pessoa.PessoaInternalFrame;
 
 public class PessoaInternalListener extends InternalFrameListener {
 

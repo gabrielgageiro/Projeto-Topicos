@@ -4,15 +4,17 @@ Data:24/03/18
 */
 
 
-package com.topicos.aluno;
+package com.topicos.cadastro.aluno;
 
-import com.topicos.comum.cadastro.Contato;
-import com.topicos.comum.cadastro.Endereco;
-import com.topicos.comum.cadastro.Pessoas;
+import com.topicos.cadastro.Contato;
+import com.topicos.cadastro.Endereco;
+import com.topicos.comum.Pessoas;
 
 public class Aluno extends Pessoas {
     private boolean pagamentoEmdia;
     private String curso;
+
+    public Aluno(){}
 
     public Aluno(String nome, String sobrenome, String CPF, int idade, Endereco endereco, Contato contato,
                  boolean pagamentoEmdia, String curso) {

@@ -4,10 +4,10 @@ Data:08/06/18
 */
 
 
-package com.topicos.aula;
+package com.topicos.cadastro.aula;
 
-import com.topicos.aluno.Aluno;
-import com.topicos.comum.cadastro.Idiomas;
+import com.topicos.cadastro.aluno.Aluno;
+import com.topicos.cadastro.Idiomas;
 import com.topicos.professor.Professor;
 
 import java.util.ArrayList;

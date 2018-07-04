@@ -6,8 +6,8 @@ Data:15/06/18
 
 package com.topicos.curso;
 
-import com.topicos.aula.Aula;
-import com.topicos.comum.cadastro.Idiomas;
+import com.topicos.cadastro.aula.Aula;
+import com.topicos.cadastro.Idiomas;
 import com.topicos.professor.Professor;
 
 import java.util.ArrayList;

@@ -147,3 +147,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 04/07/2018 17:16:46	|	null		|	Cadastrar Aula
 04/07/2018 17:16:48	|	null		|	Cancelar Aula
 04/07/2018 17:17:07	|	null		|	No suitable driver found for jdbc:mysql://localhost/escola_idioma?useSSL=false
+04/07/2018 17:26:00	|	null		|	Cadastrar Aula
+04/07/2018 17:26:07	|	null		|	Cadastrar Aula
+04/07/2018 17:26:09	|	null		|	Cadastrar Aula
+04/07/2018 17:26:10	|	null		|	Cancelar Aula

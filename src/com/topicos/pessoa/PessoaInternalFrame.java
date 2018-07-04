@@ -19,10 +19,10 @@ import java.text.ParseException;
 public class PessoaInternalFrame extends BaseInternalFrame<Pessoas> {
 	private JTextField txtNome;
 	private JTextField txtSobrenome;
+	private JLabel lblCPF;
+	private JTextField txtCPF;
 	private JLabel lblEmail;
 	private JTextField txtEmail;
-	private JLabel lblEmail2;
-	private JTextField txtEmail2;
 	private JLabel lblTelefone;
 	private JFormattedTextField txtTelefone;
 	private JLabel lblTelefone2;
@@ -87,25 +87,30 @@ public class PessoaInternalFrame extends BaseInternalFrame<Pessoas> {
         getContentPane().add(txtSobrenome);
         txtSobrenome.setColumns(10);
 
+        lblCPF = new JLabel("CPF:");
+        lblCPF.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        lblCPF.setBounds(10, 60, 46, 14);
+        getContentPane().add(lblCPF);
+
+        try{
+            maskFormatter = new MaskFormatter("###.###.###-##");
+            maskFormatter.setPlaceholderCharacter('_');
+        }catch(ParseException pex){}
+
+        txtCPF = new JFormattedTextField(maskFormatter);
+        txtCPF.setBounds(76, 59, 150, 20);
+        getContentPane().add(txtCPF);
+        txtCPF.setColumns(10);
+
         lblEmail = new JLabel("Email:");
         lblEmail.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        lblEmail.setBounds(10, 60, 46, 14);
+        lblEmail.setBounds(236, 60, 112, 14);
         getContentPane().add(lblEmail);
 
         txtEmail = new JTextField();
-        txtEmail.setBounds(76, 59, 150, 20);
+        txtEmail.setBounds(378, 59, 150, 20);
         getContentPane().add(txtEmail);
         txtEmail.setColumns(10);
-
-        lblEmail2 = new JLabel("Email 2 (opcional):");
-        lblEmail2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        lblEmail2.setBounds(236, 60, 112, 14);
-        getContentPane().add(lblEmail2);
-
-        txtEmail2 = new JTextField();
-        txtEmail2.setBounds(378, 59, 150, 20);
-        getContentPane().add(txtEmail2);
-        txtEmail2.setColumns(10);
 
         lblTelefone = new JLabel("Telefone:");
         lblTelefone.setFont(new Font("Tahoma", Font.PLAIN, 14));

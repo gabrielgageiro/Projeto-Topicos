@@ -4,13 +4,14 @@ Data:24/03/18
 */
 
 
-package com.topicos.cadastro;
+package com.topicos.comum.cadastro;
 
 
 import com.topicos.comum.Cadastro;
 
 public class Pessoas extends Cadastro {
 
+    private Integer id;
     private String nome;
     private String sobrenome;
     private String CPF;
@@ -77,6 +78,18 @@ public class Pessoas extends Cadastro {
         this.contato = contato;
     }
 
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public boolean eNovo(){
+        return id == null;
+    }
     @Override
     public String toString() {
         return nome + " " + sobrenome + "\n"+

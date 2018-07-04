@@ -1,8 +1,8 @@
 /*
 Criado por: Herick Maciel Maia
-Data: 18/05/18
+Data: 18/05/18.
  */
-package com.topicos.pessoa;
+package com.topicos.pessoa.listarTela;
 
 import javax.swing.*;
 import java.awt.Font;
@@ -10,16 +10,16 @@ import java.util.regex.PatternSyntaxException;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-public class ListarAluno extends JInternalFrame {
-    private JTable tabelaAluno;
-    private JTextField txtProcurarAluno;
+public class ListarProfessor extends JInternalFrame{
+    private JTable tabelaProfessor;
+    private JTextField txtProcurarProfessor;
     private TableModel val;
     private JCheckBox chckbxNome;
     private JCheckBox chckbxCurso;
     private boolean checkNome, checkCurso;
 
-    public ListarAluno() {
-        super("Listagem de Aluno");
+    public ListarProfessor(){
+        super("Listagem de Professor");
         setClosable(true);
         setBounds(100, 100, 450, 422);
         getContentPane().setLayout(null);
@@ -27,13 +27,13 @@ public class ListarAluno extends JInternalFrame {
         String [] colunas = {"Nome", "Curso", "Email", "Telefone"};
 
         Object [][] dados = {
-                {"Ana Maria", "Ingles", "ana.monteiro@gmail.com", "48 99237898"},
-                {"Joao da Silva", "Ingles", "joaosilva@hotmail.com", "48 88903345"},
-                {"Pedro Pedras", "Espanhol", "pedrinho@gmail.com", "48 9870-5634"}
+                {"Jorge Maciel", "Ingles", "jorge.maciel@gmail.com", "48 99237898"},
+                {"Maria Dolores", "Alemao", "doloresmaria@hotmail.com", "48 88903345"},
+                {"Otavio Rubres", "Espanhol", "tavaorubres@gmail.com", "48 9870-5634"}
         };
 
-        tabelaAluno = new JTable(dados, colunas);
-        JScrollPane barraRolagem = new JScrollPane(tabelaAluno);
+        tabelaProfessor = new JTable(dados, colunas);
+        JScrollPane barraRolagem = new JScrollPane(tabelaProfessor);
         barraRolagem.setBounds(10, 68, 414, 313);
 
         getContentPane().add(barraRolagem);
@@ -58,10 +58,9 @@ public class ListarAluno extends JInternalFrame {
         btnAtualizar.setBounds(335, 37, 89, 21);
         getContentPane().add(btnAtualizar);
 
-        txtProcurarAluno = new JTextField();
-        txtProcurarAluno.setBounds(10, 37, 216, 20);
-        getContentPane().add(txtProcurarAluno);
-        txtProcurarAluno.setColumns(10);
+        txtProcurarProfessor = new JTextField();
+        txtProcurarProfessor.setBounds(10, 37, 216, 20);
+        getContentPane().add(txtProcurarProfessor);
 
         chckbxNome.addActionListener(evt -> checkBox());
         chckbxCurso.addActionListener(evt -> checkBox());
@@ -70,9 +69,9 @@ public class ListarAluno extends JInternalFrame {
     }
 
     public void btnAtualizarActionPerformed(){
-        val = tabelaAluno.getModel();
+        val = tabelaProfessor.getModel();
         final TableRowSorter<TableModel> sorter = new TableRowSorter<>(val);
-        tabelaAluno.setRowSorter(sorter);
+        tabelaProfessor.setRowSorter(sorter);
         sorter.setRowFilter(null);
     }
 
@@ -92,10 +91,10 @@ public class ListarAluno extends JInternalFrame {
 
     private void btnBuscarActionPerformed() {
         if(checkNome && checkCurso == false) {
-            val = tabelaAluno.getModel();
+            val = tabelaProfessor.getModel();
             final TableRowSorter<TableModel> sorter = new TableRowSorter<>(val);
-            tabelaAluno.setRowSorter(sorter);
-            String text = txtProcurarAluno.getText().toUpperCase();
+            tabelaProfessor.setRowSorter(sorter);
+            String text = txtProcurarProfessor.getText().toUpperCase();
             if (text.length() == 0) {
                 sorter.setRowFilter(null);
             } else {
@@ -107,10 +106,10 @@ public class ListarAluno extends JInternalFrame {
             }
         }
         if(checkCurso && checkNome == false) {
-            val = tabelaAluno.getModel();
+            val = tabelaProfessor.getModel();
             final TableRowSorter<TableModel> sorter = new TableRowSorter<>(val);
-            tabelaAluno.setRowSorter(sorter);
-            String text = txtProcurarAluno.getText().toUpperCase();
+            tabelaProfessor.setRowSorter(sorter);
+            String text = txtProcurarProfessor.getText().toUpperCase();
             if (text.length() == 0) {
                 sorter.setRowFilter(null);
             } else {

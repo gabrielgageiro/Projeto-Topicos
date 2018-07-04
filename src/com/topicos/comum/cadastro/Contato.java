@@ -4,7 +4,7 @@ Data:08/06/18
 */
 
 
-package com.topicos.cadastro;
+package com.topicos.comum.cadastro;
 
 public class Contato {
 

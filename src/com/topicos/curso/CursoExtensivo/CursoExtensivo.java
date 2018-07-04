@@ -7,8 +7,8 @@ Data:15/06/18
 package com.topicos.curso.CursoExtensivo;
 
 import com.topicos.aula.Aula;
-import com.topicos.cadastro.Idiomas;
-import com.topicos.cadastro.Professor;
+import com.topicos.comum.cadastro.Idiomas;
+import com.topicos.professor.Professor;
 import com.topicos.comum.interfaces.CalcularValorDoSemestre;
 import com.topicos.curso.Curso;
 

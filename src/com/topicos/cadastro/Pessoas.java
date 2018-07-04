@@ -18,6 +18,8 @@ public class Pessoas extends Cadastro {
     private Endereco endereco;
     private Contato contato;
 
+    public Pessoas(){}
+
     public Pessoas(String nome, String sobrenome, String CPF, int idade, Endereco endereco, Contato contato) {
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -74,4 +76,11 @@ public class Pessoas extends Cadastro {
     public void setContato(Contato contato) {
         this.contato = contato;
     }
+
+    @Override
+    public String toString() {
+        return nome + " " + sobrenome + "\n"+
+        CPF+ " " +idade +"\n"+endereco.toString()+"\n"+contato.toString();
+    }
 }
+

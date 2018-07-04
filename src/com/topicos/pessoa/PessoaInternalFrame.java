@@ -5,6 +5,9 @@ Data: 15/05/18
 
 package com.topicos.pessoa;
 
+import com.topicos.cadastro.Contato;
+import com.topicos.cadastro.Endereco;
+import com.topicos.cadastro.Pessoas;
 import com.topicos.comum.enums.Estados;
 import com.topicos.pessoa.listener.PessoaInternalListener;
 
@@ -39,15 +42,19 @@ public class PessoaInternalFrame extends JInternalFrame {
     private JTextField txtPis;
     private JLabel lblSalario;
     private JTextField txtSalario;
-
+    private JButton btnCancelar;
     private JCheckBox chckbxAluno;
     private JCheckBox chckbxProfessor;
     private JLabel lblCurso;
     private JLabel lblPagamento;
     private JCheckBox chckbxSim;
     private JCheckBox chckbxNao;
-
+    private JButton btnCadastrar;
+    private  JComboBox<Estados> cbxEstado;
     private MaskFormatter maskFormatter;
+
+    private Pessoas pessoas;
+
 
     public PessoaInternalFrame() {
         setTitle("Cadastro de Pessoas");
@@ -101,10 +108,11 @@ public class PessoaInternalFrame extends JInternalFrame {
         lblTelefone.setBounds(10, 109, 56, 14);
         getContentPane().add(lblTelefone);
 
-        try{
+        try {
             maskFormatter = new MaskFormatter("####-####");
             maskFormatter.setPlaceholderCharacter('_');
-        }catch(ParseException pex){}
+        } catch (ParseException pex) {
+        }
 
         txtTelefone = new JFormattedTextField(maskFormatter);
         txtTelefone.setBounds(76, 108, 150, 20);
@@ -136,7 +144,7 @@ public class PessoaInternalFrame extends JInternalFrame {
         lblEstado.setBounds(236, 160, 56, 14);
         getContentPane().add(lblEstado);
 
-        JComboBox<Estados> cbxEstado = new JComboBox();
+         cbxEstado = new JComboBox();
         //Modificar com o Banco de Dados
         cbxEstado.setModel(new DefaultComboBoxModel<>(Estados.values()));
         cbxEstado.setBounds(302, 157, 66, 20);
@@ -253,33 +261,33 @@ public class PessoaInternalFrame extends JInternalFrame {
         txtSalario.setColumns(10);
         txtSalario.setEnabled(false);
 
-        JButton btnCancelar = new JButton("Cancelar");
+        btnCancelar = new JButton("Cancelar");
         btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 14));
         btnCancelar.setBounds(10, 403, 97, 23);
         getContentPane().add(btnCancelar);
 
-        JButton btnCadastrar = new JButton("Cadastrar");
+        btnCadastrar =new JButton("Cadastrar");
         btnCadastrar.setFont(new Font("Tahoma", Font.PLAIN, 14));
         btnCadastrar.setBounds(129, 403, 97, 23);
         getContentPane().add(btnCadastrar);
 
-        ActionListener handle = new PessoaInternalListener(btnCancelar,btnCadastrar);
-
-        btnCancelar.addActionListener(handle);
-        btnCadastrar.addActionListener(handle);
 
         chckbxAluno.addActionListener(this::checkBox);
         chckbxProfessor.addActionListener(this::checkBox);
+
+        new PessoaInternalListener(this);
+        pessoas = new Pessoas();
     }
-    public void checkBox(java.awt.event.ActionEvent evt){
+
+    private void checkBox(java.awt.event.ActionEvent evt) {
         //manipulando JCheckBox de aluno e professor
-        if(chckbxAluno.isSelected()){
+        if (chckbxAluno.isSelected()) {
             lblCurso.setEnabled(true);
             txtCurso.setEnabled(true);
             lblPagamento.setEnabled(true);
             chckbxSim.setEnabled(true);
             chckbxNao.setEnabled(true);
-        } else{
+        } else {
             lblCurso.setEnabled(false);
             txtCurso.setEnabled(false);
             lblPagamento.setEnabled(false);
@@ -287,14 +295,14 @@ public class PessoaInternalFrame extends JInternalFrame {
             chckbxNao.setEnabled(false);
         }
 
-        if(chckbxProfessor.isSelected()){
+        if (chckbxProfessor.isSelected()) {
             lblModulo.setEnabled(true);
             txtModulo.setEnabled(true);
             lblPis.setEnabled(true);
             txtPis.setEnabled(true);
             lblSalario.setEnabled(true);
             txtSalario.setEnabled(true);
-        } else{
+        } else {
             lblModulo.setEnabled(false);
             txtModulo.setEnabled(false);
             lblPis.setEnabled(false);
@@ -303,4 +311,31 @@ public class PessoaInternalFrame extends JInternalFrame {
             txtSalario.setEnabled(false);
         }
     }
+
+    //Insere valores
+    public void salvarDados(){
+    //String UF,String cidade, String rua, int numeroCasa
+        pessoas.setEndereco(new Endereco(cbxEstado.getSelectedItem().toString(),txtCidade.getText(),txtRua.getText(),
+                Integer.parseInt(txtNumero.getText())));
+
+        pessoas.setContato(new Contato(txtEmail.getText(),txtTelefone.getText(),txtTelefone2.getText()));
+
+        pessoas.setNome(txtNome.getText());
+        pessoas.setSobrenome(txtSobrenome.getText());
+        pessoas.setCPF("123.456.789-00");
+        pessoas.setIdade(23);
+        System.out.println(pessoas.toString());
+
+    }
+
+
+    public JButton getCadastrarBtn() {
+        return btnCadastrar;
+    }
+
+    public JButton getBtnCancelar(){
+        return btnCancelar;
+    }
+
+
 }

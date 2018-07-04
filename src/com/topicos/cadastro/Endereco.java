@@ -62,5 +62,9 @@ public class Endereco {
         this.numeroCasa = numeroCasa;
     }
 
-
+    @Override
+    public String toString() {
+        return "Cidade : "+ cidade + " UF " + UF + "\n"+
+                "Rua: " + rua + " numero da casa " + numeroCasa;
+    }
 }

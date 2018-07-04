@@ -11,13 +11,11 @@ public class Contato {
     private String email;
     private String telefone;
     private String celular;
-    private Integer id;
 
-    public Contato(String email, String telefone, String celular, Integer id) {
+    public Contato(String email, String telefone, String celular) {
         this.email = email;
         this.telefone = telefone;
         this.celular = celular;
-        this.id = id;
     }
 
     public String getEmail() {
@@ -44,11 +42,8 @@ public class Contato {
         this.celular = celular;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Email : " + email + " telefone: " + telefone + " celular: " + celular;
     }
 }

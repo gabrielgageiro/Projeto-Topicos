@@ -7,23 +7,31 @@ package com.topicos.pessoa.listener;
 
 import com.topicos.comum.listener.InternalFrameListener;
 import com.topicos.logs.logsys.LogDeAcoes;
+import com.topicos.pessoa.PessoaInternalFrame;
 
 import javax.swing.*;
 
 public class PessoaInternalListener extends InternalFrameListener {
 
-    public PessoaInternalListener(JButton btnCancelar, JButton btnCadastrar) {
-        super(btnCancelar, btnCadastrar);
+    private PessoaInternalFrame pessoaInternalFrame;
+
+    public PessoaInternalListener(PessoaInternalFrame pessoaInternalFrame) {
+        super(pessoaInternalFrame.getBtnCancelar(), pessoaInternalFrame.getCadastrarBtn());
+        this.pessoaInternalFrame=pessoaInternalFrame;
     }
+
 
     @Override
     public void btnCadastrar() {
-        LogDeAcoes.salvarLog("Cancelar Aula");
+        LogDeAcoes.salvarLog("Cadastrar Aula");
+        pessoaInternalFrame.salvarDados();
+
     }
 
     @Override
     public void btnCancelar() {
         LogDeAcoes.salvarLog("Cancelar Aula");
+        pessoaInternalFrame.dispose();
 
     }
 

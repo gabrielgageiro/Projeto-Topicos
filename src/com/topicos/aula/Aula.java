@@ -6,9 +6,9 @@ Data:08/06/18
 
 package com.topicos.aula;
 
-import com.topicos.cadastro.Aluno;
-import com.topicos.cadastro.Idiomas;
-import com.topicos.cadastro.Professor;
+import com.topicos.aluno.Aluno;
+import com.topicos.comum.cadastro.Idiomas;
+import com.topicos.professor.Professor;
 
 import java.util.ArrayList;
 import java.util.List;

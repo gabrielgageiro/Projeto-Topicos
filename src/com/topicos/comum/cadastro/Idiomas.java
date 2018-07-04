@@ -3,7 +3,7 @@ Criado por: Herick Maciel Maia
 Data: 25/03/18
  */
 
-package com.topicos.cadastro;
+package com.topicos.comum.cadastro;
 
 public class Idiomas {
 

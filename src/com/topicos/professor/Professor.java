@@ -4,7 +4,11 @@ Data:24/03/18
 */
 
 
-package com.topicos.cadastro;
+package com.topicos.professor;
+
+import com.topicos.comum.cadastro.Contato;
+import com.topicos.comum.cadastro.Endereco;
+import com.topicos.comum.cadastro.Pessoas;
 
 import java.math.BigDecimal;
 
@@ -22,8 +26,10 @@ public class Professor extends Pessoas {
         this.numeroPIS = numeroPIS;
     }
 
+
     public BigDecimal getSalario() {
         return salario;
+
     }
 
     public void setSalario(BigDecimal salario) {

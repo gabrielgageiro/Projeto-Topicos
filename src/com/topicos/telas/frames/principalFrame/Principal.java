@@ -7,12 +7,11 @@ import java.awt.event.ActionListener;
 
 import com.topicos.aula.AulaInternalFrame;
 
-import com.topicos.cadastro.Pessoas;
 import com.topicos.login.Login;
 import com.topicos.logs.login.LogLogin;
 import com.topicos.logs.logsys.LogDeAcoes;
-import com.topicos.pessoa.ListarAluno;
-import com.topicos.pessoa.ListarProfessor;
+import com.topicos.pessoa.listarTela.ListarAluno;
+import com.topicos.pessoa.listarTela.ListarProfessor;
 import com.topicos.pessoa.PessoaInternalFrame;
 
 public class Principal extends JFrame {

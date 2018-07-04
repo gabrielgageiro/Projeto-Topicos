@@ -17,7 +17,10 @@ public abstract class InternalFrameListener implements ActionListener {
         public InternalFrameListener(JButton btnCancelar,JButton btnCadastrar){
             this.btnCancelar=btnCancelar;
             this.btnCadastrar=btnCadastrar;
+            btnCadastrar.addActionListener(this::actionPerformed);
+            btnCancelar.addActionListener(this::actionPerformed);
         }
+
         public void actionPerformed(ActionEvent evento) {
             if(evento.getSource() == btnCancelar) {
                 btnCancelar();

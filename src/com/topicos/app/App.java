@@ -15,7 +15,7 @@ public class App {
 
     public static void main(String[] args) {
 
-//        Banco.getConexao();
+        Banco.getConexao();
 
 //        new Login();
         new Principal();

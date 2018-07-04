@@ -9,7 +9,6 @@ package com.topicos.telas.frames.principalFrame;
 import com.topicos.comum.listener.PrincipalListenner;
 
 import com.topicos.logs.logsys.LogDeAcoes;
-import com.topicos.pessoa.ListarAluno;
 
 import javax.swing.*;
 

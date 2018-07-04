@@ -4,7 +4,11 @@ Data:24/03/18
 */
 
 
-package com.topicos.cadastro;
+package com.topicos.aluno;
+
+import com.topicos.comum.cadastro.Contato;
+import com.topicos.comum.cadastro.Endereco;
+import com.topicos.comum.cadastro.Pessoas;
 
 public class Aluno extends Pessoas {
     private boolean pagamentoEmdia;
@@ -31,5 +35,6 @@ public class Aluno extends Pessoas {
 
     public void setCurso(String curso) {
         this.curso = curso;
+
     }
 }

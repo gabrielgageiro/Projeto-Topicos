@@ -4,7 +4,7 @@ Data:08/06/18
 */
 
 
-package com.topicos.cadastro;
+package com.topicos.comum.cadastro;
 
 public class Endereco {
 
@@ -62,5 +62,9 @@ public class Endereco {
         this.numeroCasa = numeroCasa;
     }
 
-
+    @Override
+    public String toString() {
+        return "Cidade : "+ cidade + " UF " + UF + "\n"+
+                "Rua: " + rua + " numero da casa " + numeroCasa;
+    }
 }

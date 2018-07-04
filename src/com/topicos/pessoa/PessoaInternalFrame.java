@@ -336,9 +336,6 @@ import java.text.ParseException;
 
     }
 
-public void tstes(){
-    System.out.println("tests");
-}
     public JButton getCadastrarBtn() {
         return btnCadastrar;
     }

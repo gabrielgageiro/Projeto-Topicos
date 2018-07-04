@@ -3,15 +3,11 @@ Criado por: Herick Maciel Maia
 Data: 13/05/18
 */
 
-package com.topicos.aula;
-
-import com.topicos.aula.listener.AulaInternalListener;
-import com.topicos.comum.enums.Periodo;
+package com.topicos.cadastro.aula;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.event.ActionListener;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 

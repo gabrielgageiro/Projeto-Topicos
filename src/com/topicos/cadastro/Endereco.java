@@ -4,7 +4,7 @@ Data:08/06/18
 */
 
 
-package com.topicos.comum.cadastro;
+package com.topicos.cadastro;
 
 public class Endereco {
 

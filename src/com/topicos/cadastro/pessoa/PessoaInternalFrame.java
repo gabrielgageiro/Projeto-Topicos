@@ -4,13 +4,14 @@ Criado por Herick Maciel Maia
 Data: 15/05/18
 */
 
-package com.topicos.pessoa;
+package com.topicos.cadastro.pessoa;
 
-import com.topicos.comum.cadastro.Contato;
-import com.topicos.comum.cadastro.Endereco;
-import com.topicos.comum.cadastro.Pessoas;
+import com.topicos.cadastro.aluno.AlunoDAO;
+import com.topicos.cadastro.Contato;
+import com.topicos.cadastro.Endereco;
+import com.topicos.comum.Pessoas;
 import com.topicos.comum.enums.Estados;
-import com.topicos.pessoa.listener.PessoaInternalListener;
+import com.topicos.cadastro.pessoa.listener.PessoaInternalListener;
 
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
@@ -332,13 +333,10 @@ import java.text.ParseException;
         pessoas.setSobrenome(txtSobrenome.getText());
         pessoas.setCPF("123.456.789-00");
         pessoas.setIdade(23);
-        System.out.println(pessoas.toString());
+        System.out.println(new AlunoDAO().toString());
 
     }
 
-public void tstes(){
-    System.out.println("tests");
-}
     public JButton getCadastrarBtn() {
         return btnCadastrar;
     }

@@ -5,14 +5,15 @@ import java.awt.*;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionListener;
 
-import com.topicos.aula.AulaInternalFrame;
+import com.topicos.cadastro.aula.AulaInternalFrame;
 
 import com.topicos.login.Login;
 import com.topicos.logs.login.LogLogin;
 import com.topicos.logs.logsys.LogDeAcoes;
-import com.topicos.pessoa.listarTela.ListarAluno;
-import com.topicos.pessoa.listarTela.ListarProfessor;
-import com.topicos.pessoa.PessoaInternalFrame;
+import com.topicos.cadastro.pessoa.listarTela.ListarAluno;
+import com.topicos.cadastro.pessoa.listarTela.ListarProfessor;
+import com.topicos.cadastro.pessoa.PessoaInternalFrame;
+import com.topicos.telas.frames.principalFrame.listenner.ListennerPrincipalFrame;
 
 public class Principal extends JFrame {
     private JPanel contentPane;

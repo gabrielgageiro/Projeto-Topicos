@@ -3,9 +3,9 @@ Criado por: Herick Maciel Maia
 Data: 13/05/18
 */
 
-package com.topicos.aula.listener;
+package com.topicos.cadastro.aula.listener;
 
-import com.topicos.aula.AulaInternalFrame;
+import com.topicos.cadastro.aula.AulaInternalFrame;
 import com.topicos.comum.listener.InternalFrameListener;
 import com.topicos.logs.logsys.LogDeAcoes;
 

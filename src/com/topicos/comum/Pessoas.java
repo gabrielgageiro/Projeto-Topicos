@@ -4,9 +4,11 @@ Data:24/03/18
 */
 
 
-package com.topicos.comum.cadastro;
+package com.topicos.comum;
 
 
+import com.topicos.cadastro.Contato;
+import com.topicos.cadastro.Endereco;
 import com.topicos.comum.Cadastro;
 
 public class Pessoas extends Cadastro {

@@ -359,14 +359,13 @@ public class PessoaInternalFrame extends JInternalFrame {
         aluno.setIdade(23);
 
         if (chckbxSim.isSelected())
-            aluno.setPagamentoEmdia(true);
+            aluno.setPagamentoEmdia(1);
         else
-            aluno.setPagamentoEmdia(false);
+            aluno.setPagamentoEmdia(0);
 
         aluno.setCurso("ingles");
 
-        AlunoDAO.persistirDados(aluno);
-
+        new AlunoDAO().persistir(aluno);
     }
 
     private void salvarProfessor(Professor professor) {
@@ -391,10 +390,8 @@ public class PessoaInternalFrame extends JInternalFrame {
 
         if (eAluno()) {
             salvarAluno(new Aluno());
-            System.out.println("ALUNO");
         } else {
             salvarProfessor(new Professor());
-            System.out.println("professor");
         }
     }
 

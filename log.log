@@ -195,3 +195,114 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 04/07/2018 21:47:44	|	null		|	CheckBox de Aluno selecionado
 04/07/2018 21:47:45	|	null		|	Cadastrar Aula
 04/07/2018 21:47:47	|	null		|	Cancelar Aula
+04/07/2018 22:39:41	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 22:39:45	|	null		|	Cadastrar Aula
+04/07/2018 22:40:50	|	null		|	Cadastrar Aula
+04/07/2018 22:40:52	|	null		|	Cancelar Aula
+04/07/2018 22:42:03	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 22:42:07	|	null		|	Cadastrar Aula
+04/07/2018 22:42:07	|	null		|	Field 'anoNascimento' doesn't have a default value
+04/07/2018 22:45:28	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 22:45:28	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 22:45:36	|	null		|	Cadastrar Aula
+04/07/2018 22:45:40	|	null		|	Cancelar Aula
+04/07/2018 23:27:46	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:27:48	|	null		|	Cadastrar Aula
+04/07/2018 23:27:48	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:27:51	|	null		|	Cancelar Aula
+04/07/2018 23:28:20	|	null		|	Cadastrar Aula
+04/07/2018 23:28:20	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:28:50	|	null		|	Cancelar Aula
+04/07/2018 23:28:57	|	null		|	Cadastrar Aula
+04/07/2018 23:28:57	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:29:26	|	null		|	Sobre Item
+04/07/2018 23:29:28	|	null		|	Cadastrar Aula
+04/07/2018 23:29:28	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:29:29	|	null		|	Cancelar Aula
+04/07/2018 23:29:49	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:29:51	|	null		|	Cadastrar Aula
+04/07/2018 23:29:51	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:30:40	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:30:41	|	null		|	Cadastrar Aula
+04/07/2018 23:30:42	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:33:00	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:33:02	|	null		|	Cadastrar Aula
+04/07/2018 23:33:02	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:33:04	|	null		|	Cancelar Aula
+04/07/2018 23:35:37	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:35:40	|	null		|	Cadastrar Aula
+04/07/2018 23:35:40	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:35:41	|	null		|	Cancelar Aula
+04/07/2018 23:36:53	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:36:55	|	null		|	Cadastrar Aula
+04/07/2018 23:36:55	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:36:56	|	null		|	Cancelar Aula
+04/07/2018 23:39:02	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:39:03	|	null		|	Cadastrar Aula
+04/07/2018 23:39:04	|	null		|	Column Index out of range, 3 > 1. 
+04/07/2018 23:39:06	|	null		|	Cancelar Aula
+04/07/2018 23:39:37	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:39:39	|	null		|	Cadastrar Aula
+04/07/2018 23:39:40	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:39:41	|	null		|	Cancelar Aula
+04/07/2018 23:40:39	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:40:41	|	null		|	Cadastrar Aula
+04/07/2018 23:40:41	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:40:43	|	null		|	Cancelar Aula
+04/07/2018 23:41:33	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:41:36	|	null		|	Cadastrar Aula
+04/07/2018 23:41:36	|	null		|	Incorrect integer value: 'true' for column 'pagamentoEmdia' at row 1
+04/07/2018 23:41:38	|	null		|	Cancelar Aula
+04/07/2018 23:43:37	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:43:39	|	null		|	Cadastrar Aula
+04/07/2018 23:43:39	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:43:40	|	null		|	Cancelar Aula
+04/07/2018 23:44:29	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:44:31	|	null		|	Cadastrar Aula
+04/07/2018 23:44:31	|	null		|	No operations allowed after statement closed.
+04/07/2018 23:44:32	|	null		|	Cancelar Aula
+04/07/2018 23:46:50	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:46:51	|	null		|	Cadastrar Aula
+04/07/2018 23:46:52	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:46:53	|	null		|	Cancelar Aula
+04/07/2018 23:48:39	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:48:42	|	null		|	Cadastrar Aula
+04/07/2018 23:48:42	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:48:44	|	null		|	Cancelar Aula
+04/07/2018 23:50:08	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:50:10	|	null		|	Cadastrar Aula
+04/07/2018 23:50:10	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:50:12	|	null		|	Cancelar Aula
+04/07/2018 23:51:04	|	null		|	CheckBox de Aluno selecionado
+04/07/2018 23:51:07	|	null		|	Cadastrar Aula
+04/07/2018 23:51:07	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+04/07/2018 23:51:09	|	null		|	Cancelar Aula
+05/07/2018 00:01:54	|	null		|	Unknown database 'escola_idioma'
+05/07/2018 00:03:18	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 00:03:20	|	null		|	Cadastrar Aula
+05/07/2018 00:03:20	|	null		|	Field 'anoNascimento' doesn't have a default value
+05/07/2018 00:03:22	|	null		|	Cancelar Aula
+05/07/2018 00:07:09	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 00:07:11	|	null		|	Cadastrar Aula
+05/07/2018 00:07:45	|	null		|	Cadastrar Aula
+05/07/2018 00:07:46	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+05/07/2018 00:07:53	|	null		|	Cadastrar Aula
+05/07/2018 00:07:53	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+05/07/2018 00:07:56	|	null		|	Cancelar Aula
+05/07/2018 00:08:22	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 00:08:24	|	null		|	Cadastrar Aula
+05/07/2018 00:08:25	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+05/07/2018 00:08:25	|	null		|	Cancelar Aula
+05/07/2018 00:10:03	|	null		|	Cancelar Aula
+05/07/2018 00:12:24	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 00:12:25	|	null		|	Cadastrar Aula
+05/07/2018 00:12:26	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+05/07/2018 00:12:26	|	null		|	Cancelar Aula
+05/07/2018 00:12:29	|	null		|	Cadastrar Aula
+05/07/2018 00:12:30	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+05/07/2018 00:12:30	|	null		|	Cancelar Aula
+05/07/2018 00:15:53	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 00:15:55	|	null		|	Cadastrar Aula
+05/07/2018 00:15:55	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
+05/07/2018 00:15:56	|	null		|	Cancelar Aula
+05/07/2018 00:20:46	|	null		|	Unknown database 'escola_idioma'

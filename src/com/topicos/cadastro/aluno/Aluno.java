@@ -11,23 +11,23 @@ import com.topicos.cadastro.endereco.Endereco;
 import com.topicos.comum.Pessoas;
 
 public class Aluno extends Pessoas {
-    private boolean pagamentoEmdia;
+    private Integer pagamentoEmdia;
     private String curso;
 
     public Aluno(){}
 
     public Aluno(String nome, String sobrenome, String CPF, int idade, Endereco endereco, Contato contato,
-                 boolean pagamentoEmdia, String curso) {
+                 Integer pagamentoEmdia, String curso) {
         super(nome, sobrenome, CPF, idade, endereco, contato);
         this.pagamentoEmdia = pagamentoEmdia;
         this.curso = curso;
     }
 
-    public boolean isPagamentoEmdia() {
+    public Integer getPagamentoEmdia() {
         return pagamentoEmdia;
     }
 
-    public void setPagamentoEmdia(boolean pagamentoEmdia) {
+    public void setPagamentoEmdia(Integer pagamentoEmdia) {
         this.pagamentoEmdia = pagamentoEmdia;
     }
 

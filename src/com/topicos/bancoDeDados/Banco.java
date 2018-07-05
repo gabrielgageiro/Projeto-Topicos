@@ -6,6 +6,7 @@ Data:09/05/18
 
 package com.topicos.bancoDeDados;
 
+import com.topicos.cadastro.contato.Contato;
 import com.topicos.comum.Cadastro;
 import com.topicos.exceptions.Exceptions;
 import com.topicos.logs.logsys.LogDeAcoes;
@@ -88,4 +89,5 @@ public class Banco {
         return true;
 
     }
+
 }

@@ -4,9 +4,11 @@ Data:08/06/18
 */
 
 
-package com.topicos.cadastro;
+package com.topicos.cadastro.endereco;
 
-public class Endereco {
+import com.topicos.comum.Cadastro;
+
+public class Endereco extends Cadastro {
 
     private String UF;
     private String rua;

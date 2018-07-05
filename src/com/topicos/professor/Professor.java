@@ -6,8 +6,8 @@ Data:24/03/18
 
 package com.topicos.professor;
 
-import com.topicos.cadastro.Contato;
-import com.topicos.cadastro.Endereco;
+import com.topicos.cadastro.contato.Contato;
+import com.topicos.cadastro.endereco.Endereco;
 import com.topicos.comum.Pessoas;
 
 import java.math.BigDecimal;
@@ -17,6 +17,8 @@ public class Professor extends Pessoas {
     private BigDecimal salario;
     private String modulo;
     private int numeroPIS;
+
+    public Professor(){}
 
     public Professor(String nome, String sobrenome, String CPF, int idade, Endereco endereco,
                      Contato contato, BigDecimal salario, String modulo, int numeroPIS) {

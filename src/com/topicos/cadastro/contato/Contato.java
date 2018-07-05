@@ -4,9 +4,11 @@ Data:08/06/18
 */
 
 
-package com.topicos.cadastro;
+package com.topicos.cadastro.contato;
 
-public class Contato {
+import com.topicos.comum.Cadastro;
+
+public class Contato extends Cadastro {
 
     private String email;
     private String telefone;

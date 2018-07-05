@@ -59,7 +59,7 @@ public class Principal extends JFrame {
 
         setTitle("Topicos Especiais - I");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100, 100, 811, 711);
+        setBounds(100, 100, 1011, 811);
 
         setJMenuBar(menuBar);
 
@@ -105,20 +105,17 @@ public class Principal extends JFrame {
         //Botão de cadastro de idioma
         JButton btnCadastrarIdioma = new JButton("Cadastrar idioma");
         btnCadastrarIdioma.setBorder(new LineBorder(new Color(0,0,0)));
-        btnCadastrarIdioma.setIcon(new ImageIcon((Principal.class.getResource("/com/topicos/icones/register.png"))));
         btnCadastrarIdioma.setBounds(555,6,131,45);
         panelOpcoes.add(btnCadastrarIdioma);
 
         //Botão de cadastro de pessoas
         JButton btnCadastrar = new JButton("Cadastrar pessoa");
         btnCadastrar.setBorder(new LineBorder(new Color(0, 0, 0)));
-        btnCadastrar.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
         btnCadastrar.setBounds(269, 6, 131, 45);
         panelOpcoes.add(btnCadastrar);
 
         JButton btnCadastrarTurma = new JButton("Cadastrar Turma");
         btnCadastrarTurma.setBorder(new LineBorder(new Color(0, 0, 0)));
-        btnCadastrarTurma.setIcon(new ImageIcon(Principal.class.getResource("/com/topicos/icones/register.png")));
         btnCadastrarTurma.setBounds(412, 6, 131, 45);
         panelOpcoes.add(btnCadastrarTurma);
 

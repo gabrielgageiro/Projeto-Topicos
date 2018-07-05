@@ -6,6 +6,7 @@ Data:09/05/18
 
 package com.topicos.bancoDeDados;
 
+import com.topicos.comum.Cadastro;
 import com.topicos.exceptions.Exceptions;
 import com.topicos.logs.logsys.LogDeAcoes;
 
@@ -27,9 +28,9 @@ public class Banco {
     private static final String SENHA = "";
     private static final String URL = "jdbc:mysql://" + HOST + "/" + BANCO + "?useSSL=false";
 
-    private static Connection connection = null;
+    protected static Connection connection = null;
 
-    private Banco() {
+    protected Banco() {
     }
 
     public static Connection getConexao() {
@@ -87,9 +88,4 @@ public class Banco {
         return true;
 
     }
-
-
-
-
-
 }

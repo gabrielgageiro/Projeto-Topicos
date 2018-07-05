@@ -7,9 +7,8 @@ Data:24/03/18
 package com.topicos.comum;
 
 
-import com.topicos.cadastro.Contato;
-import com.topicos.cadastro.Endereco;
-import com.topicos.comum.Cadastro;
+import com.topicos.cadastro.contato.Contato;
+import com.topicos.cadastro.endereco.Endereco;
 
 public class Pessoas extends Cadastro {
 

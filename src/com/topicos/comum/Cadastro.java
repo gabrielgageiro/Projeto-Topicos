@@ -1,3 +1,8 @@
+/*
+Criado por Gabriel Gageiro;
+Data:08/06/18
+*/
+
 package com.topicos.comum;
 
 public class Cadastro {
@@ -13,7 +18,7 @@ public class Cadastro {
     }
 
     public boolean eNovo(){
-        return id == null;
+        return id != null;
     }
 
 }

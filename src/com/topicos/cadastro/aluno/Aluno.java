@@ -6,8 +6,8 @@ Data:24/03/18
 
 package com.topicos.cadastro.aluno;
 
-import com.topicos.cadastro.Contato;
-import com.topicos.cadastro.Endereco;
+import com.topicos.cadastro.contato.Contato;
+import com.topicos.cadastro.endereco.Endereco;
 import com.topicos.comum.Pessoas;
 
 public class Aluno extends Pessoas {

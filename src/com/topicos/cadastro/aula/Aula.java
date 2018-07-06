@@ -8,12 +8,13 @@ package com.topicos.cadastro.aula;
 
 import com.topicos.cadastro.aluno.Aluno;
 import com.topicos.cadastro.Idiomas;
+import com.topicos.comum.Cadastro;
 import com.topicos.professor.Professor;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aula {
+public class Aula extends Cadastro {
 
     private Idiomas idiomas;
     private List<Aluno> alunos = new ArrayList<>();

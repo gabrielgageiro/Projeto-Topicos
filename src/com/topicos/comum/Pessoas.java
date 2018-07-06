@@ -7,9 +7,8 @@ Data:24/03/18
 package com.topicos.comum;
 
 
-import com.topicos.cadastro.Contato;
-import com.topicos.cadastro.Endereco;
-import com.topicos.comum.Cadastro;
+import com.topicos.cadastro.contato.Contato;
+import com.topicos.cadastro.endereco.Endereco;
 
 public class Pessoas extends Cadastro {
 
@@ -18,18 +17,14 @@ public class Pessoas extends Cadastro {
     private String sobrenome;
     private String CPF;
     private int idade;
-    private Endereco endereco;
-    private Contato contato;
 
     public Pessoas(){}
 
-    public Pessoas(String nome, String sobrenome, String CPF, int idade, Endereco endereco, Contato contato) {
+    public Pessoas(String nome, String sobrenome, String CPF, int idade) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.CPF = CPF;
         this.idade = idade;
-        this.endereco = endereco;
-        this.contato = contato;
     }
 
     public String getNome() {
@@ -64,23 +59,6 @@ public class Pessoas extends Cadastro {
         this.idade = idade;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-
-    public Contato getContato() {
-        return contato;
-    }
-
-    public void setContato(Contato contato) {
-        this.contato = contato;
-    }
-
-
     public Integer getId() {
         return id;
     }
@@ -95,7 +73,7 @@ public class Pessoas extends Cadastro {
     @Override
     public String toString() {
         return nome + " " + sobrenome + "\n"+
-        CPF+ " " +idade +"\n"+endereco.toString()+"\n"+contato.toString();
+        CPF+ " " +idade;
     }
 }
 

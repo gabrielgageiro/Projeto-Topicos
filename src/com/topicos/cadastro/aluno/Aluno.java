@@ -13,6 +13,8 @@ import com.topicos.comum.Pessoas;
 public class Aluno extends Pessoas {
     private Integer pagamentoEmdia;
     private String curso;
+    private String email;
+    private String telefone;
 
     public Aluno(){}
 
@@ -21,6 +23,22 @@ public class Aluno extends Pessoas {
         super(nome, sobrenome, CPF, idade);
         this.pagamentoEmdia = pagamentoEmdia;
         this.curso = curso;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public Integer getPagamentoEmdia() {

@@ -8,6 +8,7 @@ package com.topicos.app;
 
 
 import com.topicos.bancoDeDados.Banco;
+import com.topicos.login.Login;
 import com.topicos.telas.frames.principalFrame.Principal;
 
 public class App {
@@ -17,8 +18,7 @@ public class App {
         Banco.getConexao();
 
 
-//        new Login();
-        new Principal();
+        new Login();
     }
 
 

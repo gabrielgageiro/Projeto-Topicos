@@ -14,10 +14,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 public class ContatoDAO extends Banco implements PersistirDados<Contato>{
 
     public ContatoDAO(){}
+
+    @Override
+    public List<Contato> getObjetos(Contato objeto) {
+        return null;
+    }
 
     @Override
     public Contato persistir(Contato objeto) {

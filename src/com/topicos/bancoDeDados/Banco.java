@@ -15,12 +15,17 @@ import javax.swing.*;
 import java.sql.*;
 
 public class Banco {
+
     /*
     private static final String HOST = "db4free.net";
     private static final String BANCO = "projeto_topicos";
     private static final String USUARIO = "escola_diomas";
     private static final String SENHA = "12345678";
     private static final String URL = "jdbc:mysql://" + HOST + "/" + BANCO + "?useSSL=false";
+
+    Banco de dados: escola_idioma
+Nome de usuário: escola
+Email: gabrielgageiro@unesc.net
 */
 
     private static final String HOST = "localhost";

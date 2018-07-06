@@ -14,10 +14,16 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 public class EnderecoDAO extends Banco implements PersistirDados<Endereco> {
 
     public EnderecoDAO(){}
+
+    @Override
+    public List<Endereco> getObjetos(Endereco objeto) {
+        return null;
+    }
 
     @Override
     public Endereco persistir(Endereco objeto) {

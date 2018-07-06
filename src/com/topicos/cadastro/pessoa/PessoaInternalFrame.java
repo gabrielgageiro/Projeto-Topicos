@@ -7,9 +7,11 @@ Data: 15/05/18
 package com.topicos.cadastro.pessoa;
 
 import com.topicos.cadastro.contato.Contato;
+import com.topicos.cadastro.contato.ContatoDAO;
 import com.topicos.cadastro.endereco.Endereco;
 import com.topicos.cadastro.aluno.Aluno;
 import com.topicos.cadastro.aluno.AlunoDAO;
+import com.topicos.cadastro.endereco.EnderecoDAO;
 import com.topicos.comum.enums.Estados;
 import com.topicos.cadastro.pessoa.listener.PessoaInternalListener;
 import com.topicos.logs.logsys.LogDeAcoes;
@@ -349,10 +351,11 @@ public class PessoaInternalFrame extends JInternalFrame {
 
     private void salvarAluno(Aluno aluno) {
 
-        aluno.setEndereco(new Endereco(cbxEstado.getSelectedItem().toString(), txtCidade.getText(), txtRua.getText(),
-                Integer.parseInt(txtNumero.getText())));
+        Endereco endereco =new Endereco(cbxEstado.getSelectedItem().toString(), txtCidade.getText(), txtRua.getText(),
+                Integer.parseInt(txtNumero.getText()));
 
-        aluno.setContato(new Contato(txtEmail.getText(), txtTelefone.getText(), txtTelefone2.getText()));
+        Contato contato =new Contato(txtEmail.getText(), txtTelefone.getText(), txtTelefone2.getText());
+
         aluno.setNome(txtNome.getText());
         aluno.setSobrenome(txtSobrenome.getText());
         aluno.setCPF("123.456.789-00");
@@ -365,15 +368,20 @@ public class PessoaInternalFrame extends JInternalFrame {
 
         aluno.setCurso("ingles");
 
-        new AlunoDAO().persistir(aluno);
+        AlunoDAO alunoDAO = new AlunoDAO();
+        Integer id = alunoDAO.persistir(aluno).getId();
+        endereco.setPessoa_idPessoa(id);
+        contato.setPessoa_idPessoa(id);
+        new EnderecoDAO().persistir(endereco);
+        new ContatoDAO().persistir(contato);
     }
 
     private void salvarProfessor(Professor professor) {
 
-        professor.setEndereco(new Endereco(cbxEstado.getSelectedItem().toString(), txtCidade.getText(), txtRua.getText(),
-                Integer.parseInt(txtNumero.getText())));
+        Endereco endereco =new Endereco(cbxEstado.getSelectedItem().toString(), txtCidade.getText(), txtRua.getText(),
+                Integer.parseInt(txtNumero.getText()));
 
-        professor.setContato(new Contato(txtEmail.getText(), txtTelefone.getText(), txtTelefone2.getText()));
+        Contato contato =new Contato(txtEmail.getText(), txtTelefone.getText(), txtTelefone2.getText());
 
         professor.setNome(txtNome.getText());
         professor.setSobrenome(txtSobrenome.getText());

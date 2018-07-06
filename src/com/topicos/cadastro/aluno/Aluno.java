@@ -18,7 +18,7 @@ public class Aluno extends Pessoas {
 
     public Aluno(String nome, String sobrenome, String CPF, int idade, Endereco endereco, Contato contato,
                  Integer pagamentoEmdia, String curso) {
-        super(nome, sobrenome, CPF, idade, endereco, contato);
+        super(nome, sobrenome, CPF, idade);
         this.pagamentoEmdia = pagamentoEmdia;
         this.curso = curso;
     }

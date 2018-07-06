@@ -306,3 +306,66 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 05/07/2018 00:15:55	|	null		|	Duplicate entry '123.456.789-00' for key 'CPF_UNIQUE'
 05/07/2018 00:15:56	|	null		|	Cancelar Aula
 05/07/2018 00:20:46	|	null		|	Unknown database 'escola_idioma'
+05/07/2018 22:02:08	|	null		|	Unknown database 'escola_idioma'
+05/07/2018 22:03:51	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 22:03:57	|	null		|	Cadastrar Aula
+05/07/2018 22:04:34	|	null		|	Cadastrar Aula
+05/07/2018 22:04:35	|	null		|	Cancelar Aula
+05/07/2018 22:25:17	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 22:25:39	|	null		|	Cadastrar Aula
+05/07/2018 22:25:39	|	null		|	Field 'Pessoa_idPessoa' doesn't have a default value
+05/07/2018 22:25:39	|	null		|	Unknown column 'Endereco_idEndereco' in 'field list'
+05/07/2018 22:50:25	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 22:50:27	|	null		|	Cadastrar Aula
+05/07/2018 22:50:27	|	null		|	You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''123.456.789-00")' at line 1
+05/07/2018 22:50:27	|	null		|	You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''123.456.789-00")' at line 1
+05/07/2018 22:50:29	|	null		|	Cancelar Aula
+05/07/2018 22:51:41	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 22:51:43	|	null		|	Cadastrar Aula
+05/07/2018 22:51:55	|	null		|	Cancelar Aula
+05/07/2018 22:52:10	|	null		|	Cadastrar Aula
+05/07/2018 22:52:11	|	null		|	Cancelar Aula
+05/07/2018 22:57:50	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 22:57:54	|	null		|	Cadastrar Aula
+05/07/2018 22:57:54	|	null		|	Salvo com sucesso no banco
+05/07/2018 22:57:54	|	null		|	Salvo com sucesso no banco
+05/07/2018 22:58:22	|	null		|	Cadastrar Aula
+05/07/2018 22:58:22	|	null		|	Salvo com sucesso no banco
+05/07/2018 22:58:22	|	null		|	Salvo com sucesso no banco
+05/07/2018 22:58:23	|	null		|	Cancelar Aula
+05/07/2018 22:59:26	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 22:59:32	|	null		|	Cadastrar Aula
+05/07/2018 22:59:32	|	null		|	Salvo com sucesso no banco
+05/07/2018 22:59:32	|	null		|	Salvo com sucesso no banco
+05/07/2018 22:59:33	|	null		|	Cancelar Aula
+05/07/2018 23:02:51	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 23:02:56	|	null		|	Cadastrar Aula
+05/07/2018 23:02:56	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:02:56	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:02:56	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:02:56	|	null		|	You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '")' at line 1
+05/07/2018 23:02:56	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:03:01	|	null		|	Cancelar Aula
+05/07/2018 23:05:26	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 23:05:33	|	null		|	Cadastrar Aula
+05/07/2018 23:05:33	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:05:33	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:05:33	|	null		|	Column count doesn't match value count at row 1
+05/07/2018 23:05:33	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:05:34	|	null		|	Cancelar Aula
+05/07/2018 23:07:35	|	null		|	Cancelar Aula
+05/07/2018 23:07:47	|	null		|	Cancelar Aula
+05/07/2018 23:08:34	|	null		|	CheckBox de Aluno selecionado
+05/07/2018 23:08:39	|	null		|	Cadastrar Aula
+05/07/2018 23:08:40	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:08:40	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:08:40	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:09:43	|	null		|	Cadastrar Aula
+05/07/2018 23:09:43	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:09:43	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:09:43	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:10:40	|	null		|	Cadastrar Aula
+05/07/2018 23:10:40	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:10:40	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:10:40	|	null		|	Salvo com sucesso no banco
+05/07/2018 23:10:41	|	null		|	Cancelar Aula

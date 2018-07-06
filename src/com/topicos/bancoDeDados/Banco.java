@@ -24,7 +24,7 @@ public class Banco {
 */
 
     private static final String HOST = "localhost";
-    private static final String BANCO = "escola_idioma";
+    private static final String BANCO = "escola_Idioma";
     private static final String USUARIO = "root";
     private static final String SENHA = "";
     private static final String URL = "jdbc:mysql://" + HOST + "/" + BANCO + "?useSSL=false";

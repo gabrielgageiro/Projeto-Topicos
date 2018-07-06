@@ -13,11 +13,20 @@ public class Contato extends Cadastro {
     private String email;
     private String telefone;
     private String celular;
+    private Integer Pessoa_idPessoa;
 
     public Contato(String email, String telefone, String celular) {
         this.email = email;
         this.telefone = telefone;
         this.celular = celular;
+    }
+
+    public Integer getPessoa_idPessoa() {
+        return Pessoa_idPessoa;
+    }
+
+    public void setPessoa_idPessoa(Integer pessoa_idPessoa) {
+        Pessoa_idPessoa = pessoa_idPessoa;
     }
 
     public String getEmail() {

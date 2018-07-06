@@ -23,12 +23,8 @@ public class AlunoDAO extends Banco implements PersistirDados<Aluno> {
     @Override
     public Aluno persistir(Aluno objeto) {
 
-        objeto.setContato(new ContatoDAO().persistir(objeto.getContato()));
-        objeto.setEndereco(new EnderecoDAO().persistir(objeto.getEndereco()));
-
-        String sql ="INSERT INTO Pessoa (nome, sobrenome, CPF,Endereco_idEndereco,Contato_idCon) " +
-                "VALUES(\"" +objeto.getNome() + "\",\""+objeto.getSobrenome()+"\",\'" +objeto.getCPF()+
-                "\',\"" + objeto.getEndereco().getId() + "\",\"" + objeto.getContato().getId()
+        String sql ="INSERT INTO Pessoa (nome, sobrenome, CPF) " +
+                "VALUES(\"" +objeto.getNome() + "\",\""+objeto.getSobrenome()+"\",\"" +objeto.getCPF()
                 +"\")";
 
         try {
@@ -40,7 +36,10 @@ public class AlunoDAO extends Banco implements PersistirDados<Aluno> {
 
             resultSet.next();
             objeto.setId(resultSet.getInt(1));
-            pstm.close();/*
+
+            pstm.close();
+
+            /*
 //`idAluno`, `pagamentoEmdia`, `curso`, `Pessoa_idPessoa`
 
             sql = "INSERT INTO Aluno (pagamentoEmdia,curso,Pessoa_idPessoa) " + "VALUES(\"" + objeto.getPagamentoEmdia() +
@@ -58,8 +57,8 @@ public class AlunoDAO extends Banco implements PersistirDados<Aluno> {
             e.printStackTrace();
             LogDeAcoes.salvarLog(e.getMessage());
         }
-
-        return null;
+        LogDeAcoes.salvarLog("Salvo com sucesso no banco");
+        return objeto;
     }
 
     }

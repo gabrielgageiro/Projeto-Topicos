@@ -22,7 +22,7 @@ public class Professor extends Pessoas {
 
     public Professor(String nome, String sobrenome, String CPF, int idade, Endereco endereco,
                      Contato contato, BigDecimal salario, String modulo, int numeroPIS) {
-        super(nome, sobrenome, CPF, idade, endereco, contato);
+        super(nome, sobrenome, CPF, idade);
         this.salario = salario;
         this.modulo = modulo;
         this.numeroPIS = numeroPIS;

@@ -22,8 +22,9 @@ public class ContatoDAO extends Banco implements PersistirDados<Contato>{
     @Override
     public Contato persistir(Contato objeto) {
 
-        String sql ="INSERT INTO Contato (email, telefone, celular) " +
-                "VALUES(\"" +objeto.getEmail() + "\",\""+objeto.getTelefone()+"\",\"" +objeto.getCelular()+ "\")";
+        String sql ="INSERT INTO Contato (email, telefone, celular,Pessoa_idPessoa) " +
+                "VALUES(\"" +objeto.getEmail() + "\",\""+objeto.getTelefone()+"\",\"" +objeto.getCelular()+
+                "\",\"" + objeto.getPessoa_idPessoa() + "\")";
 
         try {
             connection = getConexao();
@@ -41,6 +42,8 @@ public class ContatoDAO extends Banco implements PersistirDados<Contato>{
             e.printStackTrace();
             LogDeAcoes.salvarLog(e.getMessage());
         }
+        LogDeAcoes.salvarLog("Salvo com sucesso no banco");
+
         return objeto;
     }
 }

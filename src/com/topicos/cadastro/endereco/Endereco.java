@@ -14,8 +14,7 @@ public class Endereco extends Cadastro {
     private String rua;
     private String cidade;
     private int numeroCasa;
-    private Integer id;
-
+    private Integer Pessoa_idPessoa;
 
     public Endereco(String UF,String cidade, String rua, int numeroCasa) {
         this.cidade=cidade;
@@ -24,12 +23,12 @@ public class Endereco extends Cadastro {
         this.numeroCasa = numeroCasa;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getPessoa_idPessoa() {
+        return Pessoa_idPessoa;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setPessoa_idPessoa(Integer pessoa_idPessoa) {
+        Pessoa_idPessoa = pessoa_idPessoa;
     }
 
     public String getCidade() {

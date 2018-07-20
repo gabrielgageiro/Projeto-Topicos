@@ -5,6 +5,8 @@ Data: 13/05/18
 
 package com.topicos.cadastro.aula;
 
+import com.topicos.cadastro.aula.listener.AulaInternalListener;
+
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -95,6 +97,9 @@ public class AulaInternalFrame extends JInternalFrame {
         btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 14));
         btnCancelar.setBounds(30, 210, 95, 23);
         getContentPane().add(btnCancelar);
-
+        new AulaInternalListener(btnCancelar,btnCadastrar,this);
     }
+
+
+
 }

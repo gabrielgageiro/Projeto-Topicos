@@ -28,12 +28,14 @@ public class AulaInternalListener extends InternalFrameListener {
     public void btnCadastrar() {
         LogDeAcoes.salvarLog("Cadastrar Aula");
         System.out.println("aqui");
-
+        JOptionPane.showMessageDialog(null, "Aula Salva!"
+                , "Aula salva", JOptionPane.ERROR_MESSAGE);
     }
 
     @Override
     public void btnCancelar() {
 
+        aulaInternalFrame.dispose();
 
         LogDeAcoes.salvarLog("Cancelar Aula");
 

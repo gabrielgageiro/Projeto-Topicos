@@ -9,6 +9,8 @@ import com.topicos.comum.listener.InternalFrameListener;
 import com.topicos.logs.logsys.LogDeAcoes;
 import com.topicos.cadastro.pessoa.PessoaInternalFrame;
 
+import javax.swing.*;
+
 public class PessoaInternalListener extends InternalFrameListener {
 
     private PessoaInternalFrame pessoaInternalFrame;
@@ -22,6 +24,9 @@ public class PessoaInternalListener extends InternalFrameListener {
     @Override
     public void btnCadastrar() {
         LogDeAcoes.salvarLog("Cadastrar Aula");
+
+        JOptionPane.showMessageDialog(null, "Aula Salva!"
+                , "Aula salva", JOptionPane.ERROR_MESSAGE);
         pessoaInternalFrame.salvarDados();
 
     }

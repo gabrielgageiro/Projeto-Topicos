@@ -389,3 +389,39 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 06/07/2018 18:30:08	|	null		|	Dados carregado do banco
 06/07/2018 18:31:31	|	admin		|	Table 'escola_Idioma.Usuario' doesn't exist
 06/07/2018 18:31:31	|	admin		|	tela principal
+06/07/2018 19:17:44	|	null		|	Access denied for user 'root'@'localhost' (using password: NO)
+06/07/2018 19:18:34	|	null		|	Access denied for user 'root'@'localhost' (using password: NO)
+06/07/2018 19:24:07	|	admin		|	tela principal
+06/07/2018 19:24:07	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:24:32	|	admin		|	Sobre Item
+06/07/2018 19:27:07	|	admin		|	tela principal
+06/07/2018 19:27:07	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:28:12	|	admin		|	tela principal
+06/07/2018 19:28:12	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:28:46	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:28:46	|	admin		|	tela principal
+06/07/2018 19:29:41	|	admin		|	tela principal
+06/07/2018 19:29:41	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:30:11	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:30:11	|	admin		|	tela principal
+06/07/2018 19:31:59	|	admin		|	tela principal
+06/07/2018 19:31:59	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:33:05	|	admin		|	tela principal
+06/07/2018 19:33:05	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:33:08	|	admin		|	Cadastrar Aula
+06/07/2018 19:33:08	|	admin		|	Cadastrar Aula
+06/07/2018 19:33:09	|	admin		|	Cancelar Aula
+06/07/2018 19:33:09	|	admin		|	Cancelar Aula
+06/07/2018 19:34:04	|	admin		|	tela principal
+06/07/2018 19:34:04	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 19:34:45	|	admin		|	CheckBox de Aluno selecionado
+06/07/2018 19:34:51	|	admin		|	Cadastrar Aula
+06/07/2018 19:34:52	|	admin		|	Salvo com sucesso no banco
+06/07/2018 19:34:53	|	admin		|	Salvo com sucesso no banco
+06/07/2018 19:34:53	|	admin		|	Salvo com sucesso no banco
+06/07/2018 19:34:54	|	admin		|	Cancelar Aula
+06/07/2018 19:50:40	|	null		|	Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+06/07/2018 20:07:13	|	admin		|	Table 'escola_idioma.Usuario' doesn't exist
+06/07/2018 20:07:13	|	admin		|	tela principal

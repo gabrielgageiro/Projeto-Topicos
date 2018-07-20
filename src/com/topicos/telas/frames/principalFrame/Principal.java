@@ -102,12 +102,6 @@ public class Principal extends JFrame {
         panelOpcoes.setLayout(null);
 
         handle = new ListennerPrincipalFrame(SobreItem, btnLogout, btnExit, this);
-        //Botão de cadastro de idioma
-        JButton btnCadastrarIdioma = new JButton("Cadastrar idioma");
-        btnCadastrarIdioma.setBorder(new LineBorder(new Color(0,0,0)));
-        btnCadastrarIdioma.setBounds(555,6,131,45);
-        panelOpcoes.add(btnCadastrarIdioma);
-
         //Botão de cadastro de pessoas
         JButton btnCadastrar = new JButton("Cadastrar pessoa");
         btnCadastrar.setBorder(new LineBorder(new Color(0, 0, 0)));

@@ -66,7 +66,6 @@ public class ListarProfessor extends JInternalFrame{
         btnBuscar.addActionListener(evt -> btnBuscarActionPerformed());
         btnAtualizar.addActionListener(evt -> btnAtualizarActionPerformed());
     }
-
     public void btnAtualizarActionPerformed(){
         val = tabelaProfessor.getModel();
         final TableRowSorter<TableModel> sorter = new TableRowSorter<>(val);

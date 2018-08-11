@@ -18,7 +18,8 @@ public class App {
         Banco.getConexao();
 
 
-        new Login();
+        new Principal();
+//        new Login();
     }
 
 

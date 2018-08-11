@@ -4,9 +4,15 @@ Data: 18/05/18.
  */
 package com.topicos.cadastro.pessoa.listarTela;
 
+import com.topicos.cadastro.aluno.Aluno;
+import com.topicos.professor.Professor;
+import com.topicos.professor.ProfessorDAO;
+
 import javax.swing.*;
 import java.awt.Font;
+import java.util.List;
 import java.util.regex.PatternSyntaxException;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
@@ -17,22 +23,15 @@ public class ListarProfessor extends JInternalFrame{
     private JCheckBox chckbxNome;
     private JCheckBox chckbxCurso;
     private boolean checkNome, checkCurso;
-
+//    private List<Professor> professors = new ProfessorDAO().g
     public ListarProfessor(){
         super("Listagem de Professor");
         setClosable(true);
         setBounds(100, 100, 450, 422);
         getContentPane().setLayout(null);
 
-        String [] colunas = {"Nome", "Curso", "Email", "Telefone"};
 
-        Object [][] dados = {
-                {"Jorge Maciel", "Ingles", "jorge.maciel@gmail.com", "48 99237898"},
-                {"Maria Dolores", "Alemao", "doloresmaria@hotmail.com", "48 88903345"},
-                {"Otavio Rubres", "Espanhol", "tavaorubres@gmail.com", "48 9870-5634"}
-        };
-
-        tabelaProfessor = new JTable(dados, colunas);
+        tabelaProfessor = new JTable();
         JScrollPane barraRolagem = new JScrollPane(tabelaProfessor);
         barraRolagem.setBounds(10, 68, 414, 313);
 
@@ -128,4 +127,18 @@ public class ListarProfessor extends JInternalFrame{
             JOptionPane.showMessageDialog(null, "Nenhum filtro marcado");
         }
     }
+
+/*
+
+    private DefaultTableModel setTabelaProfessor(List<Professor> professores){
+
+        DefaultTableModel dados = new DefaultTableModel();
+
+        dados.addColumn("Nome");
+        dados.addColumn("modulo");
+
+        professores.forEach(s ->  dados.addRow(new Object[] {s.getNome(),s.getModulo()}));
+        return dados;
+    }
+*/
 }

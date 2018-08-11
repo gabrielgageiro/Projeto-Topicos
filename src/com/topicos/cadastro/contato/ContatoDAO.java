@@ -21,6 +21,11 @@ public class ContatoDAO extends Banco implements PersistirDados<Contato>{
     public ContatoDAO(){}
 
     @Override
+    public List<Contato> getObjetos() {
+        return null;
+    }
+
+    @Override
     public List<Contato> getObjetos(Contato objeto) {
         return null;
     }

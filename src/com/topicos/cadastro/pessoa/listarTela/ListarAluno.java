@@ -11,12 +11,16 @@ import javax.swing.*;
 import java.awt.Font;
 import java.util.List;
 import java.util.regex.PatternSyntaxException;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
 public class ListarAluno extends JInternalFrame {
 
-    private JTable tabelaAluno;
+    AlunoDAO alunoDAO = new AlunoDAO();
+    List<Aluno> alunos = alunoDAO.getObjetos();
+
+    private JTable tabelaAluno = new JTable(setTabelaAluno(alunos));
     private JTextField txtProcurarAluno;
     private TableModel val;
     private JCheckBox chckbxNome;
@@ -31,15 +35,6 @@ public class ListarAluno extends JInternalFrame {
         setBounds(100, 100, 450, 422);
         getContentPane().setLayout(null);
 
-        String [] colunas = {"Nome", "Curso", "Email", "Telefone"};
-
-        Object [][] dados = {
-                {"Ana Maria", "Ingles", "ana.monteiro@gmail.com", "48 99237898"},
-                {"Joao da Silva", "Ingles", "joaosilva@hotmail.com", "48 88903345"},
-                {"Pedro Pedras", "Espanhol", "pedrinho@gmail.com", "48 9870-5634"}
-        };
-
-        tabelaAluno = new JTable(dados, colunas);
         JScrollPane barraRolagem = new JScrollPane(tabelaAluno);
         barraRolagem.setBounds(10, 68, 414, 313);
 
@@ -79,7 +74,7 @@ public class ListarAluno extends JInternalFrame {
         val = tabelaAluno.getModel();
         final TableRowSorter<TableModel> sorter = new TableRowSorter<>(val);
         tabelaAluno.setRowSorter(sorter);
-        new AlunoDAO().getObjetos(new Aluno());
+        new AlunoDAO().getObjetos();
         sorter.setRowFilter(null);
     }
 
@@ -137,8 +132,20 @@ public class ListarAluno extends JInternalFrame {
         if(checkNome == false && checkCurso == false){
             JOptionPane.showMessageDialog(null, "Nenhum filtro marcado");
         }
-        AlunoDAO alunoDAO = new AlunoDAO();
-        List<Aluno> alunos = alunoDAO.getObjetos(new Aluno());
-        alunos.forEach(s -> System.out.println("curso" + s.getCurso() +"email "+s.getEmail() + " nome "+ s.getNome() +"Sobrenome"));
+        setTabelaAluno(alunos);
+
+    }
+
+    private DefaultTableModel setTabelaAluno(List<Aluno> alunos){
+
+        DefaultTableModel dados = new DefaultTableModel();
+
+        dados.addColumn("Nome");
+        dados.addColumn("Curso");
+        dados.addColumn("Email");
+        dados.addColumn("Telefone");
+
+        alunos.forEach(s -> dados.addRow(new Object[] {s.getNome(),s.getCurso(),s.getEmail(),s.getTelefone()}));
+        return dados;
     }
 }

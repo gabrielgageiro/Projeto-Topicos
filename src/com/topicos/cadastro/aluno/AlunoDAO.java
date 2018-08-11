@@ -24,35 +24,39 @@ public class AlunoDAO extends Banco implements PersistirDados<Aluno> {
 
     @Override
     public List<Aluno> getObjetos(Aluno objeto) {
-        String sql = "select * FROM Pessoa INNER JOIN Contato ON Contato.Pessoa_idPessoa = Pessoa.idPessoa";
-        List<Aluno> alunos = new ArrayList<>();
+        return null;
+    }
 
+    @Override
+    public List<Aluno> getObjetos() {
+        String sql = "select nome,sobrenome,telefone,email FROM Pessoa INNER JOIN Contato ON Contato.Pessoa_idPessoa = Pessoa.idPessoa";
+        List<Aluno> alunos = new ArrayList<>();
         try {
             connection = getConexao();
-            PreparedStatement pstm = connection.prepareStatement(sql);
+            PreparedStatement pstmPessoa = connection.prepareStatement(sql);
 
-            ResultSet resultSet =  pstm.executeQuery();
-
+            ResultSet resultSet =  pstmPessoa.executeQuery();
         /*
             {"Ana Maria", "Ingles", "ana.monteiro@gmail.com", "48 99237898"},
             {"Joao da Silva", "Ingles", "joaosilva@hotmail.com", "48 88903345"},
             {"Pedro Pedras", "Espanhol", "pedrinho@gmail.com", "48 9870-5634"}*/
 
             while (resultSet.next()) {
+                Aluno objeto = new Aluno();
 
                 objeto.setNome(resultSet.getString("nome"));
                 objeto.setSobrenome(resultSet.getString("sobrenome"));
                 objeto.setEmail(resultSet.getString("email"));
                 objeto.setTelefone(resultSet.getString("telefone"));
+
                 alunos.add(objeto);
             }
-
-            pstm.close();
-
+            pstmPessoa.close();
         } catch (SQLException e) {
             e.printStackTrace();
             LogDeAcoes.salvarLog(e.getMessage());
         }
+
         LogDeAcoes.salvarLog("Dados carregado do banco");
         return alunos;
     }

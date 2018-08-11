@@ -57,4 +57,10 @@ public class Aluno extends Pessoas {
         this.curso = curso;
 
     }
+
+    @Override
+    public String toString() {
+        return "Nome: " + getNome() +" " + getSobrenome() +"\n"+
+                "Email: " + getEmail() + " " + getTelefone() + "\n";
+    }
 }

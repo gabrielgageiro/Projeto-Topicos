@@ -21,6 +21,11 @@ public class EnderecoDAO extends Banco implements PersistirDados<Endereco> {
     public EnderecoDAO(){}
 
     @Override
+    public List<Endereco> getObjetos() {
+        return null;
+    }
+
+    @Override
     public List<Endereco> getObjetos(Endereco objeto) {
         return null;
     }

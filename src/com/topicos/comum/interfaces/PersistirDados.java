@@ -12,4 +12,5 @@ public interface PersistirDados<T> {
     public T persistir(T objeto);
 
     public List<T> getObjetos (T objeto);
+    public List<T> getObjetos();
 }
